@@ -236,8 +236,8 @@ export const demos: Demo[] = [
 
 // ===== YOUR INFO =====
 export const personalInfo = {
-  name: "Akky",
-  title: "Full Stack Developer",
+  name: "Akash (Akky)",
+  title: "Software Developer",
   tagline: "Building Digital Success for Your Business",
   experience: "3 Years",
   projectsCompleted: "25+",
