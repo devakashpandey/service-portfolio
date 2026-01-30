@@ -1,36 +1,65 @@
 "use client";
 
 import { services } from "@/data/portfolio";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, Globe, Zap, Smartphone } from "lucide-react";
+
+const IconMap: { [key: string]: any } = {
+    Globe: Globe,
+    Zap: Zap,
+    Smartphone: Smartphone,
+};
 
 export default function Services() {
     return (
-        <section id="services" className="section relative overflow-hidden bg-noise">
-            <div className="container relative z-10 mx-auto">
-                <div className="section-header">
-                    <h2 className="section-title">My <span className="gradient-text">Services</span></h2>
-                    <p className="section-subtitle">Complete digital solutions to take your business online</p>
+        <section id="services" className="py-16 md:py-20 bg-background">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-10">
+                    <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
+                        My <span className="text-primary">Services</span>
+                    </h2>
+                    <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
+                        Complete digital solutions to take your business online
+                    </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {services.map((service, index) => (
-                        <div key={service.id} className={`card card-glass group hover:border-primary animate-fade-in-up stagger-${index + 1} opacity-0`}>
-                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-3xl mb-6">{service.icon}</div>
-                            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                            <p className="text-text-secondary mb-6">{service.description}</p>
-                            <ul className="space-y-3 mb-6">
-                                {service.features.map((feature) => (
-                                    <li key={feature} className="flex items-start gap-3 text-sm">
-                                        <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                        <span>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="mt-auto pt-6 border-t border-border-light flex items-center justify-between">
-                                <span className="text-lg font-bold gradient-text">{service.price}</span>
-                                <a href="#contact" className="text-primary font-medium hover:underline">Get Quote</a>
-                            </div>
-                        </div>
-                    ))}
+                    {services.map((service) => {
+                        const Icon = IconMap[service.icon];
+                        return (
+                            <Card key={service.id} className="group relative flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-background/50 backdrop-blur-sm border-border/40 overflow-hidden">
+                                {/* Subtle pattern/gradient background for cards */}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full -mr-16 -mt-16 pointer-events-none transition-colors group-hover:bg-primary/10" />
+
+                                <CardHeader className="p-6 relative z-10">
+                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                                        {Icon && <Icon size={20} />}
+                                    </div>
+                                    <CardTitle className="text-lg font-bold">{service.title}</CardTitle>
+                                    <p className="text-xs md:text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.description}</p>
+                                </CardHeader>
+
+                                <CardContent className="px-6 pb-6 flex-grow relative z-10">
+                                    <ul className="space-y-2.5">
+                                        {service.features.map((feature) => (
+                                            <li key={feature} className="flex items-start gap-2 text-[12px] md:text-[13px]">
+                                                <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                                                <span className="text-muted-foreground group-hover:text-foreground transition-colors">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </CardContent>
+
+                                <CardFooter className="px-6 py-4 border-t border-border/40 flex items-center justify-between bg-muted/5 relative z-10">
+                                    <span className="text-base font-bold text-primary">{service.price}</span>
+                                    <button className="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-primary/20 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+                                        Get Quote
+                                    </button>
+                                </CardFooter>
+                            </Card>
+                        );
+                    })}
                 </div>
             </div>
         </section>

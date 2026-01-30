@@ -6,7 +6,7 @@ export interface Demo {
   title: string;
   description: string;
   image: string;
-  category: "website" | "webapp" | "mobile";
+  category: string;
   link: string;
   tags: string[];
   featured?: boolean;
@@ -28,7 +28,7 @@ export const services: Service[] = [
     title: "Website Development",
     description:
       "Professional, fast-loading websites that attract customers and boost your business online presence.",
-    icon: "🌐",
+    icon: "Globe",
     features: [
       "Responsive Design - Mobile First",
       "SEO Optimized",
@@ -44,7 +44,7 @@ export const services: Service[] = [
     title: "Web Application",
     description:
       "Custom web apps with admin dashboard, inventory management, and online ordering systems.",
-    icon: "⚡",
+    icon: "Zap",
     features: [
       "Admin Dashboard",
       "Inventory Management",
@@ -60,7 +60,7 @@ export const services: Service[] = [
     title: "Mobile App",
     description:
       "Native-like mobile apps for Android & iOS to reach customers on their phones.",
-    icon: "📱",
+    icon: "Smartphone",
     features: [
       "Android & iOS Apps",
       "Push Notifications",
@@ -78,66 +78,159 @@ export const services: Service[] = [
 export const demos: Demo[] = [
   {
     id: "1",
-    title: "Grocery Store Website",
+    title: "Premium Salon Website",
     description:
-      "Complete e-commerce solution for a local grocery store with online ordering and delivery tracking.",
-    image: "/demos/grocery-store.jpg",
-    category: "website",
-    link: "#", // Add your demo link
-    tags: ["E-commerce", "Next.js", "Payments"],
+      "High-end salon website with online booking, service menu, and stylist profiles.",
+    image: "/demos/salon.jpg",
+    category: "wellness",
+    link: "#",
+    tags: ["Salon", "Booking", "Wellness"],
     featured: true,
   },
   {
     id: "2",
-    title: "Restaurant Ordering App",
+    title: "Restaurant Ordering System",
     description:
-      "Mobile-first web app for restaurant with QR menu, online ordering, and kitchen display system.",
-    image: "/demos/restaurant-app.jpg",
-    category: "webapp",
+      "Modern restaurant website with digital menu, table reservation, and online checkout.",
+    image: "/demos/restaurant.jpg",
+    category: "hospitality",
     link: "#",
-    tags: ["Food & Beverage", "React", "Real-time"],
+    tags: ["Food", "Reservations", "Hospitality"],
     featured: true,
   },
   {
     id: "3",
-    title: "Fashion Boutique Store",
+    title: "Dental Clinic Portal",
     description:
-      "Elegant online store for a fashion boutique with size guide, wishlist, and COD support.",
-    image: "/demos/fashion-store.jpg",
-    category: "website",
+      "Professional healthcare website for dental clinics with appointment scheduling and patient records.",
+    image: "/demos/dentist.jpg",
+    category: "healthcare",
     link: "#",
-    tags: ["Fashion", "E-commerce", "Modern UI"],
+    tags: ["Dentist", "Clinic", "Healthcare"],
     featured: true,
   },
   {
     id: "4",
-    title: "Salon Booking App",
+    title: "Coaching Center Platform",
     description:
-      "Mobile app for salon with appointment booking, service catalog, and loyalty points.",
-    image: "/demos/salon-app.jpg",
-    category: "mobile",
+      "Educational website for coaching centers with course listings, fee management, and student login.",
+    image: "/demos/education.jpg",
+    category: "education",
     link: "#",
-    tags: ["Booking", "Flutter", "Notifications"],
+    tags: ["Coaching", "Education", "Learning"],
+    featured: true,
   },
   {
     id: "5",
-    title: "Electronics Shop",
+    title: "Real Estate Property Portal",
     description:
-      "Full e-commerce website with product comparison, EMI calculator, and inventory sync.",
-    image: "/demos/electronics-shop.jpg",
-    category: "website",
+      "Property listing website for agents with advanced search, virtual tours, and lead generation.",
+    image: "/demos/realestate.jpg",
+    category: "realestate",
     link: "#",
-    tags: ["Electronics", "Comparison", "EMI"],
+    tags: ["Property", "Real Estate", "Listings"],
+    featured: true,
   },
   {
     id: "6",
-    title: "Pharmacy Delivery App",
+    title: "Boutique E-commerce Store",
     description:
-      "Web app for pharmacy with prescription upload, medicine reminders, and doorstep delivery.",
-    image: "/demos/pharmacy-app.jpg",
-    category: "webapp",
+      "Premium fashion store for clothing and jewellery with advanced filters and secure checkout.",
+    image: "/demos/boutique.jpg",
+    category: "ecommerce",
     link: "#",
-    tags: ["Healthcare", "Delivery", "PWA"],
+    tags: ["Fashion", "Cloth", "Jewellery"],
+    featured: true,
+  },
+  {
+    id: "7",
+    title: "Beauty Parlour Website",
+    description:
+      "Modern beauty parlour website with gallery, price list, and WhatsApp booking.",
+    image: "/demos/beauty.jpg",
+    category: "wellness",
+    link: "#",
+    tags: ["Beauty", "Parlour", "Service"],
+  },
+  {
+    id: "8",
+    title: "Luxury Spa Booking",
+    description:
+      "Calm and professional spa website with membership features and service packages.",
+    image: "/demos/spa.jpg",
+    category: "wellness",
+    link: "#",
+    tags: ["Spa", "Wellness", "Booking"],
+  },
+  {
+    id: "9",
+    title: "Gym Member Portal",
+    description:
+      "Gym management website with plan subscription, trainer profiles, and workout tracking.",
+    image: "/demos/gym.jpg",
+    category: "wellness",
+    link: "#",
+    tags: ["Gym", "Fitness", "Workout"],
+  },
+  {
+    id: "10",
+    title: "City Hospital Management",
+    description:
+      "Healthcare portal for hospitals with doctor schedules, OPD booking, and emergency info.",
+    image: "/demos/hospital.jpg",
+    category: "healthcare",
+    link: "#",
+    tags: ["Hospital", "Health", "Management"],
+  },
+  {
+    id: "11",
+    title: "Tuition Class Portal",
+    description:
+      "Simple website for tuition classes with schedule, homework upload, and notice board.",
+    image: "/demos/tuition.jpg",
+    category: "education",
+    link: "#",
+    tags: ["Tuition", "Education", "Classes"],
+  },
+  {
+    id: "12",
+    title: "Grand Hotel Website",
+    description:
+      "Elegant hotel website with room gallery, online booking, and local tour packages.",
+    image: "/demos/hotel.jpg",
+    category: "hospitality",
+    link: "#",
+    tags: ["Hotel", "Hospitality", "Booking"],
+  },
+  {
+    id: "13",
+    title: "SaaS Product Landing",
+    description:
+      "High-converting landing page for a SaaS startup with dynamic pricing and feature highlights.",
+    image: "/demos/saas.jpg",
+    category: "saas",
+    link: "#",
+    tags: ["SaaS", "Tech", "Landing Page"],
+  },
+  {
+    id: "14",
+    title: "Online Shoe Store",
+    description:
+      "Modern e-commerce site for shoes with 3D product view and sizes filter.",
+    image: "/demos/shoes.jpg",
+    category: "ecommerce",
+    link: "#",
+    tags: ["Shoes", "Ecommerce", "Store"],
+  },
+  {
+    id: "15",
+    title: "Diamond Jewellery Boutique",
+    description:
+      "Exquisite jewellery store website with zoom-in features and certificate display.",
+    image: "/demos/jewellery.jpg",
+    category: "ecommerce",
+    link: "#",
+    tags: ["Jewellery", "Luxury", "Boutique"],
   },
 ];
 
@@ -146,17 +239,17 @@ export const personalInfo = {
   name: "Akky",
   title: "Full Stack Developer",
   tagline: "Building Digital Success for Your Business",
-  experience: "3+ Years",
+  experience: "3 Years",
   projectsCompleted: "25+",
   happyClients: "20+",
-  email: "contact@akkydev.com", // Update this
-  phone: "+91 8709412383", // Update this
-  whatsapp: "918709412383", // Update this (without +)
+  email: "contact@akkydev.com",
+  phone: "+91 8709412383",
+  whatsapp: "918709412383",
   location: "India",
   social: {
-    github: "https://github.com/akky", // Update
-    linkedin: "https://linkedin.com/in/akky", // Update
-    twitter: "https://twitter.com/akky", // Update
+    github: "https://github.com/akky",
+    linkedin: "https://linkedin.com/in/akky",
+    twitter: "https://twitter.com/akky",
   },
 };
 
@@ -189,12 +282,43 @@ export const testimonials = [
     rating: 5,
     avatar: "MI",
   },
+  {
+    id: "4",
+    name: "Dr. Anjali Gupta",
+    business: "Gupta Dental Care",
+    feedback:
+      "The clinic portal is very user-friendly. My patients can now book appointments easily. Highly recommend Akky for healthcare projects!",
+    rating: 5,
+    avatar: "AG",
+  },
+  {
+    id: "5",
+    name: "Vikram Singh",
+    business: "Elite Realty",
+    feedback:
+      "Our real estate portal has transformed how we show properties. The virtual tour integration is flawless. Professional and timely delivery.",
+    rating: 5,
+    avatar: "VS",
+  },
+  {
+    id: "6",
+    name: "Arjun Mehra",
+    business: "The Power House Gym",
+    feedback:
+      "The gym app is exactly what we needed. Member management is now automated and the progress tracking feature is a hit with our clients.",
+    rating: 5,
+    avatar: "AM",
+  },
 ];
 
 // ===== CATEGORY FILTERS =====
 export const categories = [
   { id: "all", label: "All Projects" },
-  { id: "website", label: "Websites" },
-  { id: "webapp", label: "Web Apps" },
-  { id: "mobile", label: "Mobile Apps" },
+  { id: "wellness", label: "Wellness & Gym" },
+  { id: "hospitality", label: "Hospitality" },
+  { id: "healthcare", label: "Healthcare" },
+  { id: "education", label: "Education" },
+  { id: "realestate", label: "Real Estate" },
+  { id: "ecommerce", label: "E-commerce" },
+  { id: "saas", label: "SaaS & Tech" },
 ];
