@@ -37,7 +37,7 @@ export const services: Service[] = [
       "Google Analytics Setup",
       "1 Year Free Support",
     ],
-    price: "Starting ₹15,000",
+
   },
   {
     id: "webapp",
@@ -53,7 +53,7 @@ export const services: Service[] = [
       "Reports & Analytics",
       "Cloud Hosting Setup",
     ],
-    price: "Starting ₹30,000",
+
   },
   {
     id: "mobile",
@@ -68,7 +68,7 @@ export const services: Service[] = [
       "Play Store Publishing",
       "Regular Updates",
     ],
-    price: "Starting ₹40,000",
+
   },
 ];
 
