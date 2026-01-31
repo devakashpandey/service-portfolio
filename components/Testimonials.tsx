@@ -29,7 +29,7 @@ export default function Testimonials() {
                     {[...testimonials, ...testimonials, ...testimonials].map((testimonial, idx) => (
                         <Card
                             key={`${testimonial.id}-${idx}`}
-                            className="w-[300px] md:w-[450px] shrink-0 transition-all duration-300 bg-background/50 backdrop-blur-md border-border/50 shadow-none hover:border-primary/30 hover:bg-background/80"
+                            className="w-[300px] md:w-[450px] shrink-0 transition-all duration-300 bg-background/50 backdrop-blur-md border-border shadow-none hover:border-primary/30 hover:bg-background/80"
                         >
                             <CardContent className="p-6 md:p-8 flex flex-col justify-between h-full">
                                 <div className="mb-6">

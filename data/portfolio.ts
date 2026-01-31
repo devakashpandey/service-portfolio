@@ -53,23 +53,22 @@ export const services: Service[] = [
       "Reports & Analytics",
       "Cloud Hosting Setup",
     ],
-    price: "Starting ₹35,000",
+    price: "Starting ₹30,000",
   },
   {
     id: "mobile",
     title: "Mobile App",
     description:
-      "Native-like mobile apps for Android & iOS to reach customers on their phones.",
+      "Native-like mobile apps for Android to reach customers on their phones.",
     icon: "Smartphone",
     features: [
-      "Android & iOS Apps",
+      "Android Apps",
       "Push Notifications",
-      "Offline Mode Support",
       "Payment Integration",
-      "Play Store & App Store Publishing",
+      "Play Store Publishing",
       "Regular Updates",
     ],
-    price: "Starting ₹50,000",
+    price: "Starting ₹40,000",
   },
 ];
 
@@ -236,13 +235,13 @@ export const demos: Demo[] = [
 
 // ===== YOUR INFO =====
 export const personalInfo = {
-  name: "Akash (Akky)",
-  title: "Software Developer",
+  name: "Akash ",
+  title: "Website & App Expert",
   tagline: "Building Digital Success for Your Business",
   experience: "3 Years",
   projectsCompleted: "25+",
   happyClients: "20+",
-  email: "contact@akkydev.com",
+  email: "devakashpandey@gmail.com",
   phone: "+91 8709412383",
   whatsapp: "918709412383",
   location: "India",
@@ -321,4 +320,42 @@ export const categories = [
   { id: "realestate", label: "Real Estate" },
   { id: "ecommerce", label: "E-commerce" },
   { id: "saas", label: "SaaS & Tech" },
+];
+
+export const workSteps = [
+  {
+    title: "1. Discussion",
+    description: "We start by understanding your business goals and creating a custom plan for your needs.",
+  },
+  {
+    title: "2. Design",
+    description: "We create a professional and modern design that your customers will love to use.",
+  },
+  {
+    title: "3. Development",
+    description: "We build your website or app using fast and secure coding standards.",
+  },
+  {
+    title: "4. Launch & Support",
+    description: "After going live, we provide 1 year of free technical support to keep things running smoothly.",
+  },
+];
+
+export const faqs = [
+  {
+    question: "What if I don't like the design?",
+    answer: "We offer unlimited basic revisions until you are 100% satisfied with the final look.",
+  },
+  {
+    question: "Is Domain and Hosting included?",
+    answer: "Yes, our packages include a free Domain (.com/.in) and Cloud Hosting for the first year.",
+  },
+  {
+    question: "How long does it take to build?",
+    answer: "A basic website takes 5-7 days. Custom web applications and mobile apps take 15-30 days.",
+  },
+  {
+    question: "Do you provide support after launch?",
+    answer: "Yes, every project comes with 1 year of free technical support for any issues.",
+  },
 ];

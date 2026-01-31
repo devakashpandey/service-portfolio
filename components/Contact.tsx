@@ -28,9 +28,9 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-16 md:py-24 bg-muted/20">
+        <section id="contact" className="py-12 md:py-16 bg-muted/20">
             <div className="container mx-auto px-6">
-                <div className="max-w-3xl mx-auto text-center mb-12">
+                <div className="max-w-3xl mx-auto text-center mb-8">
                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-3">
                         Let&apos;s <span className="text-primary">Connect</span>
                     </h2>
@@ -39,16 +39,16 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="max-w-3xl mx-auto">
-                    <Card className="border-border/40 shadow-lg bg-background/50 backdrop-blur-sm overflow-hidden">
-                        <CardHeader className="text-center pt-8 px-6">
+                <div className="max-w-2xl mx-auto">
+                    <Card className="border-border/80 shadow-lg bg-background/50 backdrop-blur-sm overflow-hidden">
+                        <CardHeader className="text-center pt-6 px-6 pb-2">
                             <CardTitle className="text-xl md:text-2xl font-bold">Send a Message</CardTitle>
                             <CardDescription className="text-sm">
                                 Fill out the form below and I&apos;ll get back to you on WhatsApp within a few hours.
                             </CardDescription>
                         </CardHeader>
-                        <CardContent className="p-6 md:p-10 pb-12">
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                        <CardContent className="p-6 md:p-8 pb-8">
+                            <form onSubmit={handleSubmit} className="space-y-4">
                                 <div className="grid md:grid-cols-2 gap-5">
                                     <div className="space-y-1.5">
                                         <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Full Name</label>
@@ -57,7 +57,7 @@ export default function Contact() {
                                             placeholder="Your name"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className="h-11 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-primary/20"
+                                            className="h-10 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-primary/20"
                                         />
                                     </div>
                                     <div className="space-y-1.5">
@@ -72,11 +72,11 @@ export default function Contact() {
                                         />
                                     </div>
                                 </div>
-                                <div className="space-y-1.5">
-                                    <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">About Your Project</label>
+                                <div className="space-y-1.5 pt-1">
+                                    <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Your Project Details</label>
                                     <Textarea
                                         required
-                                        rows={4}
+                                        rows={3}
                                         placeholder="Goals or requirements..."
                                         value={formData.project}
                                         onChange={(e) => setFormData({ ...formData, project: e.target.value })}
@@ -84,13 +84,13 @@ export default function Contact() {
                                     />
                                 </div>
 
-                                <div className="space-y-6 pt-2">
-                                    <Button type="submit" size="lg" className="w-full h-12 text-base font-bold gap-2 shadow-md shadow-primary/10 transition-transform active:scale-[0.98]">
-                                        <Send size={18} />
+                                <div className="space-y-4 pt-1">
+                                    <Button type="submit" size="lg" className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-primary/10 transition-transform active:scale-[0.98]">
+                                        <Send size={16} />
                                         Send Message
                                     </Button>
 
-                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6 border-t border-border/40">
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4 border-t border-border/40">
                                         <a
                                             href={`mailto:${personalInfo.email}`}
                                             className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-bold text-[10px] uppercase tracking-widest"

@@ -18,11 +18,11 @@ export default function Hero() {
                 <div className="grid lg:grid-cols-12 gap-10 lg:gap-10 items-center">
 
                     {/* LEFT SIDE: Profile Card */}
-                    <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
-                        <div className="relative group">
+                    <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
+                        <div className="relative group w-full max-w-sm">
                             <div className="absolute -inset-1 bg-primary/20 rounded-[2rem] blur-xl opacity-30 transition duration-700" />
 
-                            <Card className="relative border-border/40 bg-background/60 backdrop-blur-xl overflow-hidden text-center p-6 md:p-8 rounded-[2rem] shadow-xl">
+                            <Card className="relative w-full border-border/80 bg-background/60 backdrop-blur-xl overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg">
                                 <CardContent className="p-0">
                                     <div className="relative w-32 h-32 md:w-36 md:h-36 mx-auto mb-6">
                                         <div className="absolute inset-0 bg-primary/5 rounded-full" />
@@ -34,7 +34,7 @@ export default function Hero() {
                                         </div>
                                     </div>
 
-                                    <h2 className="text-xl md:text-2xl font-bold mb-1">{personalInfo.name}</h2>
+                                    <h2 className="text-xl md:text-2xl font-bold mb-1">Akash Pandey</h2>
                                     <p className="text-primary font-medium mb-6 uppercase tracking-[0.2em] text-[10px]">{personalInfo.title}</p>
 
                                     <div className="grid grid-cols-3 gap-1 pt-6 border-t border-border/60">
@@ -57,36 +57,39 @@ export default function Hero() {
                     </div>
 
                     {/* RIGHT SIDE: Content */}
-                    <div className="lg:col-span-7 space-y-8 order-1 lg:order-2">
-                        <div className="space-y-4">
+                    <div className="lg:col-span-6 space-y-6 order-1 lg:order-2 lg:pl-4">
+                        <div className="space-y-2">
                             <div className="space-y-2">
-                                <p className="text-muted-foreground text-lg md:text-xl font-medium">Build your digital presence with</p>
-                                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tight leading-[1.1]">
-                                    {personalInfo.tagline}
+                                <p className="text-muted-foreground text-lg md:text-xl font-medium italic underline underline-offset-8 decoration-primary/20">Grow your business with a professional</p>
+                                <h1 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
+                                    Digital Presence & <span className="text-primary italic">Success</span>
                                 </h1>
                             </div>
 
                             <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                Namaste! I&apos;m <span className="text-foreground font-semibold underline decoration-primary/30 underline-offset-4">Full Stack Developer</span>.
-                                Tera mission hai ki har business ko online laana,
-                                chahe wo grocery store ho ya boutique.
+                                Helping local businesses go online. Hum aapke business ke liye high-quality websites aur mobile apps banate hain, taki aap zyada customers tak pahunch sakein. Like <span className="text-foreground font-medium">grocery store, boutique or any professional service.</span>
                             </p>
                         </div>
 
-                        {/* Tech Stack */}
-                        <div className="pt-2">
-                            <h4 className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-4">Tech Stack</h4>
+                        {/* Business Benefits */}
+                        <div className="pt-1">
+                            <h4 className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-3">Key Benefits</h4>
                             <div className="flex flex-wrap gap-2">
-                                {["React", "Next.js", "Flutter", "Node.js", "TypeScript", "Tailwind"].map((skill) => (
-                                    <span key={skill} className="px-3 py-1 rounded-lg border border-border/60 bg-muted/30 text-[11px] font-bold text-muted-foreground uppercase">
-                                        {skill}
+                                {[
+                                    { text: "Fast & Responsive", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
+                                    { text: "WhatsApp Ready", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
+                                    { text: "Google Ready", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
+                                    { text: "1 Year Support", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
+                                ].map((benefit) => (
+                                    <span key={benefit.text} className={`px-3 py-1.5 rounded-lg border ${benefit.color} text-[11px] font-bold uppercase`}>
+                                        {benefit.text}
                                     </span>
                                 ))}
                             </div>
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-wrap gap-4 pt-2">
+                        <div className="flex flex-wrap gap-4 pt-1">
                             <Button asChild size="lg" className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-primary/10 gap-2">
                                 <a href="#contact">
                                     Start Project

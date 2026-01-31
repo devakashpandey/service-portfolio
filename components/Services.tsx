@@ -15,7 +15,7 @@ export default function Services() {
     return (
         <section id="services" className="py-16 md:py-20 bg-background">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-10">
+                <div className="text-center mb-8">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
                         My <span className="text-primary">Services</span>
                     </h2>
@@ -24,34 +24,34 @@ export default function Services() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {services.map((service) => {
                         const Icon = IconMap[service.icon];
                         return (
-                            <Card key={service.id} className="group relative flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-background/50 backdrop-blur-sm border-border/40 overflow-hidden">
+                            <Card key={service.id} className="group relative flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-background/50 backdrop-blur-sm border-border/80 overflow-hidden">
                                 {/* Subtle pattern/gradient background for cards */}
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full -mr-16 -mt-16 pointer-events-none transition-colors group-hover:bg-primary/10" />
 
-                                <CardHeader className="p-6 relative z-10">
-                                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                                        {Icon && <Icon size={20} />}
+                                <CardHeader className="p-5 relative z-10">
+                                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                                        {Icon && <Icon size={18} />}
                                     </div>
                                     <CardTitle className="text-lg font-bold">{service.title}</CardTitle>
                                     <p className="text-xs md:text-sm text-muted-foreground mt-1.5 leading-relaxed">{service.description}</p>
                                 </CardHeader>
 
-                                <CardContent className="px-6 pb-6 flex-grow relative z-10">
-                                    <ul className="space-y-2.5">
+                                <CardContent className="px-5 pb-3 flex-grow relative z-10">
+                                    <ul className="space-y-1.5">
                                         {service.features.map((feature) => (
-                                            <li key={feature} className="flex items-start gap-2 text-[12px] md:text-[13px]">
-                                                <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                                            <li key={feature} className="flex items-start gap-2 text-[12px] md:text-[12.5px]">
+                                                <Check className="w-3 h-3 text-primary shrink-0 mt-1" />
                                                 <span className="text-muted-foreground group-hover:text-foreground transition-colors">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </CardContent>
 
-                                <CardFooter className="px-6 py-4 border-t border-border/40 flex items-center justify-between bg-muted/5 relative z-10">
+                                <CardFooter className="px-5 py-3 border-t border-border/40 flex items-center justify-between bg-muted/5 relative z-10">
                                     <span className="text-base font-bold text-primary">{service.price}</span>
                                     <button className="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-primary/20 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
                                         Get Quote

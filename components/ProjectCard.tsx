@@ -12,7 +12,7 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
     return (
         <Card
             key={demo.id}
-            className="group overflow-hidden border-border/40 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            className="group overflow-hidden border-border/80 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
         >
             <CardHeader className="p-0">
                 <div className="relative aspect-video bg-muted/50 overflow-hidden flex items-center justify-center group-hover:bg-muted/30 transition-colors">
