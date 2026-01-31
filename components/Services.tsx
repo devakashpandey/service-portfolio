@@ -51,8 +51,8 @@ export default function Services() {
                                     </ul>
                                 </CardContent>
 
-                                <CardFooter className="px-5 py-3 border-t border-border/40 flex items-center justify-between bg-muted/5 relative z-10">
-                                    <span className="text-base font-bold text-primary">{service.price}</span>
+                                <CardFooter className="px-5 py-3 border-t border-border/40 flex items-center justify-end bg-muted/5 relative z-10 ">
+                                   
                                     <button className="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-primary/20 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
                                         Get Quote
                                     </button>
