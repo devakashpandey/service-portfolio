@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     "affordable web developer",
     "web developer in India"
   ],
-  authors: [{ name: "Akky Dev" }],
+  authors: [{ name: "Akky Labs" }],
   icons: {
     icon: [
       { url: "/logo.png" },
