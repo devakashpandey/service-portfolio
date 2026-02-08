@@ -128,14 +128,6 @@ export default function Hero() {
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
                                     I help businesses of all sizes go online and grow with modern websites and mobile apps. My goal is to simplify your services and make technology easy for you, while using AI to reach more customers and scale your brand.
                                 </p>
-                                <div className="flex flex-wrap gap-2 items-center">
-                                    <span className="text-[10px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] mr-2">Industries I Serve:</span>
-                                    {["Retail", "E-commerce", "SaaS", "AI Tech", "Education", "Healthcare", "Real Estate", "Hospitality", "Wellness"].map((cat) => (
-                                        <span key={cat} className="text-[10px] md:text-[11px] font-bold px-3 py-1 rounded-full bg-muted/30 text-muted-foreground border border-border/50 backdrop-blur-sm transition-all hover:border-muted-foreground/50 hover:text-foreground cursor-default">
-                                            {cat}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
                         </div>
 
