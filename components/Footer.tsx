@@ -1,77 +1,157 @@
 "use client";
 
 import { personalInfo } from "@/data/portfolio";
-import { Github, Linkedin, Twitter, Instagram, MessageSquare, Globe } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, MessageSquare, Globe, Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    const quickLinks = [
+        { name: "Home", href: "/" },
+        { name: "About Us", href: "/about" },
+        { name: "Portfolio", href: "/#portfolio" },
+        { name: "Testimonials", href: "/#testimonials" },
+        { name: "Contact", href: "/#contact" },
+        { name: "FAQ", href: "/#faq" },
+    ];
+
+    const serviceLinks = [
+        { name: "Website Design", href: "/#services" },
+        { name: "Web Development", href: "/#services" },
+        { name: "E-commerce Solutions", href: "/#services" },
+        { name: "Mobile App Development", href: "/#services" },
+        { name: "UI/UX Design", href: "/#services" },
+        { name: "SEO Optimization", href: "/#services" },
+    ];
+
+    const legalLinks = [
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms of Service", href: "/terms" },
+    ];
+
     return (
-        <footer className="py-5 md:py-6 border-t border-border bg-muted/50">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="hidden md:flex items-center gap-2 group cursor-default">
-                    <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
-                        <Image
-                            src="/logo.png"
-                            alt="Logo"
-                            width={48}
-                            height={48}
-                            className="object-contain"
-                        />
+        <footer className="border-t border-border bg-muted/30">
+            {/* Main Footer Content */}
+            <div className="container mx-auto px-4 py-12 md:py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+                    {/* Brand Column */}
+                    <div className="space-y-4">
+                        <Link href="/" className="flex items-center gap-2 group">
+                            <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Akky Labs Logo"
+                                    width={48}
+                                    height={48}
+                                    className="object-contain"
+                                />
+                            </div>
+                            <span className="font-bold text-lg tracking-tight">{personalInfo.brandName}</span>
+                        </Link>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                            Professional web development services for businesses. Custom websites, web apps, and mobile apps to grow your business online.
+                        </p>
+                        {/* Social Icons */}
+                        <div className="flex items-center gap-3 pt-2">
+                            {personalInfo.social.github && (
+                                <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-9 h-9 rounded-lg bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                                    <Github className="w-4 h-4" />
+                                </a>
+                            )}
+                            {personalInfo.social.linkedin && (
+                                <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                                    <Linkedin className="w-4 h-4" />
+                                </a>
+                            )}
+                            {personalInfo.social.instagram && (
+                                <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-lg bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                                    <Instagram className="w-4 h-4" />
+                                </a>
+                            )}
+                            {(personalInfo.social as any).whatsapp && (
+                                <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-9 h-9 rounded-lg bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                                    <MessageSquare className="w-4 h-4" />
+                                </a>
+                            )}
+                        </div>
                     </div>
-                    <span className="font-bold text-lg tracking-tight">{personalInfo.brandName}</span>
-                </div>
-                <p className="text-sm text-muted-foreground font-medium">
-                    © {new Date().getFullYear()} {personalInfo.brandName}. All rights reserved.
-                </p>
-                <div className="flex items-center gap-6">
-                    <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</a>
-                    <a href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About</a>
-                    <a href="/#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Services</a>
-                    <a href="/#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">Features</a>
-                    <a href="/#portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">Portfolio</a>
-                    <a href="/#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors font-semibold">Contact</a>
+
+                    {/* Quick Links Column */}
+                    <div className="space-y-4">
+                        <h3 className="font-bold text-sm uppercase tracking-wider text-foreground">Quick Links</h3>
+                        <ul className="space-y-2.5">
+                            {quickLinks.map((link) => (
+                                <li key={link.name}>
+                                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Services Column */}
+                    <div className="space-y-4">
+                        <h3 className="font-bold text-sm uppercase tracking-wider text-foreground">Services</h3>
+                        <ul className="space-y-2.5">
+                            {serviceLinks.map((link) => (
+                                <li key={link.name}>
+                                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contact Column */}
+                    <div className="space-y-4">
+                        <h3 className="font-bold text-sm uppercase tracking-wider text-foreground">Get In Touch</h3>
+                        <ul className="space-y-3">
+                            <li>
+                                <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                                    <Mail className="w-4 h-4 flex-shrink-0" />
+                                    <span>{personalInfo.email}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={`tel:${personalInfo.phone}`} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                                    <Phone className="w-4 h-4 flex-shrink-0" />
+                                    <span>{personalInfo.phone}</span>
+                                </a>
+                            </li>
+                            <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                                <span>{personalInfo.location}</span>
+                            </li>
+                        </ul>
+                        {/* CTA Button */}
+                        <Link href="/#contact" className="inline-block mt-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors">
+                            Get Free Quote
+                        </Link>
+                    </div>
                 </div>
             </div>
 
-            {/* Social Links Row */}
-            <div className="container mx-auto px-4 mt-8 pt-6 border-t border-border/40 flex flex-wrap justify-center gap-6">
-                {personalInfo.social.github && (
-                    <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors group">
-                        <Github className="w-4 h-4" />
-                        <span className="hidden sm:inline">GitHub</span>
-                    </a>
-                )}
-                {personalInfo.social.linkedin && (
-                    <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors group">
-                        <Linkedin className="w-4 h-4" />
-                        <span className="hidden sm:inline">LinkedIn</span>
-                    </a>
-                )}
-                {(personalInfo.social as any).twitter && (
-                    <a href={(personalInfo.social as any).twitter} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors group">
-                        <Twitter className="w-4 h-4" />
-                        <span className="hidden sm:inline">Twitter</span>
-                    </a>
-                )}
-                {personalInfo.social.instagram && (
-                    <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors group">
-                        <Instagram className="w-4 h-4" />
-                        <span className="hidden sm:inline">Instagram</span>
-                    </a>
-                )}
-                {(personalInfo.social as any).whatsapp && (
-                    <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors group">
-                        <MessageSquare className="w-4 h-4" />
-                        <span className="hidden sm:inline">WhatsApp</span>
-                    </a>
-                )}
-                {personalInfo.social.portfolio && (
-                    <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors group">
-                        <Globe className="w-4 h-4" />
-                        <span className="hidden sm:inline">Portfolio</span>
-                    </a>
-                )}
+            {/* Bottom Bar */}
+            <div className="border-t border-border">
+                <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p className="text-xs text-muted-foreground">
+                        © {currentYear} {personalInfo.brandName}. All rights reserved.
+                    </p>
+                    <div className="flex items-center gap-4">
+                        {legalLinks.map((link) => (
+                            <Link key={link.name} href={link.href} className="text-xs text-muted-foreground hover:text-primary transition-colors">
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
         </footer>
     );
 }
+

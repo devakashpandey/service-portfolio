@@ -118,9 +118,9 @@ export default function Hero() {
                     <div className="lg:col-span-6 space-y-6 order-1 lg:order-2 lg:pl-4">
                         <div className="space-y-2">
                             <div className="space-y-2">
-                                <p className="text-muted-foreground text-lg md:text-xl font-medium italic underline underline-offset-8 decoration-primary/20">Grow your business with a professional</p>
+                                <p className="text-muted-foreground text-lg md:text-xl font-medium italic underline underline-offset-8 decoration-primary/20">Professional Web Developer & Designer</p>
                                 <h1 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
-                                    Digital Presence & <span className="text-primary italic">Success</span>
+                                    Custom <span className="text-primary italic">Website Design</span> & Web Development
                                 </h1>
                             </div>
 
