@@ -124,9 +124,19 @@ export default function Hero() {
                                 </h1>
                             </div>
 
-                            <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                Empowering local businesses with **AI-integrated** digital solutions. We build high-performance websites and mobile apps that leverage artificial intelligence to automate your business and scale your brand.
-                            </p>
+                            <div className="space-y-4">
+                                <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
+                                    I help local businesses grow by building simple and smart websites and mobile apps. My goal is to make technology easy for everyone while using AI to help you reach more customers.
+                                </p>
+                                <div className="flex flex-wrap gap-2 items-center">
+                                    <span className="text-[10px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] mr-2">Industries I Serve:</span>
+                                    {["Retail", "E-commerce", "SaaS", "AI Tech", "Education", "Healthcare", "Real Estate", "Hospitality", "Wellness"].map((cat) => (
+                                        <span key={cat} className="text-[10px] md:text-[11px] font-bold px-3 py-1 rounded-full bg-muted/30 text-muted-foreground border border-border/50 backdrop-blur-sm transition-all hover:border-muted-foreground/50 hover:text-foreground cursor-default">
+                                            {cat}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
 
                         {/* Business Benefits */}
@@ -149,15 +159,15 @@ export default function Hero() {
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4 pt-1">
                             <Button asChild size="lg" className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-primary/10 gap-2">
-                                <a href="#contact">
-                                    Start Project
+                                <a href="#services">
+                                    View Services
                                     <ChevronRight className="w-4 h-4" />
                                 </a>
                             </Button>
                             <Button asChild variant="ghost" size="lg" className="h-12 px-8 rounded-xl text-base font-bold gap-2 text-muted-foreground hover:text-foreground">
                                 <a href="#portfolio">
                                     View Works
-                                    <ExternalLink className="w-4 h-4 opacity-50" />
+
                                 </a>
                             </Button>
                         </div>

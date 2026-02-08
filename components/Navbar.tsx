@@ -68,7 +68,7 @@ export default function Navbar() {
                         <Link
                             key={link.label}
                             href={link.href}
-                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors transition-all relative group"
+                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-all relative group"
                         >
                             {link.label}
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
@@ -128,7 +128,7 @@ export default function Navbar() {
                                         <SheetClose asChild key={link.label}>
                                             <Link
                                                 href={link.href}
-                                                className="text-4xl md:text-5xl font-extrabold tracking-tighter hover:text-primary transition-all active:scale-95 text-foreground/70 hover:text-foreground"
+                                                className="text-4xl md:text-5xl font-extrabold tracking-tighter hover:text-primary transition-all active:scale-95 text-foreground/70"
                                             >
                                                 {link.label}
                                             </Link>
