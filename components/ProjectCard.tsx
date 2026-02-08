@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Demo } from "@/data/portfolio";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -30,38 +29,30 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
     return (
         <Card
             key={demo.id}
-            className="group overflow-hidden border-border/80 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full p-0"
+            className="group overflow-hidden border-border/80 bg-background/50 backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg flex flex-col h-full p-0"
         >
             <CardHeader className="p-0 border-b border-border/10 block">
                 <div className="relative aspect-video overflow-hidden bg-muted">
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={currentImageIndex}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -20 }}
-                            transition={{ duration: 0.3 }}
-                            className="absolute inset-0"
-                        >
-                            <Image
-                                src={images[currentImageIndex]}
-                                alt={`${demo.title} - Image ${currentImageIndex + 1}`}
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                        </motion.div>
-                    </AnimatePresence>
+                    {/* Simple image without animation */}
+                    <Image
+                        src={images[currentImageIndex]}
+                        alt={`${demo.title} - Image ${currentImageIndex + 1}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-opacity duration-300"
+                        priority={false}
+                        loading="lazy"
+                    />
 
-                    {/* Overlay Gradient */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-
+                    {/* Overlay Gradient - only show on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {images.length > 1 && (
                         <div className="absolute inset-x-0 bottom-4 flex justify-between px-3 items-center">
                             <button
                                 onClick={prevImage}
-                                className="p-1.5 rounded-full bg-background/80 backdrop-blur-md text-foreground border border-border/40 hover:bg-primary hover:text-white transition-all transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                                className="p-1.5 rounded-full bg-background/80 backdrop-blur-md text-foreground border border-border/40 hover:bg-primary hover:text-white transition-colors opacity-0 group-hover:opacity-100"
+                                aria-label="Previous image"
                             >
                                 <ChevronLeft className="w-4 h-4" />
                             </button>
@@ -78,7 +69,8 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
 
                             <button
                                 onClick={nextImage}
-                                className="p-1.5 rounded-full bg-background/80 backdrop-blur-md text-foreground border border-border/40 hover:bg-primary hover:text-white transition-all transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+                                className="p-1.5 rounded-full bg-background/80 backdrop-blur-md text-foreground border border-border/40 hover:bg-primary hover:text-white transition-colors opacity-0 group-hover:opacity-100"
+                                aria-label="Next image"
                             >
                                 <ChevronRight className="w-4 h-4" />
                             </button>
@@ -105,3 +97,4 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
         </Card>
     );
 }
+

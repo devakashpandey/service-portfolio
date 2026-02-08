@@ -29,12 +29,9 @@ export default function Services() {
                     {services.map((service) => {
                         const Icon = IconMap[service.icon];
                         return (
-                            <Card key={service.id} className="group relative flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-background/50 backdrop-blur-md border-border/80 overflow-hidden rounded-2xl">
-                                {/* Subtle pattern/gradient background for cards */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full -mr-16 -mt-16 pointer-events-none transition-colors group-hover:bg-primary/10" />
-
+                            <Card key={service.id} className="group relative flex flex-col transition-shadow duration-300 hover:shadow-xl bg-background border-border/80 overflow-hidden rounded-2xl">
                                 <CardHeader className="p-5 relative z-10 pb-2">
-                                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground shadow-sm">
+                                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                                         {Icon && <Icon size={20} />}
                                     </div>
                                     <CardTitle className="text-lg font-bold tracking-tight">{service.title}</CardTitle>
@@ -46,7 +43,7 @@ export default function Services() {
                                         {service.features.map((feature) => (
                                             <li key={feature} className="flex items-start gap-2.5 text-[12.5px]">
                                                 <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
-                                                <span className="text-muted-foreground group-hover:text-foreground transition-colors">{feature}</span>
+                                                <span className="text-muted-foreground">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>

@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Enable React strict mode for better performance
   reactStrictMode: true,
+  // Experimental optimizations
+  experimental: {
+    // Optimize package imports for tree-shaking
+    optimizePackageImports: ["lucide-react", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
+  },
 };
 
 export default nextConfig;
+

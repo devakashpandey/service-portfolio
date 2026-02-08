@@ -1,10 +1,10 @@
 "use client";
 
 import {
-    Globe, Zap, Shield, Palette, Rocket, Users, Smartphone, Code2,
+    Globe, Zap, Shield, Palette, Rocket, Smartphone, Code2,
     Headphones, TrendingUp, Cpu, Database, Layout, Lock, MessageSquare,
-    Bell, CreditCard, Cloud, BarChart, Server, Layers, Command, Search,
-    SmartphoneNfc, Laptop, Watch, Share2, MousePointer2, Brain, Sparkles
+    Bell, CreditCard, Cloud, BarChart, Server, Layers, Command,
+    SmartphoneNfc, MousePointer2, Brain
 } from "lucide-react";
 
 const row1 = [
@@ -52,21 +52,22 @@ const row4 = [
 ];
 
 function FeatureRow({ features, direction }: { features: typeof row1; direction: "left" | "right" }) {
-    const duplicatedFeatures = [...features, ...features, ...features, ...features];
+    // Only duplicate once (2x) instead of 4x - reduces DOM by 50%
+    const duplicatedFeatures = [...features, ...features];
 
     return (
         <div className="relative overflow-hidden py-1">
             <div
-                className={`flex gap-3 ${direction === "left" ? "animate-scroll-left" : "animate-scroll-right"}`}
+                className={`flex gap-3 will-change-transform ${direction === "left" ? "animate-scroll-left" : "animate-scroll-right"}`}
                 style={{ width: "max-content" }}
             >
                 {duplicatedFeatures.map((feature, index) => (
                     <div
                         key={`${feature.text}-${index}`}
-                        className="flex items-center gap-2 px-4 py-2 bg-muted/30 border border-border/40 rounded-full backdrop-blur-sm whitespace-nowrap hover:bg-primary/10 hover:border-primary/30 transition-all duration-300 group"
+                        className="flex items-center gap-2 px-4 py-2 bg-muted/30 border border-border/40 rounded-full whitespace-nowrap"
                     >
-                        <feature.icon className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors" />
-                        <span className="text-[13px] font-medium text-foreground/80 group-hover:text-foreground">{feature.text}</span>
+                        <feature.icon className="w-3.5 h-3.5 text-muted-foreground" />
+                        <span className="text-[13px] font-medium text-foreground/80">{feature.text}</span>
                     </div>
                 ))}
             </div>
@@ -77,9 +78,6 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
 export default function Features() {
     return (
         <section id="features" className="relative z-10 py-20 md:py-32 bg-background overflow-hidden">
-            {/* Subtle Gradient Background */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/5 blur-[120px] rounded-full opacity-50 pointer-events-none" />
-
             <div className="container relative z-10 mx-auto px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-2xl font-semibold md:text-3xl">
@@ -110,13 +108,13 @@ export default function Features() {
                         transform: translateX(0);
                     }
                     100% {
-                        transform: translateX(-25%);
+                        transform: translateX(-50%);
                     }
                 }
 
                 @keyframes scroll-right {
                     0% {
-                        transform: translateX(-25%);
+                        transform: translateX(-50%);
                     }
                     100% {
                         transform: translateX(0);
@@ -124,18 +122,21 @@ export default function Features() {
                 }
 
                 .animate-scroll-left {
-                    animation: scroll-left 40s linear infinite;
+                    animation: scroll-left 30s linear infinite;
                 }
 
                 .animate-scroll-right {
-                    animation: scroll-right 40s linear infinite;
+                    animation: scroll-right 30s linear infinite;
                 }
 
-                .animate-scroll-left:hover,
-                .animate-scroll-right:hover {
-                    animation-play-state: paused;
+                @media (prefers-reduced-motion: reduce) {
+                    .animate-scroll-left,
+                    .animate-scroll-right {
+                        animation: none;
+                    }
                 }
             `}</style>
         </section>
     );
 }
+

@@ -23,8 +23,17 @@ export default function Navbar() {
 
     useEffect(() => {
         setMounted(true);
-        const handleScroll = () => setIsScrolled(window.scrollY > 50);
-        window.addEventListener("scroll", handleScroll);
+        let ticking = false;
+        const handleScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    setIsScrolled(window.scrollY > 50);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -89,17 +98,13 @@ export default function Navbar() {
 
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="md:hidden rounded-full h-10 w-10">
+                            <Button variant="ghost" size="icon" className="md:hidden rounded-full h-10 w-10" aria-label="Open menu">
                                 <Menu className="h-5 w-5" />
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-full sm:w-[400px] border-l bg-background/95 backdrop-blur-2xl p-0" showCloseButton={false}>
-                            {/* Decorative Background for Menu */}
-                            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/20 blur-[120px] rounded-full -mr-40 -mt-40 pointer-events-none" />
-                            <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 blur-[120px] rounded-full -ml-40 -mb-40 pointer-events-none" />
-
+                        <SheetContent side="right" className="w-full sm:w-[400px] border-l bg-background p-0" showCloseButton={false}>
                             <div className="flex flex-col h-full relative z-10">
-                                <SheetHeader className="p-6 border-b bg-background/50 flex flex-row items-center justify-between space-y-0">
+                                <SheetHeader className="p-6 border-b bg-muted/30 flex flex-row items-center justify-between space-y-0">
                                     <SheetTitle className="flex items-center gap-3 text-left">
                                         <div className="w-16 h-16 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg ring-4 ring-background/50">
                                             <Image

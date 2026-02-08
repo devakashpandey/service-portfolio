@@ -6,6 +6,9 @@ import { Quote } from "lucide-react";
 
 
 export default function Testimonials() {
+    // Only duplicate once (2x) instead of 3x
+    const duplicatedTestimonials = [...testimonials, ...testimonials];
+
     return (
         <section id="testimonials" className="py-16 md:py-24 bg-background relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10 mb-16">
@@ -20,16 +23,15 @@ export default function Testimonials() {
             </div>
 
             {/* Marquee Container */}
-            <div className="relative flex w-full overflow-hidden group">
+            <div className="relative flex w-full overflow-hidden">
                 <div
-                    className="flex gap-6 md:gap-8 px-4 animate-marquee group-hover:pause"
+                    className="flex gap-6 md:gap-8 px-4 animate-marquee will-change-transform"
                     style={{ width: "fit-content" }}
                 >
-                    {/* Multiply items to ensure seamless loop */}
-                    {[...testimonials, ...testimonials, ...testimonials].map((testimonial, idx) => (
+                    {duplicatedTestimonials.map((testimonial, idx) => (
                         <Card
                             key={`${testimonial.id}-${idx}`}
-                            className="w-[300px] md:w-[450px] shrink-0 transition-all duration-300 bg-background/50 backdrop-blur-md border-border shadow-none hover:border-primary/30 hover:bg-background/80"
+                            className="w-[300px] md:w-[450px] shrink-0 bg-background border-border shadow-none"
                         >
                             <CardContent className="p-6 md:p-8 flex flex-col justify-between h-full">
                                 <div className="mb-6">
@@ -43,7 +45,7 @@ export default function Testimonials() {
                                         {testimonial.avatar}
                                     </div>
                                     <div className="overflow-hidden">
-                                        <h4 className="font-bold text-foreground text-sm truncate">{testimonial.name}</h4>
+                                        <p className="font-bold text-foreground text-sm truncate">{testimonial.name}</p>
                                         <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest truncate">{testimonial.business}</p>
                                     </div>
                                 </div>
@@ -53,13 +55,10 @@ export default function Testimonials() {
                 </div>
             </div>
 
-            {/* Gradient Fades for Slider */}
-            <div className="absolute inset-y-0 left-0 w-24 md:w-60 bg-linear-to-r from-background via-background/80 to-transparent z-20 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-24 md:w-60 bg-linear-to-l from-background via-background/80 to-transparent z-20 pointer-events-none" />
-
-            {/* Background Decorations */}
-            <div className="absolute top-1/2 left-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/5 blur-[100px] rounded-full pointer-events-none translate-x-1/3 translate-y-1/3" />
+            {/* Simple Gradient Fades */}
+            <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
         </section>
     );
 }
+
