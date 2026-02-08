@@ -58,7 +58,7 @@ export default function Navbar() {
                         />
                     </div>
                     <span className="font-bold text-xl tracking-tight hidden sm:block">
-                        {personalInfo.name}
+                        {personalInfo.brandName}
                     </span>
                 </Link>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
                                             />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-xl leading-none">{personalInfo.name}</p>
+                                            <p className="font-bold text-xl leading-none">{personalInfo.brandName}</p>
                                             <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] mt-2">{personalInfo.title}</p>
                                         </div>
                                     </SheetTitle>

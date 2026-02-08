@@ -18,10 +18,10 @@ export default function Footer() {
                             className="object-contain"
                         />
                     </div>
-                    <span className="font-bold text-lg tracking-tight">{personalInfo.name}</span>
+                    <span className="font-bold text-lg tracking-tight">{personalInfo.brandName}</span>
                 </div>
                 <p className="text-sm text-muted-foreground font-medium">
-                    © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+                    © {new Date().getFullYear()} {personalInfo.brandName}. All rights reserved.
                 </p>
                 <div className="flex items-center gap-6">
                     <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</a>

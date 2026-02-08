@@ -228,8 +228,9 @@ export const demos: Demo[] = [
 
 // ===== YOUR INFO =====
 export const personalInfo = {
-  name: "Akky Labs",
-  title: "AI & Full Stack Developer",
+  name: "Akash Pandey",
+  brandName: "Akky Labs",
+  title: "Web & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
   experience: "3 Years",
   projectsCompleted: "15+", 

@@ -57,7 +57,7 @@ export default function Hero() {
                                                 {personalInfo.title}
                                             </span>
                                             <span className="px-3 py-1 bg-muted/50 rounded-full text-[11px] font-medium text-muted-foreground border border-border/50 italic">
-                                                Building @ Akky Labs
+                                                Building @ {personalInfo.brandName}
                                             </span>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@ export default function Hero() {
 
                             <div className="space-y-4">
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                    I help local businesses grow by building simple and smart websites and mobile apps. My goal is to make technology easy for everyone while using AI to help you reach more customers.
+                                    I help businesses of all sizes go online and grow with modern websites and mobile apps. My goal is to simplify your services and make technology easy for you, while using AI to reach more customers and scale your brand.
                                 </p>
                                 <div className="flex flex-wrap gap-2 items-center">
                                     <span className="text-[10px] font-black text-muted-foreground/50 uppercase tracking-[0.2em] mr-2">Industries I Serve:</span>
