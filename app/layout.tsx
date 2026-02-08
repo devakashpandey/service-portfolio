@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   openGraph: {
-    title: "Akky Dev | Web Developer & App Solutions",
+    title: "Akky Labs | Web Developer & App Solutions",
     description:
       "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
     type: "website",
