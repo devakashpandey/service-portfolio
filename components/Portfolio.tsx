@@ -7,17 +7,17 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Portfolio() {
-    // Show only the first 6 projects on the home page
-    const featuredDemos = demos.slice(0, 6);
+    // Show only the first 3 projects on the home page
+    const featuredDemos = demos.slice(0, 3);
 
     return (
-        <section id="portfolio" className="py-16 md:py-24 bg-muted/20">
+        <section id="portfolio" className="pt-12 pb-24 bg-muted/20">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-12">
-                    <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-3">
-                        Featured <span className="text-primary">Projects</span>
+                <div className="text-center mb-16">
+                    <h2 className="text-2xl md:text-3xl font-semibold">
+                        Featured Projects
                     </h2>
-                    <p className="text-base text-muted-foreground max-w-xl mx-auto">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         A selection of my best work across various industries
                     </p>
                 </div>

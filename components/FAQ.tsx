@@ -10,11 +10,11 @@ export default function FAQ() {
     return (
         <section id="faq" className="py-16 md:py-20 bg-muted/20">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
-                        Common <span className="text-primary italic">Questions</span>
+                <div className="text-center mb-16">
+                    <h2 className="text-2xl md:text-3xl font-semibold">
+                        Common Questions
                     </h2>
-                    <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         Aapke mann mein jo bhi sawal hain, unke jawab yahan mil jayenge.
                     </p>
                 </div>

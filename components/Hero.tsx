@@ -3,11 +3,21 @@
 import { personalInfo } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronRight, ExternalLink } from "lucide-react";
+import {
+    ChevronRight,
+    ExternalLink,
+    Github,
+    Linkedin,
+    Twitter,
+    Instagram,
+    MessageSquare,
+    Globe
+} from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[85vh] py-16 lg:py-0 flex items-center justify-center overflow-hidden bg-background">
+        <section className="relative min-h-[85vh] pt-10 pb-16 md:pt-20 lg:py-0 flex items-center justify-center overflow-hidden bg-background mt-10">
             {/* Background Decorations */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-x-0 inset-y-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
@@ -24,18 +34,33 @@ export default function Hero() {
 
                             <Card className="relative w-full border-border/80 bg-background/60 backdrop-blur-xl overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg">
                                 <CardContent className="p-0">
-                                    <div className="relative w-32 h-32 md:w-36 md:h-36 mx-auto mb-6">
+                                    <div className="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-6">
                                         <div className="absolute inset-0 bg-primary/5 rounded-full" />
-                                        <div className="absolute inset-2 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-5xl font-bold shadow-lg ring-4 ring-background">
-                                            {personalInfo.name.charAt(0)}
+                                        <div className="absolute inset-2 overflow-hidden bg-background rounded-full flex items-center justify-center shadow-lg ring-4 ring-background">
+                                            <Image
+                                                src="/logo.png"
+                                                alt="Logo"
+                                                width={180}
+                                                height={180}
+                                                className="object-contain p-4"
+                                            />
                                         </div>
                                         <div className="absolute -bottom-1 -right-1 w-10 h-10 bg-card rounded-xl border border-border flex items-center justify-center text-xl shadow-md ring-2 ring-background">
                                             🇮🇳
                                         </div>
                                     </div>
 
-                                    <h2 className="text-xl md:text-2xl font-bold mb-1">Akash Pandey</h2>
-                                    <p className="text-primary font-medium mb-6 uppercase tracking-[0.2em] text-[10px]">{personalInfo.title}</p>
+                                    <div className="space-y-1.5 mb-6">
+                                        <h2 className="text-2xl font-bold tracking-tight text-foreground">{personalInfo.name}</h2>
+                                        <div className="flex flex-col items-center gap-1">
+                                            <span className="text-primary font-bold text-[10px] uppercase tracking-[0.2em]">
+                                                {personalInfo.title}
+                                            </span>
+                                            <span className="px-3 py-1 bg-muted/50 rounded-full text-[11px] font-medium text-muted-foreground border border-border/50 italic">
+                                                Building @ Akky Labs
+                                            </span>
+                                        </div>
+                                    </div>
 
                                     <div className="grid grid-cols-3 gap-1 pt-6 border-t border-border/60">
                                         <div className="flex flex-col">
@@ -50,6 +75,39 @@ export default function Hero() {
                                             <span className="text-[10px] text-muted-foreground uppercase font-semibold">Clients</span>
                                             <span className="font-bold text-base md:text-lg">{personalInfo.happyClients}</span>
                                         </div>
+                                    </div>
+
+                                    <div className="flex items-center justify-center gap-3 pt-6">
+                                        {personalInfo.social.github && (
+                                            <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                                                <Github className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                        {personalInfo.social.linkedin && (
+                                            <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                                                <Linkedin className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                        {(personalInfo.social as any).twitter && (
+                                            <a href={(personalInfo.social as any).twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                                                <Twitter className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                        {personalInfo.social.instagram && (
+                                            <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                                                <Instagram className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                        {(personalInfo.social as any).whatsapp && (
+                                            <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                                                <MessageSquare className="w-4 h-4" />
+                                            </a>
+                                        )}
+                                        {personalInfo.social.portfolio && (
+                                            <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                                                <Globe className="w-4 h-4" />
+                                            </a>
+                                        )}
                                     </div>
                                 </CardContent>
                             </Card>

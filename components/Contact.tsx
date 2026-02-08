@@ -30,11 +30,11 @@ export default function Contact() {
     return (
         <section id="contact" className="py-12 md:py-16 bg-muted/20">
             <div className="container mx-auto px-6">
-                <div className="max-w-3xl mx-auto text-center mb-8">
-                    <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-3">
-                        Let&apos;s <span className="text-primary">Connect</span>
+                <div className="max-w-3xl mx-auto text-center mb-16">
+                    <h2 className="text-2xl md:text-3xl font-semibold">
+                        Let&apos;s Connect
                     </h2>
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         Have a project in mind? Reach out and let&apos;s discuss how I can help your business grow.
                     </p>
                 </div>

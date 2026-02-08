@@ -6,12 +6,12 @@ export default function Process() {
     return (
         <section id="process" className="py-16 md:py-20 bg-background">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
-                        How I <span className="text-primary italic">Work</span>
+                <div className="text-center mb-16">
+                    <h2 className="text-2xl md:text-3xl font-semibold">
+                        How I Work
                     </h2>
-                    <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
-                        Hamara process simple aur transparent hai, taki aapka business bina kisi tension ke online aa sake.
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+                        A transparent and strategic approach to bringing your business online with confidence.
                     </p>
                 </div>
 

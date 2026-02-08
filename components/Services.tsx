@@ -15,11 +15,11 @@ export default function Services() {
     return (
         <section id="services" className="py-16 md:py-20 bg-background">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
-                        My <span className="text-primary">Services</span>
+                <div className="text-center mb-16">
+                    <h2 className="text-2xl md:text-3xl font-semibold">
+                        My Services
                     </h2>
-                    <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         Complete digital solutions to take your business online
                     </p>
                 </div>
@@ -52,7 +52,7 @@ export default function Services() {
                                 </CardContent>
 
                                 <CardFooter className="px-5 py-3 border-t border-border/40 flex items-center justify-end bg-muted/5 relative z-10 ">
-                                   
+
                                     <button className="text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-primary/20 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
                                         Get Quote
                                     </button>

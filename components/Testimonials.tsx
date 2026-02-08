@@ -8,12 +8,12 @@ import { Quote } from "lucide-react";
 export default function Testimonials() {
     return (
         <section id="testimonials" className="py-16 md:py-24 bg-background relative overflow-hidden">
-            <div className="container mx-auto px-6 relative z-10 mb-12">
+            <div className="container mx-auto px-6 relative z-10 mb-16">
                 <div className="text-center">
-                    <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-3">
-                        Client <span className="text-primary">Testimonials</span>
+                    <h2 className="text-2xl md:text-3xl font-semibold">
+                        Client Testimonials
                     </h2>
-                    <p className="text-base text-muted-foreground max-w-xl mx-auto">
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         What my happy clients say about working with me
                     </p>
                 </div>

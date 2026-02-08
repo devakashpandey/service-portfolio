@@ -14,6 +14,7 @@ import {
     SheetClose,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -28,8 +29,10 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { label: "About", href: "/#about" },
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" },
         { label: "Services", href: "/#services" },
+        { label: "Features", href: "/#features" },
         { label: "Portfolio", href: "/#portfolio" },
         { label: "Contact", href: "/#contact" },
     ];
@@ -45,8 +48,14 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 group">
-                    <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-primary-foreground font-bold transition-transform group-hover:scale-105">
-                        {personalInfo.name.charAt(0)}
+                    <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
+                        <Image
+                            src="/logo.png"
+                            alt="Logo"
+                            width={120}
+                            height={120}
+                            className="object-contain"
+                        />
                     </div>
                     <span className="font-bold text-xl tracking-tight hidden sm:block">
                         {personalInfo.name}
@@ -92,8 +101,14 @@ export default function Navbar() {
                             <div className="flex flex-col h-full relative z-10">
                                 <SheetHeader className="p-6 border-b bg-background/50 flex flex-row items-center justify-between space-y-0">
                                     <SheetTitle className="flex items-center gap-3 text-left">
-                                        <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg ring-4 ring-background/50">
-                                            {personalInfo.name.charAt(0)}
+                                        <div className="w-16 h-16 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg ring-4 ring-background/50">
+                                            <Image
+                                                src="/logo.png"
+                                                alt="Logo"
+                                                width={64}
+                                                height={64}
+                                                className="object-contain"
+                                            />
                                         </div>
                                         <div>
                                             <p className="font-bold text-xl leading-none">{personalInfo.name}</p>

@@ -13,7 +13,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Akky Dev | Software Developer & Web Solutions for Your Business",
+  title: "Akky Labs | Software Developer & Web Solutions for Your Business",
   description:
     "Professional web development services for shops and businesses. Get custom websites, web apps, and mobile apps to grow your business online. 3+ years of experience delivering premium digital solutions.",
   keywords: [
@@ -48,6 +48,14 @@ export const metadata: Metadata = {
     "web developer in India"
   ],
   authors: [{ name: "Akky Dev" }],
+  icons: {
+    icon: [
+      { url: "/logo.png" },
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Akky Dev | Web Developer & App Solutions",
     description:
