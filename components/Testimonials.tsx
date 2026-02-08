@@ -54,8 +54,8 @@ export default function Testimonials() {
             </div>
 
             {/* Gradient Fades for Slider */}
-            <div className="absolute inset-y-0 left-0 w-24 md:w-60 bg-gradient-to-r from-background via-background/80 to-transparent z-20 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-24 md:w-60 bg-gradient-to-l from-background via-background/80 to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-24 md:w-60 bg-linear-to-r from-background via-background/80 to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-24 md:w-60 bg-linear-to-l from-background via-background/80 to-transparent z-20 pointer-events-none" />
 
             {/* Background Decorations */}
             <div className="absolute top-1/2 left-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2" />

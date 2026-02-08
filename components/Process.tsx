@@ -20,7 +20,7 @@ export default function Process() {
                         <div key={index} className="relative p-6 rounded-2xl border border-border/80 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                             {/* Connector line for desktop */}
                             {index < workSteps.length - 1 && (
-                                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-[1px] bg-border/60 z-0" />
+                                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-border/60 z-0" />
                             )}
 
                             <div className="relative z-10">

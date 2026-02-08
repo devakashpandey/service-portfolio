@@ -20,7 +20,7 @@ export default function Hero() {
         <section className="relative min-h-[85vh] pt-10 pb-16 md:pt-20 lg:py-0 flex items-center justify-center overflow-hidden bg-background mt-10">
             {/* Background Decorations */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-x-0 inset-y-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
+                <div className="absolute inset-x-0 inset-y-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[32px_32px]" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full opacity-40" />
             </div>
 
@@ -125,7 +125,7 @@ export default function Hero() {
                             </div>
 
                             <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                Helping local businesses go online. Hum aapke business ke liye high-quality websites aur mobile apps banate hain, taki aap zyada customers tak pahunch sakein. Like <span className="text-foreground font-medium">grocery store, boutique or any professional service.</span>
+                                Empowering local businesses with **AI-integrated** digital solutions. We build high-performance websites and mobile apps that leverage artificial intelligence to automate your business and scale your brand.
                             </p>
                         </div>
 
@@ -136,7 +136,7 @@ export default function Hero() {
                                 {[
                                     { text: "Fast & Responsive", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
                                     { text: "WhatsApp Ready", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
-                                    { text: "Google Ready", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
+                                    { text: "AI Ready", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
                                     { text: "1 Year Support", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
                                 ].map((benefit) => (
                                     <span key={benefit.text} className={`px-3 py-1.5 rounded-lg border ${benefit.color} text-[11px] font-bold uppercase`}>

@@ -4,18 +4,18 @@ import {
     Globe, Zap, Shield, Palette, Rocket, Users, Smartphone, Code2,
     Headphones, TrendingUp, Cpu, Database, Layout, Lock, MessageSquare,
     Bell, CreditCard, Cloud, BarChart, Server, Layers, Command, Search,
-    SmartphoneNfc, Laptop, Watch, Share2, MousePointer2
+    SmartphoneNfc, Laptop, Watch, Share2, MousePointer2, Brain, Sparkles
 } from "lucide-react";
 
 const row1 = [
     { icon: Globe, text: "Responsive Design" },
+    { icon: Brain, text: "AI Model Integration" },
     { icon: Zap, text: "Fast Loading Speed" },
     { icon: Shield, text: "SSL Security" },
     { icon: Palette, text: "Modern UI/UX" },
     { icon: Rocket, text: "SEO Optimized" },
-    { icon: MessageSquare, text: "WhatsApp Integration" },
+    { icon: MessageSquare, text: "AI Chatbots" },
     { icon: Cpu, text: "High Performance" },
-    { icon: Laptop, text: "Cross-browser Support" },
 ];
 
 const row2 = [
@@ -42,13 +42,13 @@ const row3 = [
 
 const row4 = [
     { icon: Code2, text: "Clean Code" },
+    { icon: Brain, text: "Predictive Analytics" },
     { icon: Headphones, text: "24/7 Support" },
     { icon: CreditCard, text: "Payment Gateways" },
     { icon: Palette, text: "Custom Icons" },
     { icon: Layout, text: "Smooth Animations" },
     { icon: TrendingUp, text: "Analytics Ready" },
     { icon: Server, text: "Reliable Hosting" },
-    { icon: Search, text: "Advanced SEO" },
 ];
 
 function FeatureRow({ features, direction }: { features: typeof row1; direction: "left" | "right" }) {

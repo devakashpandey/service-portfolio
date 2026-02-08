@@ -47,6 +47,7 @@ export const services: Service[] = [
       "Custom web apps with admin dashboard, inventory management, and online ordering systems.",
     icon: "Zap",
     features: [
+      "AI Powered Dashboards",
       "Admin Dashboard",
       "Inventory Management",
       "Order Management System",
@@ -64,12 +65,28 @@ export const services: Service[] = [
     icon: "Smartphone",
     features: [
       "Android Apps",
+      "AI Voice/Chat Integration",
       "Push Notifications",
       "Payment Integration",
       "Play Store Publishing",
       "Regular Updates",
     ],
 
+  },
+  {
+    id: "ai",
+    title: "AI & Automation",
+    description:
+      "Integrating cutting-edge AI models like OpenAI, Gemini, and custom LLMs into your business workflow.",
+    icon: "Brain",
+    features: [
+      "Custom AI Chatbots",
+      "AI Image/Video Generation",
+      "Automated Workflows",
+      "LLM Integrations",
+     "Intelligent Search Support",
+      "Voice-to-Text Features",
+    ],
   },
 ];
 
@@ -212,8 +229,8 @@ export const demos: Demo[] = [
 // ===== YOUR INFO =====
 export const personalInfo = {
   name: "Akky Labs",
-  title: "Website & App Expert",
-  tagline: "Building Digital Success for Your Business",
+  title: "AI & Full Stack Developer",
+  tagline: "Building AI-Powered Digital Success for Your Business",
   experience: "3 Years",
   projectsCompleted: "15+", 
   happyClients: "6+",
@@ -233,7 +250,7 @@ export const personalInfo = {
 export const testimonials = [
   {
     id: "1",
-    name: "Sagar Suman",
+    name: "Sagar Tiwari",
     business: "Global Education Platform",
     feedback:
       "The EdTech platform Akky built for us is world-class. The student dashboard and interactive learning features have completely transformed how we deliver our courses online.",
@@ -242,7 +259,7 @@ export const testimonials = [
   },
   {
     id: "2",
-    name: "Priyanka Kashyap",
+    name: "Anurag Kashyap",
     business: "E-commerce Retail",
     feedback:
       "Our sales have significantly increased since launching the new store. The checkout process is seamless, and the mobile experience is incredibly smooth. Highly professional work!",
