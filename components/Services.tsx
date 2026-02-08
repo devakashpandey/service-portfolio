@@ -29,7 +29,7 @@ export default function Services() {
                     {services.map((service) => {
                         const Icon = IconMap[service.icon];
                         return (
-                            <Card key={service.id} className="group relative flex flex-col transition-shadow duration-300 hover:shadow-xl bg-background border-border/80 overflow-hidden rounded-2xl">
+                            <Card key={service.id} className="group relative flex flex-col bg-background border-border/80 overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1.5">
                                 <CardHeader className="p-5 relative z-10 pb-2">
                                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                                         {Icon && <Icon size={20} />}
