@@ -62,6 +62,7 @@ export const metadata: Metadata = {
     shortcut: "/logo.png",
     apple: "/logo.png",
   },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Akky Labs | Web Developer & App Solutions",
     description:
