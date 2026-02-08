@@ -13,7 +13,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Akky Labs | Software Developer & Web Solutions for Your Business",
+  metadataBase: new URL("https://akkylabs.com"), // Apna domain yahan dalo
+  title: {
+    default: "Akky Labs | Software Developer & Web Solutions for Your Business",
+    template: "%s | Akky Labs",
+  },
   description:
     "Professional web development services for shops and businesses. Get custom websites, web apps, and mobile apps to grow your business online. 3+ years of experience delivering premium digital solutions.",
   keywords: [
@@ -45,9 +49,11 @@ export const metadata: Metadata = {
     "portfolio website design",
     "website redesign services",
     "affordable web developer",
-    "web developer in India"
+    "web developer in India",
   ],
   authors: [{ name: "Akky Labs" }],
+  creator: "Akky Labs",
+  publisher: "Akky Labs",
   icons: {
     icon: [
       { url: "/logo.png" },
@@ -61,6 +67,30 @@ export const metadata: Metadata = {
     description:
       "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
     type: "website",
+    locale: "en_IN",
+    siteName: "Akky Labs",
+    url: "https://akkylabs.com", // Apna domain yahan dalo
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Akky Labs | Web Developer & App Solutions",
+    description:
+      "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Google Search Console se verification code milega
+    // google: "your-google-verification-code",
   },
 };
 
