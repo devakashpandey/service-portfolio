@@ -320,30 +320,30 @@ export const categories = [
 export const workSteps = [
   {
     title: "1. Strategy & Planning",
-    description: "We start with a detailed consultation to align with your business goals and define a personalized digital roadmap.",
+    description: "I start with a detailed consultation to align with your business goals and define a personalized digital roadmap.",
   },
   {
     title: "2. Premium Design",
-    description: "Our team crafts modern, high-conversion designs that establish brand authority and captivate your audience.",
+    description: "I craft modern, high-conversion designs that establish brand authority and captivate your audience.",
   },
   {
     title: "3. Precision Build",
-    description: "We develop fast, secure, and mobile-optimized solutions using the latest technology and industry best practices.",
+    description: "I develop fast, secure, and mobile-optimized solutions using the latest technology and industry best practices.",
   },
   {
     title: "4. Launch & Support",
-    description: "We ensure a flawless deployment followed by 1 year of dedicated technical support to guarantee your long-term success.",
+    description: "I ensure a flawless deployment followed by 1 year of dedicated technical support to guarantee your long-term success.",
   },
 ];
 
 export const faqs = [
   {
     question: "What if I don't like the design?",
-    answer: "We offer unlimited basic revisions until you are 100% satisfied with the final look.",
+    answer: "I offer unlimited basic revisions until you are 100% satisfied with the final look.",
   },
   {
     question: "Is Domain and Hosting included?",
-    answer: "Yes, our packages include a free Domain (.com/.in) and Cloud Hosting for the first year.",
+    answer: "Yes, my packages include a free Domain (.com/.in) and Cloud Hosting for the first year.",
   },
   {
     question: "How long does it take to build?",
