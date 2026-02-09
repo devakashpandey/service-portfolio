@@ -114,10 +114,13 @@ export default function Hero() {
                     {/* RIGHT SIDE: Content */}
                     <div className="lg:col-span-6 space-y-6 order-1 lg:order-2 lg:pl-4">
                         <div className="space-y-2">
-                            <div className="space-y-2">
-                                <p className="text-muted-foreground text-lg md:text-xl font-medium italic underline underline-offset-8 decoration-primary/20">Professional Web Developer & Designer</p>
-                                <h1 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
-                                    Custom <span className="text-primary italic">Website Design</span> & Web Development
+                            <div className="space-y-4">
+                                <div className="inline-block border-b border-border/60 pb-1">
+                                    <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Grow your business with a professional</p>
+                                </div>
+                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-[1] flex flex-col gap-1">
+                                    <span className="block">Digital Presence &</span>
+                                    <span className="italic text-muted-foreground/80">Success</span>
                                 </h1>
                             </div>
 
