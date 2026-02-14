@@ -64,9 +64,9 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
                 {duplicatedFeatures.map((feature, index) => (
                     <div
                         key={`${feature.text}-${index}`}
-                        className="flex items-center gap-2 px-4 py-2 bg-card dark:bg-muted/30 border border-border/60 dark:border-border/40 rounded-full whitespace-nowrap shadow-sm hover:shadow-md transition-shadow"
+                        className="flex items-center gap-2 px-4 py-2 bg-card border border-border/60 rounded-full whitespace-nowrap shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <feature.icon className={`w-3.5 h-3.5 ${feature.accent} dark:text-muted-foreground`} />
+                        <feature.icon className={`w-3.5 h-3.5 ${feature.accent}`} />
                         <span className="text-[13px] font-medium text-foreground/80">{feature.text}</span>
                     </div>
                 ))}
@@ -77,7 +77,7 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
 
 export default function Features() {
     return (
-        <section id="features" className="relative z-10 py-20 md:py-32 bg-gradient-to-b from-background via-indigo-50/30 to-background dark:from-background dark:via-background dark:to-background overflow-hidden">
+        <section id="features" className="relative z-10 py-20 md:py-32 bg-gradient-to-b from-background via-indigo-50/30 dark:via-indigo-950/10 to-background overflow-hidden">
             <div className="container relative z-10 mx-auto px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-2xl font-semibold md:text-3xl">

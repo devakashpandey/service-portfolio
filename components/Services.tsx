@@ -13,10 +13,10 @@ const IconMap: { [key: string]: any } = {
 };
 
 const cardAccents = [
-    { iconBg: "bg-blue-500/10 group-hover:bg-blue-500", iconText: "text-blue-600 dark:text-blue-400 group-hover:text-white", border: "hover:border-blue-500/30 dark:hover:border-border" },
-    { iconBg: "bg-violet-500/10 group-hover:bg-violet-500", iconText: "text-violet-600 dark:text-violet-400 group-hover:text-white", border: "hover:border-violet-500/30 dark:hover:border-border" },
-    { iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500", iconText: "text-emerald-600 dark:text-emerald-400 group-hover:text-white", border: "hover:border-emerald-500/30 dark:hover:border-border" },
-    { iconBg: "bg-amber-500/10 group-hover:bg-amber-500", iconText: "text-amber-600 dark:text-amber-400 group-hover:text-white", border: "hover:border-amber-500/30 dark:hover:border-border" },
+    { iconBg: "bg-blue-500/10 group-hover:bg-blue-500", iconText: "text-blue-500 group-hover:text-white", border: "hover:border-blue-500/30" },
+    { iconBg: "bg-violet-500/10 group-hover:bg-violet-500", iconText: "text-violet-500 group-hover:text-white", border: "hover:border-violet-500/30" },
+    { iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500", iconText: "text-emerald-500 group-hover:text-white", border: "hover:border-emerald-500/30" },
+    { iconBg: "bg-amber-500/10 group-hover:bg-amber-500", iconText: "text-amber-500 group-hover:text-white", border: "hover:border-amber-500/30" },
 ];
 
 export default function Services() {
@@ -54,7 +54,7 @@ export default function Services() {
                                     <ul className="space-y-2 mt-2">
                                         {service.features.map((feature) => (
                                             <li key={feature} className="flex items-start gap-2.5 text-[12.5px]">
-                                                <Check className="w-3.5 h-3.5 text-emerald-500 dark:text-primary shrink-0 mt-0.5" />
+                                                <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
                                                 <span className="text-muted-foreground">{feature}</span>
                                             </li>
                                         ))}

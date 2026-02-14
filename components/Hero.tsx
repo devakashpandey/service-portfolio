@@ -33,8 +33,8 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-x-0 inset-y-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[32px_32px]" />
                 {/* Light mode decorative blobs */}
-                <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/[0.04] blur-3xl dark:hidden" />
-                <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-purple-500/[0.04] blur-3xl dark:hidden" />
+                <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/[0.04] dark:bg-indigo-500/[0.06] blur-3xl" />
+                <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-purple-500/[0.04] dark:bg-purple-500/[0.06] blur-3xl" />
             </div>
 
             <div className="container relative z-10 mx-auto px-6">
@@ -43,10 +43,10 @@ export default function Hero() {
                     {/* LEFT SIDE: Profile Card */}
                     <div className="lg:col-span-6 flex justify-center order-2 lg:order-1 opacity-0 animate-scale-in">
                         <div className="relative group w-full max-w-sm">
-                            <Card className="relative w-full border-border/80 bg-card overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg dark:shadow-none shadow-indigo-500/[0.06]">
+                            <Card className="relative w-full border-border/80 bg-card overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg shadow-indigo-500/[0.06] dark:shadow-indigo-500/[0.08]">
                                 <CardContent className="p-0">
                                     <div className="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-6">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 dark:bg-primary/5 dark:from-transparent dark:via-transparent dark:to-transparent rounded-full" />
+                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full" />
                                         <div className="absolute inset-2 overflow-hidden bg-card rounded-full flex items-center justify-center shadow-lg ring-4 ring-background">
                                             <Image
                                                 src="/logo.png"
@@ -64,10 +64,10 @@ export default function Hero() {
                                     <div className="space-y-1.5 mb-6">
                                         <h2 className="text-2xl font-bold tracking-tight text-foreground">{personalInfo.name}</h2>
                                         <div className="flex flex-col items-center gap-1">
-                                            <span className="text-indigo-600 dark:text-primary font-bold text-[10px] uppercase tracking-[0.2em]">
+                                            <span className="text-indigo-600 dark:text-indigo-400 font-bold text-[10px] uppercase tracking-[0.2em]">
                                                 {personalInfo.title}
                                             </span>
-                                            <span className="px-3 py-1 bg-indigo-50 dark:bg-muted/50 rounded-full text-[11px] font-medium text-indigo-600 dark:text-muted-foreground border border-indigo-100 dark:border-border/50 italic">
+                                            <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-500/10 rounded-full text-[11px] font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-500/20 italic">
                                                 Building @ {personalInfo.brandName}
                                             </span>
                                         </div>
@@ -90,32 +90,32 @@ export default function Hero() {
 
                                     <div className="flex items-center justify-center gap-3 pt-6">
                                         {personalInfo.social.github && (
-                                            <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-indigo-500 dark:hover:bg-primary hover:text-white dark:hover:text-primary-foreground transition-colors">
+                                            <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-gray-700 hover:text-white transition-colors">
                                                 <Github className="w-4 h-4" />
                                             </a>
                                         )}
                                         {personalInfo.social.linkedin && (
-                                            <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-blue-500 dark:hover:bg-primary hover:text-white dark:hover:text-primary-foreground transition-colors">
+                                            <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-blue-500 hover:text-white transition-colors">
                                                 <Linkedin className="w-4 h-4" />
                                             </a>
                                         )}
                                         {(personalInfo.social as any).twitter && (
-                                            <a href={(personalInfo.social as any).twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-sky-500 dark:hover:bg-primary hover:text-white dark:hover:text-primary-foreground transition-colors">
+                                            <a href={(personalInfo.social as any).twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-sky-500 hover:text-white transition-colors">
                                                 <Twitter className="w-4 h-4" />
                                             </a>
                                         )}
                                         {personalInfo.social.instagram && (
-                                            <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-pink-500 dark:hover:bg-primary hover:text-white dark:hover:text-primary-foreground transition-colors">
+                                            <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-pink-500 hover:text-white transition-colors">
                                                 <Instagram className="w-4 h-4" />
                                             </a>
                                         )}
                                         {(personalInfo.social as any).whatsapp && (
-                                            <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-green-500 dark:hover:bg-primary hover:text-white dark:hover:text-primary-foreground transition-colors">
+                                            <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-green-500 hover:text-white transition-colors">
                                                 <MessageSquare className="w-4 h-4" />
                                             </a>
                                         )}
                                         {personalInfo.social.portfolio && (
-                                            <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-violet-500 dark:hover:bg-primary hover:text-white dark:hover:text-primary-foreground transition-colors">
+                                            <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-violet-500 hover:text-white transition-colors">
                                                 <Globe className="w-4 h-4" />
                                             </a>
                                         )}
@@ -134,7 +134,7 @@ export default function Hero() {
                                 </div>
                                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-[1] flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
                                     <span className="block">Digital Presence &</span>
-                                    <span className="italic bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 dark:from-muted-foreground/80 dark:to-muted-foreground/80 bg-clip-text text-transparent">Success</span>
+                                    <span className="italic bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Success</span>
                                 </h1>
                             </div>
 
@@ -167,7 +167,7 @@ export default function Hero() {
                             <Button
                                 onClick={() => setIsBookingOpen(true)}
                                 size="lg"
-                                className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-indigo-500/10 dark:shadow-primary/10 gap-2 cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-primary dark:to-primary hover:from-indigo-700 hover:to-purple-700 dark:hover:from-primary/90 dark:hover:to-primary/90 text-white dark:text-primary-foreground"
+                                className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-indigo-500/15 gap-2 cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
                             >
                                 Book a Meeting
                                 <Calendar className="w-4 h-4" />

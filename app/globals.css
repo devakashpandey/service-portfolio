@@ -129,7 +129,7 @@
   }
 }
 
-/* ===== LIGHT THEME ENHANCEMENTS ===== */
+/* ===== THEME ENHANCEMENTS ===== */
 
 /* Subtle warm page background for light mode */
 :root body {
@@ -140,8 +140,13 @@
   background-attachment: fixed;
 }
 
+/* Subtle cool page background for dark mode */
 .dark body {
-  background-image: none;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.06), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(168, 85, 247, 0.04), transparent),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(59, 130, 246, 0.04), transparent);
+  background-attachment: fixed;
 }
 
 /* Light mode section accent stripes */

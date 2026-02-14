@@ -35,7 +35,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-12 md:py-16 bg-gradient-to-b from-muted/20 via-indigo-50/20 to-muted/20 dark:from-muted/20 dark:via-muted/20 dark:to-muted/20">
+        <section id="contact" className="py-12 md:py-16 bg-gradient-to-b from-muted/20 via-indigo-50/20 dark:via-indigo-950/10 to-muted/20">
             <div className="container mx-auto px-6">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-semibold">
@@ -47,7 +47,7 @@ export default function Contact() {
                 </div>
 
                 <div className="max-w-2xl mx-auto">
-                    <Card className="border-border/60 dark:border-border/80 shadow-xl dark:shadow-lg bg-card dark:bg-background/50 backdrop-blur-sm overflow-hidden">
+                    <Card className="border-border/60 shadow-xl bg-card backdrop-blur-sm overflow-hidden">
                         <CardHeader className="text-center pt-6 px-6 pb-2">
                             <CardTitle className="text-xl md:text-2xl font-bold">Send a Message</CardTitle>
                             <CardDescription className="text-sm">
@@ -65,7 +65,7 @@ export default function Contact() {
                                             placeholder="Your name"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className="h-10 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-indigo-500/20 dark:focus:ring-primary/20"
+                                            className="h-10 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-indigo-500/20"
                                         />
                                     </div>
                                     <div className="space-y-1.5">
@@ -77,7 +77,7 @@ export default function Contact() {
                                             placeholder="+91"
                                             value={formData.phone}
                                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                            className="h-11 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-indigo-500/20 dark:focus:ring-primary/20"
+                                            className="h-11 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-indigo-500/20"
                                         />
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                                         placeholder="Goals or requirements..."
                                         value={formData.project}
                                         onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                                        className="bg-background/80 border-border/60 text-sm resize-none focus:ring-1 focus:ring-indigo-500/20 dark:focus:ring-primary/20"
+                                        className="bg-background/80 border-border/60 text-sm resize-none focus:ring-1 focus:ring-indigo-500/20"
                                     />
                                 </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
                                         type="submit"
                                         size="lg"
                                         disabled={isSubmitting}
-                                        className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-indigo-500/10 dark:shadow-primary/10 transition-transform active:scale-[0.98] bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-primary dark:to-primary hover:from-indigo-700 hover:to-purple-700 dark:hover:from-primary/90 dark:hover:to-primary/90 text-white dark:text-primary-foreground"
+                                        className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-indigo-500/15 transition-transform active:scale-[0.98] bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
                                     >
                                         {isSubmitting ? (
                                             <>
@@ -117,7 +117,7 @@ export default function Contact() {
                                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4 border-t border-border/40">
                                         <a
                                             href={`mailto:${personalInfo.email}`}
-                                            className="flex items-center gap-2 text-muted-foreground hover:text-indigo-600 dark:hover:text-primary transition-colors font-bold text-[10px] uppercase tracking-widest"
+                                            className="flex items-center gap-2 text-muted-foreground hover:text-indigo-500 transition-colors font-bold text-[10px] uppercase tracking-widest"
                                         >
                                             <Mail size={14} />
                                             {personalInfo.email}
