@@ -2,7 +2,15 @@
 
 import { testimonials } from "@/data/portfolio";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote } from "lucide-react";
+import { Quote, Star } from "lucide-react";
+
+const avatarColors = [
+    "bg-gradient-to-br from-blue-500 to-indigo-600 dark:bg-primary dark:from-primary dark:to-primary",
+    "bg-gradient-to-br from-violet-500 to-purple-600 dark:bg-primary dark:from-primary dark:to-primary",
+    "bg-gradient-to-br from-emerald-500 to-teal-600 dark:bg-primary dark:from-primary dark:to-primary",
+    "bg-gradient-to-br from-amber-500 to-orange-600 dark:bg-primary dark:from-primary dark:to-primary",
+    "bg-gradient-to-br from-pink-500 to-rose-600 dark:bg-primary dark:from-primary dark:to-primary",
+];
 
 
 export default function Testimonials() {
@@ -10,7 +18,7 @@ export default function Testimonials() {
     const duplicatedTestimonials = [...testimonials, ...testimonials];
 
     return (
-        <section id="testimonials" className="py-16 md:py-24 bg-background relative overflow-hidden">
+        <section id="testimonials" className="py-16 md:py-24 bg-gradient-to-b from-background via-purple-50/20 to-background dark:from-background dark:via-background dark:to-background relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10 mb-16">
                 <div className="text-center">
                     <h2 className="text-2xl md:text-3xl font-semibold">
@@ -31,17 +39,17 @@ export default function Testimonials() {
                     {duplicatedTestimonials.map((testimonial, idx) => (
                         <Card
                             key={`${testimonial.id}-${idx}`}
-                            className="w-[300px] md:w-[450px] shrink-0 bg-background border-border shadow-none"
+                            className="w-[300px] md:w-[450px] shrink-0 bg-card dark:bg-background border-border/60 dark:border-border shadow-sm dark:shadow-none hover:shadow-md transition-shadow"
                         >
                             <CardContent className="p-6 md:p-8 flex flex-col justify-between h-full">
                                 <div className="mb-6">
-                                    <Quote className="w-8 h-8 text-primary/10 mb-4" fill="currentColor" />
+                                    <Quote className="w-8 h-8 text-indigo-500/20 dark:text-primary/10 mb-4" fill="currentColor" />
                                     <p className="text-sm md:text-base text-muted-foreground italic leading-relaxed whitespace-normal line-clamp-4">
                                         &ldquo;{testimonial.feedback}&rdquo;
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-3.5 pt-5 border-t border-border/40">
-                                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm shadow-md shrink-0">
+                                    <div className={`w-10 h-10 rounded-full ${avatarColors[idx % avatarColors.length]} flex items-center justify-center text-white dark:text-primary-foreground font-bold text-sm shadow-md shrink-0`}>
                                         {testimonial.avatar}
                                     </div>
                                     <div className="overflow-hidden">

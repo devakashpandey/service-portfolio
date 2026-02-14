@@ -8,7 +8,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section id="faq" className="py-16 md:py-20 bg-muted/20">
+        <section id="faq" className="py-16 md:py-20 bg-gradient-to-b from-muted/20 via-background to-muted/20 dark:from-muted/20 dark:via-background dark:to-muted/20">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-semibold">
@@ -23,7 +23,10 @@ export default function FAQ() {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="group rounded-xl border border-border/80 bg-background/50 backdrop-blur-sm overflow-hidden transition-all duration-300"
+                            className={`group rounded-xl border bg-card dark:bg-background/50 backdrop-blur-sm overflow-hidden transition-all duration-300 ${openIndex === index
+                                    ? "border-indigo-500/30 dark:border-border shadow-md shadow-indigo-500/5 dark:shadow-none"
+                                    : "border-border/60 dark:border-border/80"
+                                }`}
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -31,7 +34,7 @@ export default function FAQ() {
                             >
                                 <span className="text-sm md:text-base font-bold text-foreground/90">{faq.question}</span>
                                 {openIndex === index ? (
-                                    <Minus className="w-4 h-4 text-primary shrink-0" />
+                                    <Minus className="w-4 h-4 text-indigo-500 dark:text-primary shrink-0" />
                                 ) : (
                                     <Plus className="w-4 h-4 text-muted-foreground shrink-0" />
                                 )}

@@ -11,7 +11,7 @@ export default function Portfolio() {
     const featuredDemos = demos.slice(0, 3);
 
     return (
-        <section id="portfolio" className="pt-12 pb-24 bg-muted/20">
+        <section id="portfolio" className="pt-12 pb-24 bg-gradient-to-b from-muted/20 via-blue-50/20 to-muted/20 dark:from-muted/20 dark:via-muted/20 dark:to-muted/20">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-semibold">
@@ -29,7 +29,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="flex justify-center">
-                    <Button asChild variant="outline" size="lg" className="h-12 px-8 rounded-xl font-bold group gap-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all">
+                    <Button asChild variant="outline" size="lg" className="h-12 px-8 rounded-xl font-bold group gap-2 border-indigo-500/20 dark:border-primary/20 hover:border-indigo-500 dark:hover:border-primary hover:bg-indigo-500/5 dark:hover:bg-primary/5 transition-all">
                         <Link href="/projects/all-projects">
                             View All Projects
                             <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

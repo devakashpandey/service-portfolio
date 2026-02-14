@@ -8,47 +8,47 @@ import {
 } from "lucide-react";
 
 const row1 = [
-    { icon: Globe, text: "Responsive Design" },
-    { icon: Brain, text: "AI Model Integration" },
-    { icon: Zap, text: "Fast Loading Speed" },
-    { icon: Shield, text: "SSL Security" },
-    { icon: Palette, text: "Modern UI/UX" },
-    { icon: Rocket, text: "SEO Optimized" },
-    { icon: MessageSquare, text: "AI Chatbots" },
-    { icon: Cpu, text: "High Performance" },
+    { icon: Globe, text: "Responsive Design", accent: "text-blue-500" },
+    { icon: Brain, text: "AI Model Integration", accent: "text-violet-500" },
+    { icon: Zap, text: "Fast Loading Speed", accent: "text-amber-500" },
+    { icon: Shield, text: "SSL Security", accent: "text-emerald-500" },
+    { icon: Palette, text: "Modern UI/UX", accent: "text-pink-500" },
+    { icon: Rocket, text: "SEO Optimized", accent: "text-orange-500" },
+    { icon: MessageSquare, text: "AI Chatbots", accent: "text-indigo-500" },
+    { icon: Cpu, text: "High Performance", accent: "text-red-500" },
 ];
 
 const row2 = [
-    { icon: Smartphone, text: "Native Performance" },
-    { icon: Bell, text: "Push Notifications" },
-    { icon: SmartphoneNfc, text: "Play Store Ready" },
-    { icon: Layers, text: "Offline Support" },
-    { icon: Zap, text: "Real-time Updates" },
-    { icon: Lock, text: "Secure Auth" },
-    { icon: Layout, text: "User Dashboard" },
-    { icon: Palette, text: "Dark Mode Support" },
+    { icon: Smartphone, text: "Native Performance", accent: "text-cyan-500" },
+    { icon: Bell, text: "Push Notifications", accent: "text-yellow-500" },
+    { icon: SmartphoneNfc, text: "Play Store Ready", accent: "text-green-500" },
+    { icon: Layers, text: "Offline Support", accent: "text-purple-500" },
+    { icon: Zap, text: "Real-time Updates", accent: "text-amber-500" },
+    { icon: Lock, text: "Secure Auth", accent: "text-emerald-500" },
+    { icon: Layout, text: "User Dashboard", accent: "text-blue-500" },
+    { icon: Palette, text: "Dark Mode Support", accent: "text-violet-500" },
 ];
 
 const row3 = [
-    { icon: Command, text: "Admin Dashboard" },
-    { icon: Cloud, text: "Cloud Hosted" },
-    { icon: MousePointer2, text: "Custom Workflows" },
-    { icon: BarChart, text: "Reports & Analytics" },
-    { icon: Server, text: "API Integration" },
-    { icon: Database, text: "Database Integration" },
-    { icon: Cpu, text: "Scalable Backend" },
-    { icon: Shield, text: "Daily Backups" },
+    { icon: Command, text: "Admin Dashboard", accent: "text-indigo-500" },
+    { icon: Cloud, text: "Cloud Hosted", accent: "text-sky-500" },
+    { icon: MousePointer2, text: "Custom Workflows", accent: "text-pink-500" },
+    { icon: BarChart, text: "Reports & Analytics", accent: "text-orange-500" },
+    { icon: Server, text: "API Integration", accent: "text-teal-500" },
+    { icon: Database, text: "Database Integration", accent: "text-amber-500" },
+    { icon: Cpu, text: "Scalable Backend", accent: "text-red-500" },
+    { icon: Shield, text: "Daily Backups", accent: "text-emerald-500" },
 ];
 
 const row4 = [
-    { icon: Code2, text: "Clean Code" },
-    { icon: Brain, text: "Predictive Analytics" },
-    { icon: Headphones, text: "24/7 Support" },
-    { icon: CreditCard, text: "Payment Gateways" },
-    { icon: Palette, text: "Custom Icons" },
-    { icon: Layout, text: "Smooth Animations" },
-    { icon: TrendingUp, text: "Analytics Ready" },
-    { icon: Server, text: "Reliable Hosting" },
+    { icon: Code2, text: "Clean Code", accent: "text-slate-500" },
+    { icon: Brain, text: "Predictive Analytics", accent: "text-violet-500" },
+    { icon: Headphones, text: "24/7 Support", accent: "text-green-500" },
+    { icon: CreditCard, text: "Payment Gateways", accent: "text-blue-500" },
+    { icon: Palette, text: "Custom Icons", accent: "text-pink-500" },
+    { icon: Layout, text: "Smooth Animations", accent: "text-cyan-500" },
+    { icon: TrendingUp, text: "Analytics Ready", accent: "text-orange-500" },
+    { icon: Server, text: "Reliable Hosting", accent: "text-indigo-500" },
 ];
 
 function FeatureRow({ features, direction }: { features: typeof row1; direction: "left" | "right" }) {
@@ -64,9 +64,9 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
                 {duplicatedFeatures.map((feature, index) => (
                     <div
                         key={`${feature.text}-${index}`}
-                        className="flex items-center gap-2 px-4 py-2 bg-muted/30 border border-border/40 rounded-full whitespace-nowrap"
+                        className="flex items-center gap-2 px-4 py-2 bg-card dark:bg-muted/30 border border-border/60 dark:border-border/40 rounded-full whitespace-nowrap shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <feature.icon className="w-3.5 h-3.5 text-muted-foreground" />
+                        <feature.icon className={`w-3.5 h-3.5 ${feature.accent} dark:text-muted-foreground`} />
                         <span className="text-[13px] font-medium text-foreground/80">{feature.text}</span>
                     </div>
                 ))}
@@ -77,7 +77,7 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
 
 export default function Features() {
     return (
-        <section id="features" className="relative z-10 py-20 md:py-32 bg-background overflow-hidden">
+        <section id="features" className="relative z-10 py-20 md:py-32 bg-gradient-to-b from-background via-indigo-50/30 to-background dark:from-background dark:via-background dark:to-background overflow-hidden">
             <div className="container relative z-10 mx-auto px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-2xl font-semibold md:text-3xl">
