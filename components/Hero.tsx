@@ -11,13 +11,24 @@ import {
     Twitter,
     Instagram,
     MessageSquare,
-    Globe
+    Globe,
+    Calendar
 } from "lucide-react";
 import Image from "next/image";
+import { BookingModal } from "./BookingModal";
+import { useState } from "react";
 
 export default function Hero() {
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
+
     return (
         <section className="relative min-h-[85vh] pt-10 pb-16 md:pt-20 lg:py-0 flex items-center justify-center overflow-hidden bg-background mt-10">
+            {/* Custom Booking Modal */}
+            <BookingModal
+                isOpen={isBookingOpen}
+                onClose={() => setIsBookingOpen(false)}
+            />
+
             {/* Background Decorations */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-x-0 inset-y-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[32px_32px]" />
@@ -27,7 +38,7 @@ export default function Hero() {
                 <div className="grid lg:grid-cols-12 gap-10 lg:gap-10 items-center">
 
                     {/* LEFT SIDE: Profile Card */}
-                    <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
+                    <div className="lg:col-span-6 flex justify-center order-2 lg:order-1 opacity-0 animate-scale-in">
                         <div className="relative group w-full max-w-sm">
                             <Card className="relative w-full border-border/80 bg-background overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg">
                                 <CardContent className="p-0">
@@ -115,16 +126,16 @@ export default function Hero() {
                     <div className="lg:col-span-6 space-y-6 order-1 lg:order-2 lg:pl-4">
                         <div className="space-y-2">
                             <div className="space-y-4">
-                                <div className="inline-block border-b border-border/60 pb-1">
+                                <div className="inline-block border-b border-border/60 pb-1 opacity-0 animate-fade-in-up">
                                     <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Grow your business with a professional</p>
                                 </div>
-                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-[1] flex flex-col gap-1">
+                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-[1] flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
                                     <span className="block">Digital Presence &</span>
                                     <span className="italic text-muted-foreground/80">Success</span>
                                 </h1>
                             </div>
 
-                            <div className="space-y-4">
+                            <div className="space-y-4 opacity-0 animate-fade-in-up delay-200">
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
                                     I help businesses of all sizes go online and grow with modern websites and mobile apps. My goal is to simplify your services and make technology easy for you, while using AI to reach more customers and scale your brand.
                                 </p>
@@ -132,7 +143,7 @@ export default function Hero() {
                         </div>
 
                         {/* Business Benefits */}
-                        <div className="pt-1">
+                        <div className="pt-1 opacity-0 animate-fade-in-up delay-[300ms]">
                             <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-3 block">Key Benefits</span>
                             <div className="flex flex-wrap gap-2">
                                 {[
@@ -149,12 +160,14 @@ export default function Hero() {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-wrap gap-4 pt-1">
-                            <Button asChild size="lg" className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-primary/10 gap-2">
-                                <a href="#services">
-                                    View Services
-                                    <ChevronRight className="w-4 h-4" />
-                                </a>
+                        <div className="flex flex-wrap gap-4 pt-1 opacity-0 animate-fade-in-up delay-[400ms]">
+                            <Button
+                                onClick={() => setIsBookingOpen(true)}
+                                size="lg"
+                                className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-primary/10 gap-2 cursor-pointer"
+                            >
+                                Book a Meeting
+                                <Calendar className="w-4 h-4" />
                             </Button>
                             <Button asChild variant="ghost" size="lg" className="h-12 px-8 rounded-xl text-base font-bold gap-2 text-muted-foreground hover:text-foreground">
                                 <a href="#portfolio">

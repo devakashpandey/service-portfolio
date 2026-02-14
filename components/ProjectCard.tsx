@@ -12,17 +12,20 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ demo }: ProjectCardProps) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
     const images = demo.images && demo.images.length > 0 ? demo.images : [demo.image];
 
     const nextImage = (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
+        setIsLoading(true);
         setCurrentImageIndex((prev) => (prev + 1) % images.length);
     };
 
     const prevImage = (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
+        setIsLoading(true);
         setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
     };
 
@@ -33,15 +36,18 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
         >
             <CardHeader className="p-0 border-b border-border/10 block">
                 <div className="relative aspect-video overflow-hidden bg-muted">
-                    {/* Simple image without animation */}
+                    {/* Loading Skeleton */}
+                    <div className={`absolute inset-0 animate-pulse bg-muted-foreground/10 ${isLoading ? 'opacity-100' : 'opacity-0'}`} />
+
                     <Image
                         src={images[currentImageIndex]}
                         alt={`${demo.title} - Image ${currentImageIndex + 1}`}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover transition-opacity duration-300"
+                        className={`object-cover transition-all duration-700 ${isLoading ? 'scale-110 blur-sm opacity-0' : 'scale-100 blur-0 opacity-100'}`}
                         priority={false}
                         loading="lazy"
+                        onLoad={() => setIsLoading(false)}
                     />
 
                     {/* Overlay Gradient - only show on hover */}
@@ -97,4 +103,3 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
         </Card>
     );
 }
-

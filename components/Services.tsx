@@ -26,10 +26,14 @@ export default function Services() {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {services.map((service) => {
+                    {services.map((service, index) => {
                         const Icon = IconMap[service.icon];
                         return (
-                            <Card key={service.id} className="group relative flex flex-col bg-background border-border/80 overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1.5">
+                            <Card
+                                key={service.id}
+                                className="group relative flex flex-col bg-background border-border/80 overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1.5 opacity-0 animate-fade-in-up"
+                                style={{ animationDelay: `${index * 100}ms` }}
+                            >
                                 <CardHeader className="p-5 relative z-10 pb-2">
                                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                                         {Icon && <Icon size={20} />}

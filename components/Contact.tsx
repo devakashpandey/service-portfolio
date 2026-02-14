@@ -1,7 +1,7 @@
 "use client";
 
 import { personalInfo } from "@/data/portfolio";
-import { Mail, MessageSquare, Send } from "lucide-react";
+import { Mail, MessageSquare, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,9 +14,14 @@ export default function Contact() {
         phone: "",
         project: ""
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
+
+        // Simulate a small delay for premium feel
+        await new Promise(resolve => setTimeout(resolve, 1500));
 
         // Construct WhatsApp Message
         const message = `Hi ${personalInfo.name}! \n\n*New Inquiry from Portfolio*\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Project Details:* ${formData.project}`;
@@ -25,6 +30,8 @@ export default function Contact() {
         // Using WhatsApp Link (Universal)
         const whatsappUrl = `https://wa.me/${personalInfo.whatsapp}?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank');
+        setIsSubmitting(false);
+        setFormData({ name: "", phone: "", project: "" });
     };
 
     return (
@@ -54,6 +61,7 @@ export default function Contact() {
                                         <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Full Name</label>
                                         <Input
                                             required
+                                            disabled={isSubmitting}
                                             placeholder="Your name"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -64,6 +72,7 @@ export default function Contact() {
                                         <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Phone Number</label>
                                         <Input
                                             required
+                                            disabled={isSubmitting}
                                             type="tel"
                                             placeholder="+91"
                                             value={formData.phone}
@@ -76,6 +85,7 @@ export default function Contact() {
                                     <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Your Project Details</label>
                                     <Textarea
                                         required
+                                        disabled={isSubmitting}
                                         rows={3}
                                         placeholder="Goals or requirements..."
                                         value={formData.project}
@@ -85,9 +95,23 @@ export default function Contact() {
                                 </div>
 
                                 <div className="space-y-4 pt-1">
-                                    <Button type="submit" size="lg" className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-primary/10 transition-transform active:scale-[0.98]">
-                                        <Send size={16} />
-                                        Send Message
+                                    <Button
+                                        type="submit"
+                                        size="lg"
+                                        disabled={isSubmitting}
+                                        className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-primary/10 transition-transform active:scale-[0.98]"
+                                    >
+                                        {isSubmitting ? (
+                                            <>
+                                                <Loader2 size={16} className="animate-spin" />
+                                                Opening WhatsApp...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Send size={16} />
+                                                Send Message
+                                            </>
+                                        )}
                                     </Button>
 
                                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4 border-t border-border/40">
