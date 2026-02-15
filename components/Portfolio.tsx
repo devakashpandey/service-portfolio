@@ -7,8 +7,8 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Portfolio() {
-    // Show only the first 3 projects on the home page
-    const featuredDemos = demos.slice(0, 3);
+    // Show featured projects on the home page
+    const featuredDemos = demos.filter(demo => demo.featured).slice(0, 3);
 
     return (
         <section id="portfolio" className="pt-12 pb-24 bg-gradient-to-b from-muted/20 via-blue-50/20 dark:via-blue-950/10 to-muted/20">

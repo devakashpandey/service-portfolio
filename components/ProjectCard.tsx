@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Demo } from "@/data/portfolio";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -51,7 +51,7 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
                     />
 
                     {/* Overlay Gradient - only show on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {images.length > 1 && (
                         <div className="absolute inset-x-0 bottom-4 flex justify-between px-3 items-center">
@@ -85,7 +85,19 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
                 </div>
             </CardHeader>
             <CardContent className="p-6 flex flex-col grow gap-0">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{demo.title}</h3>
+                <div className="flex justify-between items-start mb-2 gap-2">
+                    <h3 className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-1">{demo.title}</h3>
+                    <a
+                        href={demo.link}
+                        target={demo.link !== "#" ? "_blank" : "_self"}
+                        rel="noopener noreferrer"
+                        className="group/btn flex items-center gap-1.5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-wider bg-transparent text-primary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 whitespace-nowrap border border-primary/20 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:scale-95"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        View
+                        <Eye className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:scale-110" />
+                    </a>
+                </div>
                 <p className="text-[13px] text-muted-foreground mb-5 line-clamp-2 leading-relaxed">
                     {demo.description}
                 </p>

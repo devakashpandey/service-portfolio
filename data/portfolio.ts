@@ -94,6 +94,42 @@ export const services: Service[] = [
 // Add your demo projects here
 export const demos: Demo[] = [
   {
+    id: "8",
+    title: "Premium Unisex Salon",
+    description:
+      "A professional unisex salon website with service menu, expert stylists, and online appointment booking.",
+    image: "/salon1.png",
+    images: ["/salon1.png", "/salon2.png", "/salon3.png", "/salon4.png", "/salon5.png"],
+    category: "wellness",
+    link: "https://luxe-salon-weapp.vercel.app/",
+    tags: ["Salon", "Beauty", "Service"],
+    featured: true,
+  },
+  {
+    id: "9",
+    title: "Gym Member Portal",
+    description:
+      "Gym management website with plan subscription, trainer profiles, and workout tracking.",
+    image: "/gym1.png",
+    images: ["/gym1.png", "/gym2.png", "/gym3.png", "/gym4.png"],
+    category: "wellness",
+    link: "https://gym-portal-webapp.vercel.app/",
+    tags: ["Gym", "Fitness", "Workout"],
+    featured: true,
+  },
+  {
+    id: "2",
+    title: "Luxurious Jewelry Shop",
+    description:
+      "Premium jewelry e-commerce website with elegant product display and secure checkout.",
+    image: "/jwell1.png",
+    images: ["/jwell1.png", "/jwell2.png", "/jwell3.png", "/jwell4.png"],
+    category: "ecommerce",
+    link: "https://jyoti-jewellers.vercel.app/",
+    tags: ["Jewellery", "Luxury", "E-commerce"],
+    featured: true,
+  },
+  {
     id: "1",
     title: "Premium Course Platform",
     description:
@@ -103,19 +139,6 @@ export const demos: Demo[] = [
     category: "education",
     link: "#",
     tags: ["Courses", "Education", "Learning"],
-    featured: true,
-  },
-  {
-    id: "2",
-    title: "Luxurious Jewelry Shop",
-    description:
-      "Premium jewelry e-commerce website with elegant product display and secure checkout.",
-    image: "/jwell1.png",
-    images: ["/jwell1.png", "/jwell2.png"],
-    category: "ecommerce",
-    link: "#",
-    tags: ["Jewellery", "Luxury", "E-commerce"],
-    featured: true,
   },
   {
     id: "3",
@@ -123,11 +146,10 @@ export const demos: Demo[] = [
     description:
       "Modern cafe website with digital menu, online ordering, and table reservation system.",
     image: "/cafe1.png",
-    images: ["/cafe1.png", "/cafe2.png"],
+    images: ["/cafe1.png", "/cafe2.png", "/cafe3.png", "/cafe4.png"],
     category: "hospitality",
-    link: "#",
+    link: "https://my-cafe-webapp.vercel.app/",
     tags: ["Cafe", "Food", "Hospitality"],
-    featured: true,
   },
   {
     id: "4",
@@ -138,8 +160,8 @@ export const demos: Demo[] = [
     category: "education",
     link: "#",
     tags: ["Coaching", "Education", "Learning"],
-    featured: true,
   },
+
   {
     id: "5",
     title: "Real Estate Property Portal",
@@ -163,16 +185,6 @@ export const demos: Demo[] = [
     tags: ["Beauty", "Parlour", "Service"],
   },
 
-  {
-    id: "9",
-    title: "Gym Member Portal",
-    description:
-      "Gym management website with plan subscription, trainer profiles, and workout tracking.",
-    image: "/demos/demo_gym.png",
-    category: "wellness",
-    link: "#",
-    tags: ["Gym", "Fitness", "Workout"],
-  },
   {
     id: "10",
     title: "City Hospital Management",
