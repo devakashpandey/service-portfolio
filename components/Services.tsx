@@ -25,7 +25,7 @@ export default function Services() {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-semibold">
-                        My Services
+                        Our Services
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         Modern digital solutions integrated with the latest AI technologies to scale your business

@@ -8,14 +8,14 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section id="faq" className="py-16 md:py-20 bg-gradient-to-b from-muted/20 via-background to-muted/20">
+        <section id="faq" className="py-16 md:py-20 bg-linear-to-b from-muted/20 via-background to-muted/20">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-semibold">
                         Common Questions
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-                        Aapke mann mein jo bhi sawal hain, unke jawab yahan mil jayenge.
+                        Everything you need to know about my services and the development process.
                     </p>
                 </div>
 

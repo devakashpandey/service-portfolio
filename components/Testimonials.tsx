@@ -25,7 +25,7 @@ export default function Testimonials() {
                         Client Testimonials
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-                        What my happy clients say about working with me
+                        What our happy clients say about working with Akky Labs
                     </p>
                 </div>
             </div>

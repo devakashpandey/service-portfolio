@@ -81,10 +81,10 @@ export default function Features() {
             <div className="container relative z-10 mx-auto px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-2xl font-semibold md:text-3xl">
-                        Features that I provide
+                        Features we provide
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto ">
-                        One developer, thousands of possibilities. Every project comes packed with premium features.
+                        Expert team, limitless possibilities. Every project comes packed with premium features.
                     </p>
                 </div>
 

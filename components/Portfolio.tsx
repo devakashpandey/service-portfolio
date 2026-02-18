@@ -18,7 +18,7 @@ export default function Portfolio() {
                         Featured Projects
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-                        A selection of my best work across various industries
+                        A selection of our best work across various industries
                     </p>
                 </div>
 

@@ -22,13 +22,13 @@ export interface Service {
 
 }
 
-// ===== YOUR SERVICES =====
+// ===== OUR SERVICES =====
 export const services: Service[] = [
   {
     id: "website",
     title: "Website Development",
     description:
-      "Professional, fast-loading websites that attract customers and boost your business online presence.",
+      "Professional, fast-loading websites that attract customers and boost your collective business presence.",
     icon: "Globe",
     features: [
       "Responsive Design - Mobile First",
@@ -84,13 +84,13 @@ export const services: Service[] = [
       "AI Image/Video Generation",
       "Automated Workflows",
       "LLM Integrations",
-     "Intelligent Search Support",
+      "Intelligent Search Support",
       "Voice-to-Text Features",
     ],
   },
 ];
 
-// ===== YOUR DEMOS/PORTFOLIO =====
+// ===== OUR DEMOS/PORTFOLIO =====
 // Add your demo projects here
 export const demos: Demo[] = [
   {
@@ -238,9 +238,10 @@ export const demos: Demo[] = [
   
 ];
 
-// ===== YOUR INFO =====
+// ===== AGENCY INFO =====
 export const personalInfo = {
   name: "Akash Pandey",
+  founder: "Akash Pandey",
   brandName: "Akky Labs",
   title: "Web & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
@@ -266,7 +267,7 @@ export const testimonials = [
     name: "Sagar Tiwari",
     business: "Global Education Platform",
     feedback:
-      "The EdTech platform Akky built for us is world-class. The student dashboard and interactive learning features have completely transformed how we deliver our courses online.",
+      "The EdTech platform Akky Labs built for us is world-class. The student dashboard and interactive learning features have completely transformed how we deliver our courses online.",
     rating: 5,
     avatar: "SS",
   },
@@ -275,7 +276,7 @@ export const testimonials = [
     name: "Anurag Kashyap",
     business: "E-commerce Retail",
     feedback:
-      "Our sales have significantly increased since launching the new store. The checkout process is seamless, and the mobile experience is incredibly smooth. Highly professional work!",
+      "Our sales have significantly increased since launching the new store. The checkout process is seamless, and the mobile experience is incredibly smooth. Highly professional team!",
     rating: 5,
     avatar: "PK",
   },
@@ -284,7 +285,7 @@ export const testimonials = [
     name: "Rohit Singh",
     business: "AI Video Tech Startup",
     feedback:
-      "Working with Akky on our AI video generator was a great experience. He understood the complex technical requirements perfectly and produced a high-performance web app our users love.",
+      "Working with Akky Labs on our AI video generator was a great experience. They understood the complex technical requirements perfectly and produced a high-performance web app our users love.",
     rating: 5,
     avatar: "RS",
   },
@@ -293,7 +294,7 @@ export const testimonials = [
     name: "Kumar Shikhar",
     business: "Course Selling Platform",
     feedback:
-      "I needed a robust platform to sell my digital courses, and Akky delivered exactly that. The integration with payment gateways and the content security features are top-notch.",
+      "I needed a robust platform to sell my digital courses, and the team at Akky Labs delivered exactly that. The integration with payment gateways and the content security features are top-notch.",
     rating: 5,
     avatar: "KS",
   },
@@ -302,7 +303,7 @@ export const testimonials = [
     name: "Charchit Gupta",
     business: "Luxury Jewelry Brand",
     feedback:
-      "The jewelry web app looks absolutely premium! The high-quality image rendering and the focus on details really help showcase our collection. Exceptional UI work.",
+      "The jewelry web app looks absolutely premium! The high-quality image rendering and the focus on details really help showcase our collection. Exceptional development work.",
     rating: 5,
     avatar: "CG",
   },
@@ -332,37 +333,46 @@ export const categories = [
 export const workSteps = [
   {
     title: "1. Strategy & Planning",
-    description: "I start with a detailed consultation to align with your business goals and define a personalized digital roadmap.",
+    description: "We start with a detailed consultation to align with your business goals and define a personalized digital roadmap.",
   },
   {
     title: "2. Premium Design",
-    description: "I craft modern, high-conversion designs that establish brand authority and captivate your audience.",
+    description: "We craft modern, high-conversion designs that establish brand authority and captivate your audience.",
   },
   {
     title: "3. Precision Build",
-    description: "I develop fast, secure, and mobile-optimized solutions using the latest technology and industry best practices.",
+    description: "We develop fast, secure, and mobile-optimized solutions using the latest technology and industry best practices.",
   },
   {
     title: "4. Launch & Support",
-    description: "I ensure a flawless deployment followed by 1 year of dedicated technical support to guarantee your long-term success.",
+    description: "We ensure a flawless deployment followed by 1 year of dedicated technical support to guarantee your long-term success.",
   },
 ];
 
 export const faqs = [
   {
     question: "What if I don't like the design?",
-    answer: "I offer unlimited basic revisions until you are 100% satisfied with the final look.",
+    answer: "We offer unlimited basic revisions until you are 100% satisfied with the final look.",
   },
   {
     question: "Is Domain and Hosting included?",
-    answer: "Yes, my packages include a free Domain (.com/.in) and Cloud Hosting for the first year.",
+    answer: "Yes, our packages include a free Domain (.com/.in) and Cloud Hosting for the first year.",
   },
   {
     question: "How long does it take to build?",
-    answer: "A basic website takes 5-7 days. Custom web applications and mobile apps take 15-30 days.",
+    answer: "It depends on the features you need. A basic website normally takes 7-10 days, but if you add more custom features or complex animations, it will take time accordingly.",
   },
   {
     question: "Do you provide support after launch?",
     answer: "Yes, every project comes with 1 year of free technical support for any issues.",
+  },
+  {
+    question: "Can I update the website myself?",
+    answer: "Yes, I build websites with easy-to-use dashboards so you can update text, images, and other content without any coding knowledge.",
+  },
+ 
+  {
+    question: "What information do I need to get started?",
+    answer: "You just need to provide your business details, goals, and any specific preferences you have. I'll handle the rest, from planning to launch.",
   },
 ];

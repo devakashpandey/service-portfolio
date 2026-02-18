@@ -15,7 +15,7 @@ export default function Process() {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-semibold">
-                        How I Work
+                        Our Process
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         A transparent and strategic approach to bringing your business online with confidence.
