@@ -18,7 +18,7 @@ export default function Testimonials() {
     const duplicatedTestimonials = [...testimonials, ...testimonials];
 
     return (
-        <section id="testimonials" className="py-16 md:py-24 bg-gradient-to-b from-background via-purple-50/20 dark:via-purple-950/10 to-background relative overflow-hidden">
+        <section id="testimonials" className="py-16 md:py-24 bg-linear-to-b from-background via-purple-50/20 dark:via-purple-950/10 to-background relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10 mb-16">
                 <div className="text-center">
                     <h2 className="text-2xl md:text-3xl font-semibold">
@@ -64,8 +64,8 @@ export default function Testimonials() {
             </div>
 
             {/* Simple Gradient Fades */}
-            <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-linear-to-r from-background to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-linear-to-l from-background to-transparent z-20 pointer-events-none" />
         </section>
     );
 }

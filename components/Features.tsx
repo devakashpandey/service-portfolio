@@ -77,7 +77,7 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
 
 export default function Features() {
     return (
-        <section id="features" className="relative z-10 py-20 md:py-32 bg-gradient-to-b from-background via-indigo-50/30 dark:via-indigo-950/10 to-background overflow-hidden">
+        <section id="features" className="relative z-10 py-20 md:py-32 bg-linear-to-b from-background via-indigo-50/30 dark:via-indigo-950/10 to-background overflow-hidden">
             <div className="container relative z-10 mx-auto px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-2xl font-semibold md:text-3xl">

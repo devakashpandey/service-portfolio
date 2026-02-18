@@ -33,8 +33,8 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-x-0 inset-y-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[32px_32px]" />
                 {/* Light mode decorative blobs */}
-                <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/[0.04] dark:bg-indigo-500/[0.06] blur-3xl" />
-                <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-purple-500/[0.04] dark:bg-purple-500/[0.06] blur-3xl" />
+                <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/4 dark:bg-indigo-500/6 blur-3xl" />
+                <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-purple-500/4 dark:bg-purple-500/6 blur-3xl" />
             </div>
 
             <div className="container relative z-10 mx-auto px-6">
@@ -43,10 +43,10 @@ export default function Hero() {
                     {/* LEFT SIDE: Profile Card */}
                     <div className="lg:col-span-6 flex justify-center order-2 lg:order-1 opacity-0 animate-scale-in">
                         <div className="relative group w-full max-w-sm">
-                            <Card className="relative w-full border-border/80 bg-card overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg shadow-indigo-500/[0.06] dark:shadow-indigo-500/[0.08]">
+                            <Card className="relative w-full border-border/80 bg-card overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg shadow-indigo-500/6 dark:shadow-indigo-500/8">
                                 <CardContent className="p-0">
                                     <div className="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-6">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full" />
+                                        <div className="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full" />
                                         <div className="absolute inset-2 overflow-hidden bg-card rounded-full flex items-center justify-center shadow-lg ring-4 ring-background">
                                             <Image
                                                 src="/logo.png"
@@ -132,9 +132,9 @@ export default function Hero() {
                                 <div className="inline-block border-b border-border/60 pb-1 opacity-0 animate-fade-in-up">
                                     <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Grow your business with a professional</p>
                                 </div>
-                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-[1] flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
+                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-none flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
                                     <span className="block">Digital Presence &</span>
-                                    <span className="italic bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Success</span>
+                                    <span className="italic bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Success</span>
                                 </h1>
                             </div>
 
@@ -146,7 +146,7 @@ export default function Hero() {
                         </div>
 
                         {/* Business Benefits */}
-                        <div className="pt-1 opacity-0 animate-fade-in-up delay-[300ms]">
+                        <div className="pt-1 opacity-0 animate-fade-in-up delay-300">
                             <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-3 block">Key Benefits</span>
                             <div className="flex flex-wrap gap-2">
                                 {[
@@ -167,7 +167,7 @@ export default function Hero() {
                             <Button
                                 onClick={() => setIsBookingOpen(true)}
                                 size="lg"
-                                className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-indigo-500/15 gap-2 cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+                                className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-indigo-500/15 gap-2 cursor-pointer bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
                             >
                                 Book a Meeting
                                 <Calendar className="w-4 h-4" />

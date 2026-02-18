@@ -35,7 +35,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-12 md:py-16 bg-gradient-to-b from-muted/20 via-indigo-50/20 dark:via-indigo-950/10 to-muted/20">
+        <section id="contact" className="py-12 md:py-16 bg-linear-to-b from-muted/20 via-indigo-50/20 dark:via-indigo-950/10 to-muted/20">
             <div className="container mx-auto px-6">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-2xl md:text-3xl font-semibold">
@@ -99,7 +99,7 @@ export default function Contact() {
                                         type="submit"
                                         size="lg"
                                         disabled={isSubmitting}
-                                        className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-indigo-500/15 transition-transform active:scale-[0.98] bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+                                        className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-indigo-500/15 transition-transform active:scale-[0.98] bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
                                     >
                                         {isSubmitting ? (
                                             <>
