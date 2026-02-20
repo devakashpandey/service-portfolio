@@ -12,7 +12,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
-        const duration = 2000; // 3 seconds total
+        const duration = 1400; // 3 seconds total
         const intervalTime = 30; // 30ms for smooth update
         const increment = (100 / (duration / intervalTime));
 

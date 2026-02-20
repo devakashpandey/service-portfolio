@@ -55,9 +55,14 @@ export const metadata: Metadata = {
     "affordable web developer",
     "web developer in India",
   ],
-  authors: [{ name: "Akky Labs" }],
+  authors: [{ name: "Akky Labs", url: "https://akkylabs.com" }],
   creator: "Akky Labs",
   publisher: "Akky Labs",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
@@ -65,9 +70,16 @@ export const metadata: Metadata = {
       { url: "/logo.png", sizes: "192x192", type: "image/png" },
     ],
     shortcut: "/favicon-96.png",
-    apple: "/logo.png",
+    apple: [
+      { url: "/logo.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Akky Labs",
+  },
   openGraph: {
     title: "Akky Labs | Web Developer & App Solutions",
     description:
@@ -75,13 +87,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "Akky Labs",
-    url: "https://akkylabs.com", // Apna domain yahan dalo
+    url: "https://akkylabs.com",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Akky Labs Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Akky Labs | Web Developer & App Solutions",
     description:
       "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -95,9 +116,13 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Google Search Console se verification code milega
-    // google: "your-google-verification-code",
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    me: "your-me-verification-code",
+    // Bing/Brave indexing usually follows Bing Webmaster Tools
+    // Add : msvalidate.01: "your-bing-code"
   },
+  category: "technology",
 };
 
 import { Providers } from "@/components/Providers";
