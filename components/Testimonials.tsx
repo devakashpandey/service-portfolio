@@ -20,11 +20,14 @@ export default function Testimonials() {
     return (
         <section id="testimonials" className="py-16 md:py-24 bg-linear-to-b from-background via-purple-50/20 dark:via-purple-950/10 to-background relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10 mb-16">
-                <div className="text-center">
-                    <h2 className="text-2xl md:text-3xl font-semibold">
-                        Client Testimonials
+                <div className="relative text-center">
+                    <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl md:text-9xl lg:text-[14rem] font-black text-transparent [webkit-text-stroke:1.5px_hsl(var(--foreground)/0.08)] select-none tracking-[0.2em] uppercase whitespace-nowrap z-0 pointer-events-none">
+                        Reviews
+                    </span>
+                    <h2 className="relative z-10 text-3xl md:text-5xl font-bold tracking-tight">
+                        Client <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Reviews</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+                    <p className="relative z-10 text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         What our happy clients say about working with Akky Labs
                     </p>
                 </div>

@@ -78,24 +78,35 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
 export default function Features() {
     return (
         <section id="features" className="relative z-10 py-20 md:py-32 bg-linear-to-b from-background via-indigo-50/30 dark:via-indigo-950/10 to-background overflow-hidden">
-            <div className="container relative z-10 mx-auto px-6">
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-2xl font-semibold md:text-3xl">
-                        Features we provide
+            <div className="container relative z-10 mx-auto px-6 mb-16">
+                <div className="relative text-center space-y-4">
+                    <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl md:text-9xl lg:text-[14rem] font-black text-transparent [webkit-text-stroke:1.5px_hsl(var(--foreground)/0.08)] select-none tracking-[0.2em] uppercase whitespace-nowrap z-0 pointer-events-none">
+                        Features
+                    </span>
+                    <h2 className="relative z-10 text-3xl md:text-5xl font-bold tracking-tight">
+                        Features we <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Provide</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto ">
+                    <p className="relative z-10 text-lg text-muted-foreground max-w-2xl mx-auto ">
                         Expert team, limitless possibilities. Every project comes packed with premium features.
                     </p>
                 </div>
+            </div>
 
-                <div className="space-y-4 max-w-7xl mx-auto">
+            <div className="relative w-full overflow-hidden">
+                {/* Lateral Fades */}
+                <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-linear-to-r from-background to-transparent z-20 pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-linear-to-l from-background to-transparent z-20 pointer-events-none" />
+
+                <div className="space-y-4 w-full">
                     <FeatureRow features={row1} direction="left" />
                     <FeatureRow features={row2} direction="right" />
                     <FeatureRow features={row3} direction="left" />
                     <FeatureRow features={row4} direction="right" />
                 </div>
+            </div>
 
-                <div className="mt-16 text-center">
+            <div className="container relative z-10 mx-auto px-6 mt-16">
+                <div className="text-center">
                     <p className="text-sm text-muted-foreground italic font-medium">
                         PS: You can customize features based on your business requirements.
                     </p>
@@ -139,4 +150,3 @@ export default function Features() {
         </section>
     );
 }
-

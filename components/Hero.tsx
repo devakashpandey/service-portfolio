@@ -140,7 +140,7 @@ export default function Hero() {
 
                             <div className="space-y-4 opacity-0 animate-fade-in-up delay-200">
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                    I help businesses of all sizes go online and grow with modern websites and mobile apps. My goal is to simplify your services and make technology easy for you, while using AI to reach more customers and scale your brand.
+                                    I help new and growing businesses build a strong online presence with modern websites and mobile apps. Whether you’re just getting started or already online, I simplify your services, optimize your digital presence, and use AI to bring you more customers and increase your revenue.
                                 </p>
                             </div>
                         </div>
@@ -150,10 +150,10 @@ export default function Hero() {
                             <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-3 block">Key Benefits</span>
                             <div className="flex flex-wrap gap-2">
                                 {[
-                                    { text: "Fast & Responsive", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
-                                    { text: "WhatsApp Ready", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
-                                    { text: "AI Ready", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
-                                    { text: "1 Year Support", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
+                                    { text: "Result-Driven Design", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
+                                    { text: "More Leads & Sales", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
+                                    { text: "1 Year Support", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
+                                    { text: "High-End Build Quality", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
                                 ].map((benefit) => (
                                     <span key={benefit.text} className={`px-3 py-1.5 rounded-lg border ${benefit.color} text-[11px] font-bold uppercase`}>
                                         {benefit.text}

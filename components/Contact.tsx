@@ -1,12 +1,11 @@
 "use client";
 
 import { personalInfo } from "@/data/portfolio";
-import { Mail, MessageSquare, Send, Loader2 } from "lucide-react";
+import { Mail, MessageSquare, Send, Loader2, Phone, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -19,122 +18,140 @@ export default function Contact() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-
-        // Simulate a small delay for premium feel
         await new Promise(resolve => setTimeout(resolve, 1500));
-
-        // Construct WhatsApp Message
-        const message = `Hi ${personalInfo.name}! \n\n*New Inquiry from Portfolio*\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Project Details:* ${formData.project}`;
+        const message = `Hi ${personalInfo.name}! \n\n*Inquiry from Portfolio*\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Project:* ${formData.project}`;
         const encodedMessage = encodeURIComponent(message);
-
-        // Using WhatsApp Link (Universal)
-        const whatsappUrl = `https://wa.me/${personalInfo.whatsapp}?text=${encodedMessage}`;
-        window.open(whatsappUrl, '_blank');
+        window.open(`https://wa.me/${personalInfo.whatsapp}?text=${encodedMessage}`, '_blank');
         setIsSubmitting(false);
         setFormData({ name: "", phone: "", project: "" });
     };
 
     return (
-        <section id="contact" className="py-12 md:py-16 bg-linear-to-b from-muted/20 via-indigo-50/20 dark:via-indigo-950/10 to-muted/20">
-            <div className="container mx-auto px-6">
-                <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h2 className="text-2xl md:text-3xl font-semibold">
-                        Let&apos;s Connect
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-                        Have a project in mind? Reach out and let&apos;s discuss how I can help your business grow.
-                    </p>
-                </div>
+        <section id="contact" className="py-20 md:py-28 bg-background relative overflow-hidden">
+            {/* Background Decorative Elements */}
+            <div className="absolute top-1/4 -right-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="max-w-2xl mx-auto">
-                    <Card className="border-border/60 shadow-xl bg-card backdrop-blur-sm overflow-hidden">
-                        <CardHeader className="text-center pt-6 px-6 pb-2">
-                            <CardTitle className="text-xl md:text-2xl font-bold">Send a Message</CardTitle>
-                            <CardDescription className="text-sm">
-                                Fill out the form below and I&apos;ll get back to you on WhatsApp within a few hours.
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent className="p-6 md:p-8 pb-8">
-                            <form onSubmit={handleSubmit} className="space-y-4">
-                                <div className="grid md:grid-cols-2 gap-5">
-                                    <div className="space-y-1.5">
-                                        <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Full Name</label>
-                                        <Input
-                                            required
-                                            disabled={isSubmitting}
-                                            placeholder="Your name"
-                                            value={formData.name}
-                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className="h-10 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-indigo-500/20"
-                                        />
-                                    </div>
-                                    <div className="space-y-1.5">
-                                        <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Phone Number</label>
-                                        <Input
-                                            required
-                                            disabled={isSubmitting}
-                                            type="tel"
-                                            placeholder="+91"
-                                            value={formData.phone}
-                                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                            className="h-11 bg-background/80 border-border/60 text-sm focus:ring-1 focus:ring-indigo-500/20"
-                                        />
-                                    </div>
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+                    {/* Left Side: Contact Info & Action Cards */}
+                    <div>
+                        <div className="relative mb-10">
+                            <span className="absolute -top-10 -left-6 text-7xl md:text-8xl lg:text-[11rem] font-black text-transparent [webkit-text-stroke:1.5px_hsl(var(--foreground)/0.08)] select-none tracking-[0.2em] uppercase whitespace-nowrap z-0 pointer-events-none">
+                                Contact
+                            </span>
+                            <h2 className="relative z-10 text-3xl md:text-5xl font-bold tracking-tight mb-6">
+                                Ready to scale your <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">business?</span>
+                            </h2>
+                            <p className="relative z-10 text-lg text-muted-foreground leading-relaxed max-w-lg">
+                                Whether you have a specific project in mind or just want to explore possibilities, I&apos;m here to help you build something extraordinary.
+                            </p>
+                        </div>
+
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            {/* WhatsApp Card */}
+                            <a
+                                href={`https://wa.me/${personalInfo.whatsapp}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-green-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/5 hover:-translate-y-1"
+                            >
+                                <div className="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 mb-4 group-hover:bg-green-500 group-hover:text-white transition-all duration-500">
+                                    <MessageSquare size={24} />
                                 </div>
-                                <div className="space-y-1.5 pt-1">
-                                    <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground ml-1">Your Project Details</label>
+                                <h3 className="font-bold text-lg mb-1">WhatsApp Chat</h3>
+                                <p className="text-sm text-muted-foreground mb-4">Instance response</p>
+                                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-green-500">
+                                    Chat Now <ArrowUpRight size={14} />
+                                </div>
+                            </a>
+
+                            {/* Email Card */}
+                            <a
+                                href={`mailto:${personalInfo.email}`}
+                                className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-indigo-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/5 hover:-translate-y-1"
+                            >
+                                <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-4 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500">
+                                    <Mail size={24} />
+                                </div>
+                                <h3 className="font-bold text-lg mb-1">Email Me</h3>
+                                <p className="text-sm text-muted-foreground mb-4">Official inquiry</p>
+                                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-indigo-500">
+                                    Send Email <ArrowUpRight size={14} />
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    {/* Right Side: Modern Inquiry Form */}
+                    <div className="bg-card border border-border/60 rounded-[2.5rem] p-6 md:p-10 shadow-2xl relative">
+                        <div className="mb-8">
+                            <h3 className="text-2xl font-bold mb-2">Start a conversation</h3>
+                            <p className="text-sm text-muted-foreground">Tell me about your project and I&apos;ll get back to you.</p>
+                        </div>
+
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="space-y-4">
+                                <div className="space-y-2">
+                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">What&apos;s your name?</label>
+                                    <Input
+                                        required
+                                        disabled={isSubmitting}
+                                        placeholder="Type your name here..."
+                                        value={formData.name}
+                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                        className="h-14 bg-muted/30 border-none rounded-2xl px-6 focus:ring-2 focus:ring-indigo-500/20 transition-all"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Your Phone / WhatsApp</label>
+                                    <Input
+                                        required
+                                        disabled={isSubmitting}
+                                        type="tel"
+                                        placeholder="+91 00000 00000"
+                                        value={formData.phone}
+                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                        className="h-14 bg-muted/30 border-none rounded-2xl px-6 focus:ring-2 focus:ring-indigo-500/20 transition-all"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Project Details</label>
                                     <Textarea
                                         required
                                         disabled={isSubmitting}
-                                        rows={3}
-                                        placeholder="Goals or requirements..."
+                                        rows={4}
+                                        placeholder="What are you looking to build?"
                                         value={formData.project}
                                         onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                                        className="bg-background/80 border-border/60 text-sm resize-none focus:ring-1 focus:ring-indigo-500/20"
+                                        className="bg-muted/30 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500/20 transition-all resize-none"
                                     />
                                 </div>
+                            </div>
 
-                                <div className="space-y-4 pt-1">
-                                    <Button
-                                        type="submit"
-                                        size="lg"
-                                        disabled={isSubmitting}
-                                        className="w-full h-11 text-base font-bold gap-2 shadow-md shadow-indigo-500/15 transition-transform active:scale-[0.98] bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
-                                    >
-                                        {isSubmitting ? (
-                                            <>
-                                                <Loader2 size={16} className="animate-spin" />
-                                                Opening WhatsApp...
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Send size={16} />
-                                                Send Message
-                                            </>
-                                        )}
-                                    </Button>
+                            <Button
+                                type="submit"
+                                size="lg"
+                                disabled={isSubmitting}
+                                className="w-full h-14 rounded-2xl text-base font-bold gap-3 shadow-xl shadow-indigo-500/20 transition-all active:scale-[0.98] bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none"
+                            >
+                                {isSubmitting ? (
+                                    <>
+                                        <Loader2 size={20} className="animate-spin" />
+                                        Processing...
+                                    </>
+                                ) : (
+                                    <>
+                                        <Send size={20} />
+                                        Send Message
+                                    </>
+                                )}
+                            </Button>
+                        </form>
+                    </div>
 
-                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4 border-t border-border/40">
-                                        <a
-                                            href={`mailto:${personalInfo.email}`}
-                                            className="flex items-center gap-2 text-muted-foreground hover:text-indigo-500 transition-colors font-bold text-[10px] uppercase tracking-widest"
-                                        >
-                                            <Mail size={14} />
-                                            {personalInfo.email}
-                                        </a>
-                                        <div className="hidden sm:block w-1 h-1 bg-border/60 rounded-full" />
-                                        <a
-                                            href={`https://wa.me/${personalInfo.whatsapp}`}
-                                            className="flex items-center gap-2 text-muted-foreground hover:text-green-500 transition-colors font-bold text-[10px] uppercase tracking-widest"
-                                        >
-                                            <MessageSquare size={14} />
-                                            WhatsApp Chat
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
-                        </CardContent>
-                    </Card>
                 </div>
             </div>
         </section>

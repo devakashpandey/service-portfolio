@@ -11,13 +11,16 @@ const stepColors = [
 
 export default function Process() {
     return (
-        <section id="process" className="py-16 md:py-20 bg-background">
+        <section id="process" className="py-16 md:py-20 bg-background overflow-hidden">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-2xl md:text-3xl font-semibold">
-                        Our Process
+                <div className="relative text-center mb-16">
+                    <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl md:text-9xl lg:text-[14rem] font-black text-transparent [webkit-text-stroke:1.5px_hsl(var(--foreground)/0.08)] select-none tracking-[0.2em] uppercase whitespace-nowrap z-0 pointer-events-none">
+                        Process
+                    </span>
+                    <h2 className="relative z-10 text-3xl md:text-5xl font-bold tracking-tight">
+                        Our Working <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Process</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+                    <p className="relative z-10 text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
                         A transparent and strategic approach to bringing your business online with confidence.
                     </p>
                 </div>

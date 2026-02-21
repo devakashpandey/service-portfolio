@@ -48,7 +48,7 @@ export default function NotFound() {
                     <p className="text-sm text-muted-foreground mb-4">Or explore these pages:</p>
                     <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
                         <Link href="/#services" className="text-primary hover:underline">
-                            Our Services
+                            Services we Provide
                         </Link>
                         <span className="text-border">•</span>
                         <Link href="/#portfolio" className="text-primary hover:underline">

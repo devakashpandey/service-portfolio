@@ -50,14 +50,17 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? "py-3 bg-background/80 backdrop-blur-md border-b"
-                : "py-5 bg-transparent"
+            className={`fixed left-0 right-0 z-50 transition-all duration-500 ease-in-out flex justify-center pointer-events-none ${isScrolled ? "top-4 md:top-6 px-4 md:px-10 lg:px-0" : "top-0 md:top-2"
                 }`}
         >
-            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <div
+                className={`container mx-auto flex items-center justify-between transition-all duration-500 pointer-events-auto ${isScrolled
+                    ? "max-w-6xl py-3 px-6 md:px-8 bg-background/60 backdrop-blur-xl rounded-full border border-indigo-500/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]"
+                    : "max-w-full py-5 px-6 md:px-10 bg-transparent border-transparent"
+                    }`}
+            >
                 <Link href="/" className="flex items-center gap-2 group">
-                    <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
+                    <div className={`transition-all duration-500 rounded-xl overflow-hidden flex items-center justify-center ${isScrolled ? "w-10 h-10" : "w-12 h-12"}`}>
                         <Image
                             src="/logo.png"
                             alt="Logo"
@@ -66,21 +69,21 @@ export default function Navbar() {
                             className="object-contain"
                         />
                     </div>
-                    <span className="font-bold text-xl tracking-tight hidden sm:block">
+                    <span className={`font-bold tracking-tight hidden lg:block transition-all duration-500 ${isScrolled ? "text-lg" : "text-xl"}`}>
                         {personalInfo.brandName}
                     </span>
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8">
+                <div className="hidden md:flex items-center gap-6 lg:gap-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.label}
                             href={link.href}
-                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-all relative group"
+                            className="text-sm font-semibold text-muted-foreground hover:text-indigo-500 transition-all relative group"
                         >
                             {link.label}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-indigo-500 to-purple-600 transition-all group-hover:w-full" />
                         </Link>
                     ))}
                 </div>
@@ -91,15 +94,15 @@ export default function Navbar() {
                         size="icon"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                         aria-label="Toggle theme"
-                        className="rounded-full h-10 w-10"
+                        className="rounded-full h-9 w-9 md:h-10 md:w-10 hover:bg-indigo-500/5"
                     >
-                        {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                        {theme === "dark" ? <Sun className="h-4 w-4 md:h-5 md:w-5" /> : <Moon className="h-4 w-4 md:h-5 md:w-5" />}
                     </Button>
 
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="md:hidden rounded-full h-10 w-10" aria-label="Open menu">
-                                <Menu className="h-5 w-5" />
+                            <Button variant="ghost" size="icon" className="md:hidden rounded-full h-9 w-9" aria-label="Open menu">
+                                <Menu className="h-4 w-4" />
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right" className="w-full sm:w-[400px] border-l bg-background p-0" showCloseButton={false}>
@@ -133,7 +136,7 @@ export default function Navbar() {
                                         <SheetClose asChild key={link.label}>
                                             <Link
                                                 href={link.href}
-                                                className="text-4xl md:text-5xl font-extrabold tracking-tighter hover:text-primary transition-all active:scale-95 text-foreground/70"
+                                                className="text-4xl md:text-5xl font-extrabold tracking-tighter hover:text-indigo-500 transition-all active:scale-95 text-foreground/70"
                                             >
                                                 {link.label}
                                             </Link>
@@ -144,7 +147,7 @@ export default function Navbar() {
                                 <div className="p-10 border-t bg-muted/20 flex flex-col items-center gap-8">
                                     <p className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.4em]">Get in touch</p>
                                     <div className="flex gap-10">
-                                        <Button asChild variant="outline" size="icon" className="rounded-2xl h-16 w-16 border-border/50 hover:border-primary hover:text-primary transition-all shadow-xl bg-background hover:-translate-y-1">
+                                        <Button asChild variant="outline" size="icon" className="rounded-2xl h-16 w-16 border-border/50 hover:border-indigo-500 hover:text-indigo-500 transition-all shadow-xl bg-background hover:-translate-y-1">
                                             <a href={`mailto:${personalInfo.email}`} aria-label="Email">
                                                 <Mail className="h-7 w-7" />
                                             </a>
