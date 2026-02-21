@@ -107,9 +107,9 @@ export default function Navbar() {
                         </SheetTrigger>
                         <SheetContent side="right" className="w-full sm:w-[400px] border-l bg-background p-0" showCloseButton={false}>
                             <div className="flex flex-col h-full relative z-10">
-                                <SheetHeader className="p-6 border-b bg-muted/30 flex flex-row items-center justify-between space-y-0">
+                                <SheetHeader className="p-4 border-b bg-muted/30 flex flex-row items-center justify-between space-y-0">
                                     <SheetTitle className="flex items-center gap-3 text-left">
-                                        <div className="w-16 h-16 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg ring-4 ring-background/50">
+                                        <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center shadow-lg ring-4 ring-background/50">
                                             <Image
                                                 src="/logo.png"
                                                 alt="Logo"
@@ -131,12 +131,12 @@ export default function Navbar() {
                                     </SheetClose>
                                 </SheetHeader>
 
-                                <div className="flex-1 flex flex-col items-center justify-center gap-12 p-6">
+                                <div className="flex-1 flex flex-col items-center justify-center gap-6 p-4">
                                     {navLinks.map((link) => (
                                         <SheetClose asChild key={link.label}>
                                             <Link
                                                 href={link.href}
-                                                className="text-4xl md:text-5xl font-extrabold tracking-tighter hover:text-indigo-500 transition-all active:scale-95 text-foreground/70"
+                                                className="text-2xl font-extrabold tracking-tight hover:text-indigo-500 transition-all active:scale-95 text-foreground/70"
                                             >
                                                 {link.label}
                                             </Link>
@@ -144,17 +144,17 @@ export default function Navbar() {
                                     ))}
                                 </div>
 
-                                <div className="p-10 border-t bg-muted/20 flex flex-col items-center gap-8">
+                                <div className="p-6 border-t bg-muted/20 flex flex-col items-center gap-4">
                                     <p className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.4em]">Get in touch</p>
-                                    <div className="flex gap-10">
-                                        <Button asChild variant="outline" size="icon" className="rounded-2xl h-16 w-16 border-border/50 hover:border-indigo-500 hover:text-indigo-500 transition-all shadow-xl bg-background hover:-translate-y-1">
+                                    <div className="flex gap-6">
+                                        <Button asChild variant="outline" size="icon" className="rounded-xl h-12 w-12 border-border/50 hover:border-indigo-500 hover:text-indigo-500 transition-all shadow-xl bg-background hover:-translate-y-1">
                                             <a href={`mailto:${personalInfo.email}`} aria-label="Email">
-                                                <Mail className="h-7 w-7" />
+                                                <Mail className="h-5 w-5" />
                                             </a>
                                         </Button>
-                                        <Button asChild variant="outline" size="icon" className="rounded-2xl h-16 w-16 border-border/50 hover:border-green-500 hover:text-green-500 transition-all shadow-xl bg-background hover:-translate-y-1">
+                                        <Button asChild variant="outline" size="icon" className="rounded-xl h-12 w-12 border-border/50 hover:border-green-500 hover:text-green-500 transition-all shadow-xl bg-background hover:-translate-y-1">
                                             <a href={`https://wa.me/${personalInfo.whatsapp}`} aria-label="WhatsApp">
-                                                <MessageSquare className="h-7 w-7" />
+                                                <MessageSquare className="h-5 w-5" />
                                             </a>
                                         </Button>
                                     </div>

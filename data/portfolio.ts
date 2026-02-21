@@ -251,7 +251,7 @@ export const personalInfo = {
   social: {
     github: "https://github.com/devakashpandey",
     linkedin: "https://www.linkedin.com/in/devakashpandey/",
-    instagram: "https://www.instagram.com/firstclasscode/",
+    instagram: "https://www.instagram.com/akkylabs/",
     portfolio: "https://developerakashpandey.vercel.app/",
   },
 };
