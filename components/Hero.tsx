@@ -75,8 +75,8 @@ export default function Hero() {
 
                                     <div className="grid grid-cols-3 gap-1 pt-6 border-t border-border/60">
                                         <div className="flex flex-col">
-                                            <span className="text-[10px] text-muted-foreground uppercase font-semibold">Years</span>
-                                            <span className="font-bold text-base md:text-lg">{personalInfo.experience.split(' ')[0]}+</span>
+                                            <span className="text-[10px] text-muted-foreground uppercase font-semibold">Expertise</span>
+                                            <span className="font-bold text-[10px] md:text-xs pt-1">{personalInfo.experience}</span>
                                         </div>
                                         <div className="flex flex-col border-x border-border/60">
                                             <span className="text-[10px] text-muted-foreground uppercase font-semibold">Projects</span>
@@ -130,7 +130,7 @@ export default function Hero() {
                         <div className="space-y-2">
                             <div className="space-y-4">
                                 <div className="inline-block border-b border-border/60 pb-1 opacity-0 animate-fade-in-up">
-                                    <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Grow your business with a professional</p>
+                                    <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Transform your business into a digital powerhouse</p>
                                 </div>
                                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-none flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
                                     <span className="block">Digital Presence &</span>
@@ -140,7 +140,7 @@ export default function Hero() {
 
                             <div className="space-y-4 opacity-0 animate-fade-in-up delay-200">
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                    I help new and growing businesses build a strong online presence with modern websites and mobile apps. Whether you’re just getting started or already online, I simplify your services, optimize your digital presence, and use AI to bring you more customers and increase your revenue.
+                                    I help local businesses grow by building a professional online presence that actually works. From getting you more customers to setting up simple tools that save your time, I handle everything so you can focus on running your business.
                                 </p>
                             </div>
                         </div>
@@ -150,10 +150,10 @@ export default function Hero() {
                             <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-3 block">Key Benefits</span>
                             <div className="flex flex-wrap gap-2">
                                 {[
-                                    { text: "Result-Driven Design", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
-                                    { text: "More Leads & Sales", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
-                                    { text: "1 Year Support", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
-                                    { text: "High-End Build Quality", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
+                                    { text: "Growth-Focused", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
+                                    { text: "More Customers", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
+                                    { text: "Dedicated Support", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
+                                    { text: "Premium Brand Look", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
                                 ].map((benefit) => (
                                     <span key={benefit.text} className={`px-3 py-1.5 rounded-lg border ${benefit.color} text-[11px] font-bold uppercase`}>
                                         {benefit.text}

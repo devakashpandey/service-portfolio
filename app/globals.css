@@ -158,17 +158,14 @@
   background: transparent;
 }
 
-/* Custom Scrollbar */
+/* Hide Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-muted;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-primary rounded-full border-2 border-muted;
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* Marquee Animation - GPU Accelerated */

@@ -8,6 +8,7 @@ const Features = dynamic(() => import("@/components/Features"), { ssr: true });
 const Process = dynamic(() => import("@/components/Process"), { ssr: true });
 const Portfolio = dynamic(() => import("@/components/Portfolio"), { ssr: true });
 const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: true });
+const WhyUs = dynamic(() => import("@/components/WhyUs"), { ssr: true });
 const FAQ = dynamic(() => import("@/components/FAQ"), { ssr: true });
 const Contact = dynamic(() => import("@/components/Contact"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
@@ -24,6 +25,7 @@ export default function Home() {
         <Process />
         <Portfolio />
         <Testimonials />
+        <WhyUs />
         <FAQ />
         <Contact />
       </main>
@@ -32,4 +34,5 @@ export default function Home() {
     </>
   );
 }
+
 

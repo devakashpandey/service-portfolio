@@ -41,10 +41,12 @@ export default function Navbar() {
         { label: "Home", href: "/" },
         { label: "About", href: "/about" },
         { label: "Services", href: "/#services" },
+        { label: "Why Us", href: "/#why-us" },
         { label: "Features", href: "/#features" },
         { label: "Portfolio", href: "/#portfolio" },
         { label: "Contact", href: "/#contact" },
     ];
+
 
     if (!mounted) return null;
 
@@ -75,7 +77,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-6 lg:gap-8">
+                <div className="hidden lg:flex items-center gap-6 lg:gap-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.label}
@@ -101,7 +103,7 @@ export default function Navbar() {
 
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="md:hidden rounded-full h-9 w-9" aria-label="Open menu">
+                            <Button variant="ghost" size="icon" className="lg:hidden rounded-full h-9 w-9" aria-label="Open menu">
                                 <Menu className="h-4 w-4" />
                             </Button>
                         </SheetTrigger>

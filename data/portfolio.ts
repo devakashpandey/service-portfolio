@@ -241,7 +241,7 @@ export const personalInfo = {
   brandName: "Akky Labs",
   title: "Web & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
-  experience: "3 Years",
+  experience: "Premium",
   projectsCompleted: "15+", 
   happyClients: "6+",
   email: "devakashpandey04@gmail.com",
@@ -372,3 +372,37 @@ export const faqs = [
     answer: "You just need to provide your business details, goals, and any specific preferences you have. I'll handle the rest, from planning to launch.",
   },
 ];
+
+export const whyUs = [
+  {
+    title: "Revenue-Focused Development",
+    description: "Every website we build is designed to generate leads, increase conversions, and deliver measurable business results, not just look good.",
+    icon: "Award",
+  },
+  {
+    title: "Performance & Speed",
+    description: "Fast load times and optimized performance to improve SEO, user experience, and customer retention.",
+    icon: "Clock",
+  },
+  {
+    title: "Clear & Transparent Process",
+    description: "No hidden surprises. Defined timelines, milestone updates, and complete clarity from start to launch.",
+    icon: "ShieldCheck",
+  },
+  {
+    title: "Ongoing Growth Support",
+    description: "Beyond launch we help you maintain, improve, and scale your digital presence as your business grows.",
+    icon: "BrainCircuit",
+  },
+  {
+    title: "Simple to Manage",
+    description: "Get a website that is incredibly easy for you to update yourself without needing any technical knowledge.",
+    icon: "BarChart3",
+  },
+  {
+    title: "Premium Brand Image",
+    description: "We give your business a high-end look that builds instant trust and makes customers choose you over others.",
+    icon: "BadgePercent",
+  },
+];
+
