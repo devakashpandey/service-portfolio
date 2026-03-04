@@ -103,7 +103,7 @@ export const demos: Demo[] = [
   },
   {
     id: "9",
-    title: "Gym Member Portal",
+    title: "Gym Portal",
     description:
       "Gym management website with plan subscription, trainer profiles, and workout tracking.",
     image: "/gym1.png",
@@ -115,7 +115,7 @@ export const demos: Demo[] = [
   },
   {
     id: "2",
-    title: "Luxurious Jewelry Shop",
+    title: "Jewelry Shop",
     description:
       "Premium jewelry e-commerce website with elegant product display and secure checkout.",
     image: "/jwell1.png",
@@ -133,12 +133,24 @@ export const demos: Demo[] = [
     image: "/course1.png",
     images: ["/course1.png", "/course2.png", "/course3.png"],
     category: "education",
-    link: "#",
+    link: "https://new-course-platform.vercel.app/",
     tags: ["Courses", "Education", "Learning"],
+  },
+    {
+    id: "15",
+    title: "Shopping Platform",
+    description:
+      "A high-end ecommerce platform with premium fashion collection, seamless shopping experience, and modern UI/UX design.",
+    image: "/ecomm1.png",
+    images: ["/ecomm1.png", "/ecomm2.png", "/ecomm3.png", "/ecomm4.png", "/ecomm5.png", "/ecomm6.png"],
+    category: "ecommerce",
+    link: "https://unisex-store.vercel.app/",
+    tags: ["Ecommerce", "Fashion", "Premium"],
+    featured: true,
   },
   {
     id: "3",
-    title: "Urban Cafe & Bistro",
+    title: " Cafe & Bistro",
     description:
       "Modern cafe website with digital menu, online ordering, and table reservation system.",
     image: "/cafe1.png",
@@ -154,7 +166,7 @@ export const demos: Demo[] = [
       "Educational website for coaching centers with course listings, fee management, and student login.",
     image: "/demos/demo_coaching.png",
     category: "education",
-    link: "#",
+    link: "https://unisex-store.vercel.app/",
     tags: ["Coaching", "Education", "Learning"],
   },
 
@@ -191,16 +203,7 @@ export const demos: Demo[] = [
     link: "#",
     tags: ["Hospital", "Health", "Management"],
   },
-  {
-    id: "11",
-    title: "Tuition Class Portal",
-    description:
-      "Simple website for tuition classes with schedule, homework upload, and notice board.",
-    image: "/demos/demo_tuition.png",
-    category: "education",
-    link: "#",
-    tags: ["Tuition", "Education", "Classes"],
-  },
+ 
   {
     id: "12",
     title: "Grand Hotel Website",
@@ -221,16 +224,7 @@ export const demos: Demo[] = [
     link: "#",
     tags: ["SaaS", "Tech", "Landing Page"],
   },
-  {
-    id: "14",
-    title: "Online Shoe Store",
-    description:
-      "Modern e-commerce site for shoes with 3D product view and sizes filter.",
-    image: "/demos/demo_shoes.png",
-    category: "ecommerce",
-    link: "#",
-    tags: ["Shoes", "Ecommerce", "Store"],
-  },
+
   
 ];
 

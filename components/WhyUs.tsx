@@ -45,23 +45,20 @@ export default function WhyUs() {
                         return (
                             <div
                                 key={index}
-                                className="group relative p-8 rounded-[2.5rem] border border-border/40 bg-card/40 backdrop-blur-md hover:bg-card/80 hover:border-indigo-500/40 transition-all duration-700 hover:shadow-lg overflow-hidden"
+                                className="group relative p-8 rounded-[2.5rem] border border-border/40 bg-card/40 backdrop-blur-md hover:border-indigo-500/40 transition-all duration-700 overflow-hidden"
                             >
                                 {/* Decorative background number */}
-                                <span className="absolute -bottom-6 -right-4 text-9xl font-bold text-foreground/5 pointer-events-none select-none group-hover:text-indigo-500/10 transition-colors duration-700">
+                                <span className="absolute -bottom-6 -right-4 text-9xl font-bold text-foreground/5 pointer-events-none select-none transition-colors duration-700">
                                     0{index + 1}
                                 </span>
-
-                                {/* Glow effect on hover */}
-                                <div className="absolute -top-24 -left-24 w-48 h-48 bg-indigo-500/5 rounded-full blur-[80px] group-hover:bg-indigo-500/20 transition-all duration-700" />
 
                                 <div className="relative z-10">
                                     <div className="relative w-16 h-16 rounded-2xl bg-linear-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center mb-8 transition-all duration-500">
                                         <div className="absolute inset-0 rounded-2xl border border-indigo-500/20 group-hover:border-indigo-500/40 transition-colors" />
-                                        <Icon className="w-8 h-8 text-indigo-500 group-hover:text-purple-600 transition-colors" />
+                                        <Icon className="w-8 h-8 text-indigo-500 transition-colors" />
                                     </div>
 
-                                    <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-indigo-500 transition-colors duration-500">
+                                    <h3 className="text-2xl font-bold mb-4 tracking-tight transition-colors duration-500">
                                         {item.title}
                                     </h3>
                                     <p className="text-muted-foreground leading-relaxed text-[15px] max-w-[260px]">
