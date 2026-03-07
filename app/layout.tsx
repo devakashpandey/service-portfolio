@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap", // Font swap - text dikhega immediately, font baad mein load hoga
+  display: "swap",
   preload: true,
 });
 
@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://akkylabs.com"), // Apna domain yahan dalo
+  metadataBase: new URL("https://www.akkylabs.com/"),
   title: {
     default: "Akky Labs | Software Developer & Web Solutions for Your Business",
     template: "%s | Akky Labs",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     "affordable web developer",
     "web developer in India",
   ],
-  authors: [{ name: "Akky Labs", url: "https://akkylabs.com" }],
+  authors: [{ name: "Akky Labs", url: "https://www.akkylabs.com/" }],
   creator: "Akky Labs",
   publisher: "Akky Labs",
   formatDetection: {
@@ -119,8 +119,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
     me: "your-me-verification-code",
-    // Bing/Brave indexing usually follows Bing Webmaster Tools
-    // Add : msvalidate.01: "your-bing-code"
+   
   },
   category: "technology",
 };
@@ -132,16 +131,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Structured Data for SEO (JSON-LD)
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Akky Labs",
     description:
       "Professional web development services for shops and businesses. Custom websites, web apps, and mobile apps.",
-    url: "https://akkylabs.com",
-    logo: "https://akkylabs.com/logo.png",
-    image: "https://akkylabs.com/logo.png",
+    url: "https://www.akkylabs.com/",
+    logo: "https://www.akkylabs.com/logo.png",
+    image: "https://www.akkylabs.com/logo.png",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -150,7 +149,7 @@ export default function RootLayout({
     sameAs: [
       "https://github.com/devakashpandey",
       "https://linkedin.com/in/devakashpandey",
-      "https://instagram.com/devakashpandey",
+      "https://instagram.com/akkylabs",
     ],
     serviceType: [
       "Web Development",
