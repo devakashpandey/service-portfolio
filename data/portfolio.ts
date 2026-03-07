@@ -233,7 +233,7 @@ export const personalInfo = {
   name: "Akash Pandey",
   founder: "Akash Pandey",
   brandName: "Akky Labs",
-  title: "Web & App Developer",
+  title: "Software & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
   experience: "Premium",
   projectsCompleted: "15+", 
