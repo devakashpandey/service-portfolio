@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://akkylabs.com' // Apna domain yahan dalo
+  const baseUrl = 'https://akkylabs.com' 
 
   return {
     rules: {
