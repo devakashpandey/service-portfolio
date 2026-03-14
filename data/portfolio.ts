@@ -149,6 +149,19 @@ export const demos: Demo[] = [
     featured: true,
   },
 
+   {
+    id: "8",
+    title: "Premium Unisex Salon",
+    description:
+      "A professional unisex salon website with service menu, expert stylists, and online appointment booking.",
+    image: "/salon1.png",
+    images: ["/salon1.png", "/salon2.png", "/salon3.png", "/salon4.png", "/salon5.png"],
+    category: "wellness",
+    link: "https://luxe-salon-weapp.vercel.app/",
+    tags: ["Salon", "Beauty", "Service"],
+    featured: true,
+  },
+
   {
     id: "4",
     title: "Coaching Center Platform",
