@@ -91,14 +91,14 @@ export const services: Service[] = [
 export const demos: Demo[] = [
   {
     id: "8",
-    title: "Premium Unisex Salon",
+    title: "Urban Cafe Bistro",
     description:
-      "A professional unisex salon website with service menu, expert stylists, and online appointment booking.",
-    image: "/salon1.png",
-    images: ["/salon1.png", "/salon2.png", "/salon3.png", "/salon4.png", "/salon5.png"],
-    category: "wellness",
-    link: "https://luxe-salon-weapp.vercel.app/",
-    tags: ["Salon", "Beauty", "Service"],
+      "A premium cafe and bistro website with digital menu, online ordering, and table reservation system.",
+    image: "/cafe1.png",
+    images: ["/cafe1.png", "/cafe2.png", "/cafe3.png", "/cafe4.png"],
+    category: "hospitality",
+    link: "https://my-cafe-webapp.vercel.app/",
+    tags: ["Cafe", "Bistro", "Food"],
     featured: true,
   },
   {
@@ -148,17 +148,7 @@ export const demos: Demo[] = [
     tags: ["Ecommerce", "Fashion", "Premium"],
     featured: true,
   },
-  {
-    id: "3",
-    title: " Cafe & Bistro",
-    description:
-      "Modern cafe website with digital menu, online ordering, and table reservation system.",
-    image: "/cafe1.png",
-    images: ["/cafe1.png", "/cafe2.png", "/cafe3.png", "/cafe4.png"],
-    category: "hospitality",
-    link: "https://my-cafe-webapp.vercel.app/",
-    tags: ["Cafe", "Food", "Hospitality"],
-  },
+
   {
     id: "4",
     title: "Coaching Center Platform",
@@ -235,7 +225,7 @@ export const personalInfo = {
   brandName: "Akky Labs",
   title: "Software & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
-  experience: "Premium",
+  experience: "3+",
   projectsCompleted: "15+", 
   happyClients: "6+",
   email: "devakashpandey04@gmail.com",

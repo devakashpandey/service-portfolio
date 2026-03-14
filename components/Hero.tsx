@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import { BookingModal } from "./BookingModal";
 import { useState } from "react";
+import { DataFlowCard } from "./DataFlowCard";
 
 export default function Hero() {
     const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -40,89 +41,75 @@ export default function Hero() {
             <div className="container relative z-10 mx-auto px-6">
                 <div className="grid lg:grid-cols-12 gap-10 lg:gap-10 items-center">
 
-                    {/* LEFT SIDE: Profile Card */}
+                    {/* LEFT SIDE: Profile Card with Premium Data-Flow Effect */}
                     <div className="lg:col-span-6 flex justify-center order-2 lg:order-1 opacity-0 animate-scale-in">
-                        <div className="relative group w-full max-w-sm">
-                            <Card className="relative w-full border-border/80 bg-card overflow-hidden text-center p-6 md:p-10 rounded-[2rem] shadow-lg shadow-indigo-500/6 dark:shadow-indigo-500/8">
-                                <CardContent className="p-0">
-                                    <div className="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-6">
-                                        <div className="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full" />
-                                        <div className="absolute inset-2 overflow-hidden bg-card rounded-full flex items-center justify-center shadow-lg ring-4 ring-background">
-                                            <Image
-                                                src="/logo.png"
-                                                alt="Logo"
-                                                width={180}
-                                                height={180}
-                                                className="object-contain p-4"
-                                            />
-                                        </div>
-                                        <div className="absolute -bottom-1 -right-1 w-10 h-10 bg-card rounded-xl border border-border flex items-center justify-center text-xl shadow-md ring-2 ring-background">
-                                            🇮🇳
-                                        </div>
-                                    </div>
+                        <DataFlowCard cardClassName="text-center p-6 md:p-8">
+                            <div className="relative w-32 h-32 md:w-36 md:h-36 mx-auto mb-6">
+                                <div className="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full" />
+                                <div className="absolute inset-2 overflow-hidden bg-card rounded-full flex items-center justify-center shadow-lg ring-4 ring-background">
+                                    <Image
+                                        src="/logo.png"
+                                        alt="Logo"
+                                        width={160}
+                                        height={160}
+                                        className="object-contain p-4"
+                                    />
+                                </div>
+                                <div className="absolute -bottom-1 -right-1 w-9 h-9 bg-card rounded-xl border border-border flex items-center justify-center text-xl shadow-md ring-2 ring-background">
+                                    🇮🇳
+                                </div>
+                            </div>
 
-                                    <div className="space-y-1.5 mb-6">
-                                        <h2 className="text-2xl font-bold tracking-tight text-foreground">{personalInfo.name}</h2>
-                                        <div className="flex flex-col items-center gap-1">
-                                            <span className="text-indigo-600 dark:text-indigo-400 font-bold text-[10px] uppercase tracking-[0.2em]">
-                                                {personalInfo.title}
-                                            </span>
-                                            <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-500/10 rounded-full text-[11px] font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-500/20 italic">
-                                                Building @ {personalInfo.brandName}
-                                            </span>
-                                        </div>
-                                    </div>
+                            <div className="space-y-1.5 mb-6">
+                                <h2 className="text-2xl font-bold tracking-tight text-foreground">{personalInfo.name}</h2>
+                                <div className="flex flex-col items-center gap-1">
+                                    <span className="text-indigo-600 dark:text-indigo-400 font-bold text-[10px] uppercase tracking-[0.2em]">
+                                        {personalInfo.title}
+                                    </span>
+                                    <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-500/10 rounded-full text-[11px] font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-500/20 italic">
+                                        Building @ {personalInfo.brandName}
+                                    </span>
+                                </div>
+                            </div>
 
-                                    <div className="grid grid-cols-3 gap-1 pt-6 border-t border-border/60">
-                                        <div className="flex flex-col">
-                                            <span className="text-[10px] text-muted-foreground uppercase font-semibold">Expertise</span>
-                                            <span className="font-bold text-[10px] md:text-xs pt-1">{personalInfo.experience}</span>
-                                        </div>
-                                        <div className="flex flex-col border-x border-border/60">
-                                            <span className="text-[10px] text-muted-foreground uppercase font-semibold">Projects</span>
-                                            <span className="font-bold text-base md:text-lg">{personalInfo.projectsCompleted}</span>
-                                        </div>
-                                        <div className="flex flex-col">
-                                            <span className="text-[10px] text-muted-foreground uppercase font-semibold">Clients</span>
-                                            <span className="font-bold text-base md:text-lg">{personalInfo.happyClients}</span>
-                                        </div>
-                                    </div>
+                            <div className="grid grid-cols-3 gap-1 pt-6 border-t border-border/60">
+                                <div className="flex flex-col">
+                                    <span className="text-[10px] text-muted-foreground uppercase font-semibold">Expertise</span>
+                                    <span className="font-bold text-base md:text-lg">{personalInfo.experience}</span>
+                                </div>
+                                <div className="flex flex-col border-x border-border/60">
+                                    <span className="text-[10px] text-muted-foreground uppercase font-semibold">Projects</span>
+                                    <span className="font-bold text-base md:text-lg">{personalInfo.projectsCompleted}</span>
+                                </div>
+                                <div className="flex flex-col">
+                                    <span className="text-[10px] text-muted-foreground uppercase font-semibold">Clients</span>
+                                    <span className="font-bold text-base md:text-lg">{personalInfo.happyClients}</span>
+                                </div>
+                            </div>
 
-                                    <div className="flex items-center justify-center gap-3 pt-6">
-                                        {personalInfo.social.github && (
-                                            <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-gray-700 hover:text-white transition-colors">
-                                                <Github className="w-4 h-4" />
-                                            </a>
-                                        )}
-                                        {personalInfo.social.linkedin && (
-                                            <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-blue-500 hover:text-white transition-colors">
-                                                <Linkedin className="w-4 h-4" />
-                                            </a>
-                                        )}
-                                        {(personalInfo.social as any).twitter && (
-                                            <a href={(personalInfo.social as any).twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-sky-500 hover:text-white transition-colors">
-                                                <Twitter className="w-4 h-4" />
-                                            </a>
-                                        )}
-                                        {personalInfo.social.instagram && (
-                                            <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-pink-500 hover:text-white transition-colors">
-                                                <Instagram className="w-4 h-4" />
-                                            </a>
-                                        )}
-                                        {(personalInfo.social as any).whatsapp && (
-                                            <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-green-500 hover:text-white transition-colors">
-                                                <MessageSquare className="w-4 h-4" />
-                                            </a>
-                                        )}
-                                        {personalInfo.social.portfolio && (
-                                            <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-violet-500 hover:text-white transition-colors">
-                                                <Globe className="w-4 h-4" />
-                                            </a>
-                                        )}
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </div>
+                            <div className="flex items-center justify-center gap-3 pt-6">
+                                {personalInfo.social.github && (
+                                    <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-gray-700 hover:text-white transition-colors">
+                                        <Github className="w-4 h-4" />
+                                    </a>
+                                )}
+                                {personalInfo.social.linkedin && (
+                                    <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-blue-500 hover:text-white transition-colors">
+                                        <Linkedin className="w-4 h-4" />
+                                    </a>
+                                )}
+                                {personalInfo.social.instagram && (
+                                    <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-pink-500 hover:text-white transition-colors">
+                                        <Instagram className="w-4 h-4" />
+                                    </a>
+                                )}
+                                {personalInfo.social.portfolio && (
+                                    <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio" className="w-8 h-8 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:bg-violet-500 hover:text-white transition-colors">
+                                        <Globe className="w-4 h-4" />
+                                    </a>
+                                )}
+                            </div>
+                        </DataFlowCard>
                     </div>
 
                     {/* RIGHT SIDE: Content */}
@@ -140,27 +127,27 @@ export default function Hero() {
 
                             <div className="space-y-4 opacity-0 animate-fade-in-up delay-200">
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                    I help local businesses grow by building a professional online presence that actually works. From getting you more customers to setting up simple tools that save your time, I handle everything so you can focus on running your business.
+                                    I help local businesses grow by building a professional online presence that attracts more customers, turns visitors into real enquiries, builds trust, and improves efficiency through smart digital solutions, useful AI features, and simple automation tools.
                                 </p>
                             </div>
                         </div>
 
                         {/* Business Benefits */}
-                        <div className="pt-1 opacity-0 animate-fade-in-up delay-300">
-                            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-3 block">Key Benefits</span>
+                        <div className="pt-2 opacity-0 animate-fade-in-up delay-300">
+                            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.3em] mb-3 block">Key Advantages</span>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     { text: "Growth-Focused", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
-                                    { text: "More Customers", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
-                                    { text: "Dedicated Support", color: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20" },
-                                    { text: "Premium Brand Look", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
+                                    { text: "Conversion Optimized", color: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20" },
+                                    { text: "Premium Branding", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
                                 ].map((benefit) => (
-                                    <span key={benefit.text} className={`px-3 py-1.5 rounded-lg border ${benefit.color} text-[11px] font-bold uppercase`}>
+                                    <span key={benefit.text} className={`px-3 py-1.5 rounded-lg border ${benefit.color} text-[10px] md:text-[11px] font-bold uppercase tracking-tight`}>
                                         {benefit.text}
                                     </span>
                                 ))}
                             </div>
                         </div>
+
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4 pt-1 opacity-0 animate-fade-in-up delay-[400ms]">

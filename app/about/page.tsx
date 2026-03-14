@@ -6,6 +6,7 @@ import { personalInfo } from "@/data/portfolio";
 import Image from "next/image";
 import { CheckCircle2, Users, Clock, TrendingUp, Code2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { DataFlowCard } from "@/components/DataFlowCard";
 
 const stats = [
     { label: "Years Experience", value: "3+", icon: Clock },
@@ -17,7 +18,7 @@ const stats = [
 const aboutDetails = [
     "Full Stack Developer with expertise in React, Next.js, and Node.js",
     "Specialized in building scalable web applications and mobile apps",
-    "Worked with startups and established businesses across India",
+    "Worked with startups and established businesses worldwide",
     "Passionate about creating premium digital experiences",
     "1 Year free support included with every project",
 ];
@@ -26,7 +27,7 @@ export default function AboutPage() {
     return (
         <>
             <Navbar />
-            <main className="pt-24 min-h-screen bg-background text-foreground overflow-x-hidden">
+            <main className="pt-16 min-h-screen bg-background text-foreground overflow-x-hidden">
                 {/* Background Decorations */}
                 <div className="fixed inset-0 z-0 pointer-events-none">
                     <div className="absolute inset-x-0 inset-y-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-size-[32px_32px]" />
@@ -35,7 +36,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* About Section */}
-                <section className="relative z-10 py-12 md:py-20 overflow-hidden">
+                <section className="relative z-10 py-8 md:py-12 overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
                             {/* Header */}
@@ -47,33 +48,24 @@ export default function AboutPage() {
                                     About <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Me</span>
                                 </h1>
                                 <p className="relative z-10 text-lg text-muted-foreground max-w-2xl mx-auto">
-                                    Building premium digital solutions for businesses across India
+                                    Crafting world-class digital experiences for a global clientele
                                 </p>
                             </div>
 
                             {/* Main Content Grid */}
                             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
-                                {/* Left - Logo/Image */}
-                                <div className="flex justify-center">
-                                    <div className="relative group">
-                                        <div className="absolute -inset-4 bg-primary/20 rounded-[2.5rem] blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-                                        <Card className="relative w-72 h-72 md:w-80 md:h-80 rounded-[2rem] border-border/80 bg-background/60 backdrop-blur-xl overflow-hidden shadow-2xl">
-                                            <CardContent className="p-0 w-full h-full flex items-center justify-center">
-                                                <Image
-                                                    src="/logo.png"
-                                                    alt="Logo"
-                                                    width={280}
-                                                    height={280}
-                                                    className="object-contain p-8"
-                                                />
-                                            </CardContent>
-                                        </Card>
-                                        {/* Floating Badge */}
-                                        <div className="absolute -bottom-4 -right-4 px-5 py-2.5 bg-linear-to-r from-indigo-600 to-purple-600 text-white rounded-2xl font-bold text-sm shadow-xl shadow-indigo-500/20 backdrop-blur-sm border border-white/10">
-                                            {personalInfo.experience} Experience
-                                        </div>
+                                {/* Left - Logo/Image with Premium Data-Flow Effect */}
+                                <DataFlowCard >
+                                    <div className="flex flex-col items-center justify-center h-full p-12 transition-transform duration-500 group-hover:scale-110">
+                                        <Image
+                                            src="/logo.png"
+                                            alt="Logo"
+                                            width={240}
+                                            height={240}
+                                            className="object-contain drop-shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+                                        />
                                     </div>
-                                </div>
+                                </DataFlowCard>
 
                                 {/* Right - About Info */}
                                 <div className="space-y-6">
@@ -88,9 +80,7 @@ export default function AboutPage() {
                                     </div>
 
                                     <p className="text-muted-foreground leading-relaxed">
-                                        I help businesses establish a strong online presence through custom websites,
-                                        web applications, and mobile apps. Whether you run a local shop, a coaching center,
-                                        or a startup, I create digital solutions that attract customers and grow your business.
+                                        I help local businesses grow by building a professional online presence that attracts more customers, generates real enquiries, builds trust, and improves efficiency through smart digital solutions and AI automation.
                                     </p>
 
                                     {/* Key Points */}
@@ -113,7 +103,7 @@ export default function AboutPage() {
                                             <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500">
                                                 <stat.icon className="w-6 h-6 text-indigo-500 group-hover:text-white transition-colors" />
                                             </div>
-                                            <p className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600 mb-1">{stat.value}</p>
+                                            <p className="text-3xl md:text-4xl font-black text-foreground mb-1">{stat.value}</p>
                                             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">{stat.label}</p>
                                         </CardContent>
                                     </Card>

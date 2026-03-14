@@ -42,17 +42,17 @@ export default function Testimonials() {
                     {duplicatedTestimonials.map((testimonial, idx) => (
                         <Card
                             key={`${testimonial.id}-${idx}`}
-                            className="w-[300px] md:w-[450px] shrink-0 bg-card border-border/60 shadow-sm hover:shadow-md transition-shadow"
+                            className="w-[280px] md:w-[380px] shrink-0 bg-card border-border/60 shadow-sm hover:shadow-md transition-shadow"
                         >
-                            <CardContent className="p-6 md:p-8 flex flex-col justify-between h-full">
-                                <div className="mb-6">
-                                    <Quote className="w-8 h-8 text-indigo-500/20 mb-4" fill="currentColor" />
-                                    <p className="text-sm md:text-base text-muted-foreground italic leading-relaxed whitespace-normal line-clamp-4">
+                            <CardContent className="p-5 md:p-6 flex flex-col justify-between h-full gap-4">
+                                <div>
+                                    <Quote className="w-6 h-6 text-indigo-500/20 mb-3" fill="currentColor" />
+                                    <p className="text-sm text-muted-foreground italic leading-relaxed whitespace-normal line-clamp-4">
                                         &ldquo;{testimonial.feedback}&rdquo;
                                     </p>
                                 </div>
-                                <div className="flex items-center gap-3.5 pt-5 border-t border-border/40">
-                                    <div className={`w-10 h-10 rounded-full ${avatarColors[idx % avatarColors.length]} flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0`}>
+                                <div className="flex items-center gap-3 pt-4 mt-auto border-t border-border/40">
+                                    <div className={`w-8 h-8 rounded-full ${avatarColors[idx % avatarColors.length]} flex items-center justify-center text-white font-bold text-xs shadow-md shrink-0`}>
                                         {testimonial.avatar}
                                     </div>
                                     <div className="overflow-hidden">

@@ -21,7 +21,7 @@ const iconMap = {
 
 export default function WhyUs() {
     return (
-        <section id="why-us" className="py-20 md:py-32 bg-background relative overflow-hidden">
+        <section id="why-us" className="py-16 md:py-24 bg-background relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -39,29 +39,29 @@ export default function WhyUs() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                     {whyUs.map((item, index) => {
                         const Icon = iconMap[item.icon as keyof typeof iconMap];
                         return (
                             <div
                                 key={index}
-                                className="group relative p-8 rounded-[2.5rem] border border-border/40 bg-card/40 backdrop-blur-md hover:border-indigo-500/40 transition-all duration-700 overflow-hidden"
+                                className="group relative p-6 md:p-7 rounded-[2rem] border border-border/40 bg-card/40 backdrop-blur-md hover:border-indigo-500/40 transition-all duration-700 overflow-hidden"
                             >
                                 {/* Decorative background number */}
-                                <span className="absolute -bottom-6 -right-4 text-9xl font-bold text-foreground/5 pointer-events-none select-none transition-colors duration-700">
+                                <span className="absolute -bottom-4 -right-2 text-8xl font-bold text-foreground/5 pointer-events-none select-none transition-colors duration-700">
                                     0{index + 1}
                                 </span>
 
                                 <div className="relative z-10">
-                                    <div className="relative w-16 h-16 rounded-2xl bg-linear-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center mb-8 transition-all duration-500">
-                                        <div className="absolute inset-0 rounded-2xl border border-indigo-500/20 group-hover:border-indigo-500/40 transition-colors" />
-                                        <Icon className="w-8 h-8 text-indigo-500 transition-colors" />
+                                    <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center mb-6 transition-all duration-500">
+                                        <div className="absolute inset-0 rounded-xl border border-indigo-500/20 group-hover:border-indigo-500/40 transition-colors" />
+                                        <Icon className="w-6 h-6 text-indigo-500 transition-colors" />
                                     </div>
 
-                                    <h3 className="text-2xl font-bold mb-4 tracking-tight transition-colors duration-500">
+                                    <h3 className="text-xl font-bold mb-3 tracking-tight transition-colors duration-500">
                                         {item.title}
                                     </h3>
-                                    <p className="text-muted-foreground leading-relaxed text-[15px] max-w-[260px]">
+                                    <p className="text-muted-foreground leading-relaxed text-sm max-w-[240px]">
                                         {item.description}
                                     </p>
                                 </div>
