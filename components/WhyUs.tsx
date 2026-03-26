@@ -45,7 +45,7 @@ export default function WhyUs() {
                         return (
                             <div
                                 key={index}
-                                className="group relative p-6 md:p-7 rounded-[2rem] border border-border/40 bg-card/40 backdrop-blur-md hover:border-indigo-500/40 transition-all duration-700 overflow-hidden"
+                                className="group relative p-6 md:p-7 rounded-[2rem] border border-black/5 dark:border-white/[0.08] bg-white/40 dark:bg-zinc-900/40 backdrop-blur-xl hover:border-indigo-500/40 transition-all duration-700 overflow-hidden"
                             >
                                 {/* Decorative background number */}
                                 <span className="absolute -bottom-4 -right-2 text-8xl font-bold text-foreground/5 pointer-events-none select-none transition-colors duration-700">

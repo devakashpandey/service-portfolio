@@ -87,10 +87,10 @@ export const DataFlowCard: React.FC<DataFlowCardProps> = ({
                 `}</style>
                 
                 {/* Glow Background */}
-                <div className="absolute -inset-10 bg-indigo-500/10 rounded-full blur-[80px] opacity-50 group-hover:opacity-80 transition-opacity duration-1000" />
+                <div className="absolute -inset-10 bg-indigo-500/10 rounded-full blur-[80px] opacity-50 transition-opacity duration-1000" />
                 
                 <Card className={cn(
-                    "relative border-border/80 bg-background/80 backdrop-blur-2xl overflow-hidden shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] z-10 transition-transform duration-500 group-hover:scale-[1.02]",
+                    "relative border-white/[0.08] bg-zinc-950 backdrop-blur-3xl overflow-hidden shadow-[0_0_50px_-12px_rgba(0,0,0,0.8)] z-10 transition-all duration-700",
                     cardClassName
                 )}>
                     <CardContent className="p-0 w-full h-full flex flex-col items-center justify-center relative">

@@ -56,7 +56,7 @@ export default function AboutPage() {
                             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
                                 {/* Left - Logo/Image with Premium Data-Flow Effect */}
                                 <DataFlowCard >
-                                    <div className="flex flex-col items-center justify-center h-full p-12 transition-transform duration-500 group-hover:scale-110">
+                                    <div className="flex flex-col items-center justify-center h-full p-12 transition-transform duration-500">
                                         <Image
                                             src="/logo.png"
                                             alt="Logo"
@@ -98,10 +98,10 @@ export default function AboutPage() {
                             {/* Stats Grid */}
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-24">
                                 {stats.map((stat, index) => (
-                                    <Card key={index} className="border-border/60 bg-card/40 backdrop-blur-xl hover:border-indigo-500/30 transition-all duration-500 group">
+                                    <Card key={index} className="border-black/5 dark:border-white/[0.08] bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl transition-all duration-700">
                                         <CardContent className="p-6 text-center">
-                                            <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500">
-                                                <stat.icon className="w-6 h-6 text-indigo-500 group-hover:text-white transition-colors" />
+                                            <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-4 transition-all duration-500">
+                                                <stat.icon className="w-6 h-6 text-indigo-500 transition-colors" />
                                             </div>
                                             <p className="text-3xl md:text-4xl font-black text-foreground mb-1">{stat.value}</p>
                                             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">{stat.label}</p>

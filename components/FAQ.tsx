@@ -26,9 +26,9 @@ export default function FAQ() {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className={`group rounded-xl border bg-card backdrop-blur-sm overflow-hidden transition-all duration-300 ${openIndex === index
-                                ? "border-indigo-500/30 shadow-md shadow-indigo-500/5"
-                                : "border-border/60"
+                            className={`group rounded-xl border backdrop-blur-xl overflow-hidden transition-all duration-300 ${openIndex === index
+                                ? "border-indigo-500/30 shadow-md shadow-indigo-500/5 bg-white/80 dark:bg-zinc-800/50"
+                                : "border-black/5 dark:border-white/[0.08] bg-white/50 dark:bg-zinc-900/50"
                                 }`}
                         >
                             <button

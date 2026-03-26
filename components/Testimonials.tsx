@@ -2,7 +2,8 @@
 
 import { testimonials } from "@/data/portfolio";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, User } from "lucide-react";
+import Image from "next/image";
 
 const avatarColors = [
     "bg-gradient-to-br from-blue-500 to-indigo-600",
@@ -42,21 +43,36 @@ export default function Testimonials() {
                     {duplicatedTestimonials.map((testimonial, idx) => (
                         <Card
                             key={`${testimonial.id}-${idx}`}
-                            className="w-[280px] md:w-[380px] shrink-0 bg-card border-border/60 shadow-sm hover:shadow-md transition-shadow"
+                            className="w-[280px] md:w-[350px] shrink-0 bg-white/70 dark:bg-zinc-900/60 backdrop-blur-xl border-black/5 dark:border-white/[0.08] shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 rounded-2xl"
                         >
-                            <CardContent className="p-5 md:p-6 flex flex-col justify-between h-full gap-4">
-                                <div>
-                                    <Quote className="w-6 h-6 text-indigo-500/20 mb-3" fill="currentColor" />
-                                    <p className="text-sm text-muted-foreground italic leading-relaxed whitespace-normal line-clamp-4">
-                                        &ldquo;{testimonial.feedback}&rdquo;
-                                    </p>
+                            <CardContent className="p-5 md:p-6 flex flex-col h-full gap-4">
+                                {/* Top: Quote Icon */}
+                                <div className="text-indigo-500/30">
+                                    <Quote className="w-6 h-6 md:w-8 md:h-8" fill="currentColor" />
                                 </div>
-                                <div className="flex items-center gap-3 pt-4 mt-auto border-t border-border/40">
-                                    <div className={`w-8 h-8 rounded-full ${avatarColors[idx % avatarColors.length]} flex items-center justify-center text-white font-bold text-xs shadow-md shrink-0`}>
-                                        {testimonial.avatar}
+
+                                {/* Middle: Testimonial Text */}
+                                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed italic line-clamp-5">
+                                    &ldquo;{testimonial.feedback}&rdquo;
+                                </p>
+
+                                {/* Bottom: User Info */}
+                                <div className="flex items-center gap-3 mt-auto pt-4 border-t border-border/10">
+                                    <div className={`w-11 h-11 rounded-full ${avatarColors[idx % avatarColors.length]} flex items-center justify-center text-white shadow-md shrink-0 overflow-hidden relative`}>
+                                        {(testimonial as any).image ? (
+                                            <Image
+                                                src={(testimonial as any).image}
+                                                alt={testimonial.name}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        ) : (
+                                            <User className="w-5 h-5" />
+                                        )
+                                        }
                                     </div>
                                     <div className="overflow-hidden">
-                                        <p className="font-bold text-foreground text-sm truncate">{testimonial.name}</p>
+                                        <p className="font-bold text-foreground text-sm md:text-base truncate">{testimonial.name}</p>
                                         <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest truncate">{testimonial.business}</p>
                                     </div>
                                 </div>
@@ -72,4 +88,3 @@ export default function Testimonials() {
         </section>
     );
 }
-

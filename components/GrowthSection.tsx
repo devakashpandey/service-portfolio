@@ -1,10 +1,10 @@
 "use client";
 
-import { 
-    CheckCircle2, 
-    Clock, 
-    Users, 
-    Smartphone, 
+import {
+    CheckCircle2,
+    Clock,
+    Users,
+    Smartphone,
     Zap,
     ArrowUpRight
 } from "lucide-react";
@@ -40,7 +40,7 @@ export default function GrowthSection() {
         <section id="growth" className="py-20 bg-background relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:items-stretch items-center max-w-6xl mx-auto">
-                    
+
                     {/* LEFT SIDE: Clean Typography */}
                     <div className="lg:col-span-5 flex flex-col justify-center space-y-8 py-4">
                         <div className="space-y-4">
@@ -49,7 +49,7 @@ export default function GrowthSection() {
                                 <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-500">Grow Business Online</span>
                             </div>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15]">
-                                Why your shop needs an <span className="text-indigo-500">Online Presence?</span>
+                                Why your Business needs an <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Online Presence?</span>
                             </h2>
                             <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
                                 Today, customers search online before visiting any store. If your business isn't online, you might be losing potential sales.
@@ -58,7 +58,7 @@ export default function GrowthSection() {
 
                         <div className="grid grid-cols-2 gap-3">
                             {cards.map((item, idx) => (
-                                <div key={idx} className="p-4 rounded-2xl border border-border/40 bg-card/40 hover:border-indigo-500/20 transition-all duration-300 group">
+                                <div key={idx} className="p-4 rounded-2xl border border-black/5 dark:border-white/[0.08] bg-white/40 dark:bg-zinc-900/40 backdrop-blur-xl hover:border-indigo-500/20 transition-all duration-300 group">
                                     <item.icon className="w-5 h-5 text-indigo-500/70 mb-2 group-hover:scale-110 transition-transform" />
                                     <h3 className="font-bold text-base mb-1">{item.title}</h3>
                                     <p className="text-sm text-muted-foreground leading-tight">{item.desc}</p>
@@ -69,10 +69,10 @@ export default function GrowthSection() {
 
                     {/* RIGHT SIDE: Compact Premium Card */}
                     <div className="lg:col-span-7 w-full lg:h-full">
-                        <div className="relative p-8 md:p-10 rounded-[2rem] bg-card border border-border/60 shadow-xl overflow-hidden group h-full flex flex-col">
+                        <div className="relative p-8 md:p-10 rounded-[2rem] bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] shadow-sm overflow-hidden group h-full flex flex-col">
                             {/* Subtle Gradient Glow */}
                             <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all duration-700 pointer-events-none" />
-                            
+
                             <div className="relative flex-1 flex flex-col justify-center space-y-8">
                                 <div className="space-y-1">
                                     <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-500">Premium Support</p>
@@ -107,8 +107,8 @@ export default function GrowthSection() {
                                 <p className="text-sm text-muted-foreground italic max-w-[280px] leading-relaxed">
                                     "Our goal isn't just to build websites, it's to grow your online business."
                                 </p>
-                                <a 
-                                    href="#contact" 
+                                <a
+                                    href="#contact"
                                     className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-indigo-500 hover:text-indigo-400 transition-colors group/btn"
                                 >
                                     Start Growth

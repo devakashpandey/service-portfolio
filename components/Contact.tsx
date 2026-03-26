@@ -55,7 +55,7 @@ export default function Contact() {
                                 href={`https://wa.me/${personalInfo.whatsapp}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-green-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/5 hover:-translate-y-1"
+                                className="group p-6 rounded-3xl bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] hover:border-green-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/5 hover:-translate-y-1"
                             >
                                 <div className="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 mb-4 group-hover:bg-green-500 group-hover:text-white transition-all duration-500">
                                     <MessageSquare size={24} />
@@ -70,7 +70,7 @@ export default function Contact() {
                             {/* Email Card */}
                             <a
                                 href={`mailto:${personalInfo.email}`}
-                                className="group p-6 rounded-3xl bg-card border border-border/50 hover:border-indigo-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/5 hover:-translate-y-1"
+                                className="group p-6 rounded-3xl bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] hover:border-indigo-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/5 hover:-translate-y-1"
                             >
                                 <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-4 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500">
                                     <Mail size={24} />
@@ -86,7 +86,7 @@ export default function Contact() {
                     </div>
 
                     {/* Right Side: Modern Inquiry Form */}
-                    <div className="bg-card border border-border/60 rounded-[2.5rem] p-6 md:p-10 shadow-2xl relative">
+                    <div className="bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] rounded-[2.5rem] p-6 md:p-10 shadow-sm relative">
                         <div className="mb-8">
                             <h3 className="text-2xl font-bold mb-2">Start a conversation</h3>
                             <p className="text-sm text-muted-foreground">Tell me about your project and I&apos;ll get back to you.</p>

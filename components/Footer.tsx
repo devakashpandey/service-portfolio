@@ -32,7 +32,11 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="border-t border-border bg-gradient-to-b from-muted/30 to-muted/60">
+        <footer className="relative mt-20 border-t border-black/5 dark:border-white/[0.08] bg-slate-50 dark:bg-zinc-950 rounded-t-[3rem] md:rounded-t-[4.5rem] overflow-hidden">
+            {/* Premium Background Decoration */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-linear-to-r from-transparent via-indigo-500/50 to-transparent" />
+            <div className="absolute -top-24 -left-24 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
             {/* Main Footer Content */}
             <div className="container mx-auto px-4 py-12 md:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -57,22 +61,22 @@ export default function Footer() {
                         {/* Social Icons */}
                         <div className="flex items-center gap-3 pt-2">
                             {personalInfo.social.github && (
-                                <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-9 h-9 rounded-lg bg-card border border-border/60 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-gray-800 transition-all">
+                                <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-9 h-9 rounded-lg bg-white dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] flex items-center justify-center text-muted-foreground hover:text-white hover:bg-gray-800 transition-all">
                                     <Github className="w-4 h-4" />
                                 </a>
                             )}
                             {personalInfo.social.linkedin && (
-                                <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-card border border-border/60 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-blue-600 transition-all">
+                                <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-white dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] flex items-center justify-center text-muted-foreground hover:text-white hover:bg-blue-600 transition-all">
                                     <Linkedin className="w-4 h-4" />
                                 </a>
                             )}
                             {personalInfo.social.instagram && (
-                                <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-lg bg-card border border-border/60 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 transition-all">
+                                <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-lg bg-white dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] flex items-center justify-center text-muted-foreground hover:text-white hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 transition-all">
                                     <Instagram className="w-4 h-4" />
                                 </a>
                             )}
                             {(personalInfo.social as any).whatsapp && (
-                                <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-9 h-9 rounded-lg bg-card border border-border/60 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-green-500 transition-all">
+                                <a href={(personalInfo.social as any).whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-9 h-9 rounded-lg bg-white dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] flex items-center justify-center text-muted-foreground hover:text-white hover:bg-green-500 transition-all">
                                     <MessageSquare className="w-4 h-4" />
                                 </a>
                             )}
@@ -129,15 +133,16 @@ export default function Footer() {
                             </li>
                         </ul>
                         {/* CTA Button */}
-                        <Link href="/#contact" className="inline-block mt-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-colors">
+                        <Link href="/#contact" className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-indigo-600 to-purple-600 text-white text-xs font-bold uppercase tracking-widest rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/20 active:scale-95">
                             Get Free Quote
+                            <MessageSquare className="w-3.5 h-3.5" />
                         </Link>
                     </div>
                 </div>
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-border">
+            <div className="border-t border-black/5 dark:border-white/[0.05] bg-white/50 dark:bg-zinc-950/50 backdrop-blur-md">
                 <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-muted-foreground">
                         © {currentYear} {personalInfo.brandName}. All rights reserved.

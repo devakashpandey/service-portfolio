@@ -42,7 +42,6 @@ export default function Navbar() {
         { label: "About", href: "/about" },
         { label: "Services", href: "/#services" },
         { label: "Why Us", href: "/#why-us" },
-        { label: "Features", href: "/#features" },
         { label: "Portfolio", href: "/#portfolio" },
         { label: "Contact", href: "/#contact" },
     ];
@@ -91,12 +90,24 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-2">
+                    <div className="hidden lg:flex items-center gap-4">
+                        <Button
+                            asChild
+                            className={`rounded-full shadow-lg transition-all duration-300 active:scale-95 bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none font-bold text-xs ${isScrolled ? "h-9 px-5" : "h-10 px-6"}`}
+                        >
+                            <a href={`https://wa.me/${personalInfo.whatsapp}`} className="flex items-center gap-2">
+                                <MessageSquare className="h-3.5 w-3.5" />
+                                Chat with Us
+                            </a>
+                        </Button>
+                    </div>
+
                     <Button
                         variant="ghost"
                         size="icon"
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                         aria-label="Toggle theme"
-                        className="rounded-full h-9 w-9 md:h-10 md:w-10 hover:bg-indigo-500/5"
+                        className="rounded-full h-9 w-9 md:h-10 md:w-10 hover:bg-indigo-500/5 text-foreground"
                     >
                         {theme === "dark" ? <Sun className="h-4 w-4 md:h-5 md:w-5" /> : <Moon className="h-4 w-4 md:h-5 md:w-5" />}
                     </Button>

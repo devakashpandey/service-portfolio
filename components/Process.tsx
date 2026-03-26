@@ -29,7 +29,7 @@ export default function Process() {
                     {workSteps.map((step, index) => {
                         const color = stepColors[index % stepColors.length];
                         return (
-                            <div key={index} className={`relative p-6 rounded-2xl border ${color.border} bg-card backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}>
+                            <div key={index} className={`relative p-6 rounded-2xl border ${color.border} bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 group`}>
                                 {/* Step Number */}
                                 <div className={`w-8 h-8 rounded-lg ${color.bg} flex items-center justify-center mb-4`}>
                                     <span className={`text-sm font-extrabold ${color.text}`}>{index + 1}</span>

@@ -60,10 +60,10 @@ export default function Portfolio() {
                                     top: `calc(${index * 2}rem + 8rem)`
                                 }}
                             >
-                                <div className="group relative bg-card border border-border/60 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-indigo-500/10">
+                                <div className="group relative bg-white dark:bg-zinc-950 border border-black/5 dark:border-white/[0.08] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-indigo-500/10 hover:border-indigo-500/20 will-change-transform">
                                     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 overflow-hidden lg:min-h-[540px]">
                                         {/* Project Info */}
-                                        <div className="p-6 md:p-10 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                                        <div className="p-6 md:p-10 lg:p-12 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-white dark:bg-zinc-950">
                                             <div className="flex items-center gap-3 mb-4 md:mb-6">
                                                 <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-500 text-[10px] font-black uppercase tracking-widest border border-indigo-500/20">
                                                     {project.category}

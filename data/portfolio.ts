@@ -309,6 +309,16 @@ export const testimonials = [
     rating: 5,
     avatar: "RK",
   },
+  {
+    id: "7",
+    name: "Aditya Sharma",
+    business: "Landscaping & Gardening Service",
+    feedback:
+      "Akky Labs delivered our landscaping website incredibly fast! The smooth animations, clean UI, and on-page SEO give it a truly premium feel. Highly recommended!",
+    rating: 5,
+    avatar: "AS",
+    image: "/clients/adityasharma.jpeg",
+  },
 ];
 
 // ===== CATEGORY FILTERS =====
