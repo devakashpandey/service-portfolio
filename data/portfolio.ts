@@ -227,8 +227,18 @@ export const demos: Demo[] = [
     link: "#",
     tags: ["SaaS", "Tech", "Landing Page"],
   },
-
-  
+  {
+    id: "16",
+    title: "Green Ganga Associates",
+    description:
+      "A professional landscaping and gardening website, specializing in outdoor space design and maintenance.",
+    image: "/greenganga1.png",
+    images: ["/greenganga1.png", "/greenganga2.png", "/greenganga3.png"],
+    category: "realestate",
+    link: "https://www.greengangaassociates.com/",
+    tags: ["Landscaping", "Gardening", "Design"],
+    featured: true,
+  },
 ];
 
 // ===== AGENCY INFO =====
@@ -239,8 +249,8 @@ export const personalInfo = {
   title: "Software & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
   experience: "3+",
-  projectsCompleted: "15+", 
-  happyClients: "6+",
+  projectsCompleted: "20+", 
+  happyClients: "10+",
   email: "devakashpandey04@gmail.com",
   phone: "+91 8709412383",
   whatsapp: "918709412383",

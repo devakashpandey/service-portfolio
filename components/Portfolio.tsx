@@ -163,7 +163,7 @@ export default function Portfolio() {
                 <div className="mt-24 flex justify-center">
                     <Button asChild variant="outline" size="lg" className="h-14 px-10 rounded-2xl font-bold group gap-2 border-indigo-500/20 hover:border-indigo-500 hover:bg-indigo-500/5 transition-all text-base">
                         <Link href="/projects/all-projects">
-                            Browse All 15+ Projects
+                            Browse All Works
                             <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </Button>
