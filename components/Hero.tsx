@@ -43,10 +43,10 @@ export default function Hero() {
 
                     {/* LEFT SIDE: Profile Card with Premium Data-Flow Effect */}
                     <div className="lg:col-span-6 flex justify-center order-2 lg:order-1 opacity-0 animate-scale-in">
-                        <DataFlowCard cardClassName="text-center p-6 md:p-8 text-white dark:text-white">
+                        <DataFlowCard cardClassName="text-center p-6 md:p-8">
                             <div className="relative w-32 h-32 md:w-36 md:h-36 mx-auto mb-6">
                                 <div className="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full" />
-                                <div className="absolute inset-2 overflow-hidden bg-zinc-900/50 backdrop-blur-xl rounded-full flex items-center justify-center shadow-lg ring-4 ring-zinc-950">
+                                <div className="absolute inset-2 overflow-hidden bg-white/40 dark:bg-zinc-900/50 backdrop-blur-xl rounded-full flex items-center justify-center shadow-lg ring-4 ring-indigo-500/10 dark:ring-zinc-950">
                                     <Image
                                         src="/logo.png"
                                         alt="Logo"
@@ -55,13 +55,13 @@ export default function Hero() {
                                         className="object-contain p-4"
                                     />
                                 </div>
-                                <div className="absolute -bottom-1 -right-1 w-9 h-9 bg-zinc-900/50 backdrop-blur-xl rounded-xl border border-white/[0.08] flex items-center justify-center text-xl shadow-md ring-2 ring-zinc-950">
+                                <div className="absolute -bottom-1 -right-1 w-9 h-9 bg-white/40 dark:bg-zinc-900/50 backdrop-blur-xl rounded-xl border border-black/5 dark:border-white/[0.08] flex items-center justify-center text-xl shadow-md ring-2 ring-indigo-500/10 dark:ring-zinc-950">
                                     🇮🇳
                                 </div>
                             </div>
 
                             <div className="space-y-1.5 mb-6">
-                                <h2 className="text-2xl font-bold tracking-tight text-white">{personalInfo.name}</h2>
+                                <h2 className="text-2xl font-bold tracking-tight text-foreground">{personalInfo.name}</h2>
                                 <div className="flex flex-col items-center gap-1">
                                     <span className="text-indigo-400 font-bold text-[10px] uppercase tracking-[0.2em]">
                                         {personalInfo.title}
@@ -72,7 +72,7 @@ export default function Hero() {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-3 gap-1 pt-6 border-t border-white/10">
+                            <div className="grid grid-cols-3 gap-1 pt-6 border-t border-indigo-500/10">
                                 <div className="flex flex-col">
                                     <span className="text-[10px] text-muted-foreground uppercase font-semibold">Expertise</span>
                                     <span className="font-bold text-base md:text-lg">{personalInfo.experience}</span>
@@ -89,22 +89,22 @@ export default function Hero() {
 
                             <div className="flex items-center justify-center gap-3 pt-6">
                                 {personalInfo.social.github && (
-                                    <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:bg-gray-700 hover:text-white transition-colors">
+                                    <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-foreground/50 hover:bg-gray-700 hover:text-white transition-colors">
                                         <Github className="w-4 h-4" />
                                     </a>
                                 )}
                                 {personalInfo.social.linkedin && (
-                                    <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:bg-blue-500 hover:text-white transition-colors">
+                                    <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-foreground/50 hover:bg-blue-500 hover:text-white transition-colors">
                                         <Linkedin className="w-4 h-4" />
                                     </a>
                                 )}
                                 {personalInfo.social.instagram && (
-                                    <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:bg-pink-500 hover:text-white transition-colors">
+                                    <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-foreground/50 hover:bg-pink-500 hover:text-white transition-colors">
                                         <Instagram className="w-4 h-4" />
                                     </a>
                                 )}
                                 {personalInfo.social.portfolio && (
-                                    <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:bg-violet-500 hover:text-white transition-colors">
+                                    <a href={personalInfo.social.portfolio} target="_blank" rel="noopener noreferrer" aria-label="Portfolio" className="w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-foreground/50 hover:bg-violet-500 hover:text-white transition-colors">
                                         <Globe className="w-4 h-4" />
                                     </a>
                                 )}
