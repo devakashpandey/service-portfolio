@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.akkylabs.com/"),
+  metadataBase: new URL("https://www.akkylabs.com"),
   title: {
     default: "Akky Labs | Software Developer & Web Solutions for Your Business",
     template: "%s | Akky Labs",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "Akky Labs",
-    url: "https://akkylabs.com",
+    url: "https://www.akkylabs.com",
     images: [
       {
         url: "/logo.png",
@@ -115,11 +115,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  alternates: {
+    canonical: "https://www.akkylabs.com",
+  },
   verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    me: "your-me-verification-code",
-   
+    // Yahan apna Google Search Console code dalo:
+    // google: "yaha-code-aayega",
   },
   category: "technology",
 };

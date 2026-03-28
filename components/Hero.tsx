@@ -59,7 +59,7 @@ export default function Hero() {
                                     🇮🇳
                                 </div>
                             </div>
- 
+
                             <div className="space-y-1.5 mb-6">
                                 <h2 className="text-2xl font-bold tracking-tight text-white">{personalInfo.name}</h2>
                                 <div className="flex flex-col items-center gap-1">
@@ -71,7 +71,7 @@ export default function Hero() {
                                     </span>
                                 </div>
                             </div>
- 
+
                             <div className="grid grid-cols-3 gap-1 pt-6 border-t border-white/10">
                                 <div className="flex flex-col">
                                     <span className="text-[10px] text-muted-foreground uppercase font-semibold">Expertise</span>
@@ -117,7 +117,7 @@ export default function Hero() {
                         <div className="space-y-2">
                             <div className="space-y-4">
                                 <div className="inline-block border-b border-border/60 pb-1 opacity-0 animate-fade-in-up">
-                                    <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Transform your business into a digital growth brand</p>
+                                    <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Transform your business into a digital brand</p>
                                 </div>
                                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-none flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
                                     <span className="block">Digital Presence &</span>
