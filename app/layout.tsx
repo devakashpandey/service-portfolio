@@ -202,7 +202,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${outfit.variable} antialiased`}>
         <Providers>{children}</Providers>
-        {/* Yahan apna GA4 Measuring ID dalo (e.g. G-XXXXXXXXXX) */}
+
         <GoogleAnalytics gaId="G-WE8HT2M4GN" />
       </body>
     </html>
