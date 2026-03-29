@@ -80,7 +80,7 @@ export default function AboutPage() {
                                     </div>
 
                                     <p className="text-muted-foreground leading-relaxed">
-                                        I help local businesses grow by building a professional online presence that attracts more customers, generates real enquiries, builds trust, and improves efficiency through smart digital solutions and AI automation.
+I help businesses across industries build a professional online presence that strengthens credibility, turns visitors into real enquiries, builds trust, and improves efficiency through smart digital solutions, useful AI features, and simple automation tools.
                                     </p>
 
                                     {/* Key Points */}
