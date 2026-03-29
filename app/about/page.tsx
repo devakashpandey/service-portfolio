@@ -16,11 +16,11 @@ const stats = [
 ];
 
 const aboutDetails = [
-    "Full Stack Developer with expertise in React, Next.js, and Node.js",
-    "Specialized in building scalable web applications and mobile apps",
+    "Software & App Developer focused on building modern, high-performance web applications.",
+    "Helping businesses scale with robust web platforms and intuitive mobile apps.",
     "Worked with startups and established businesses worldwide",
-    "Passionate about creating premium digital experiences",
-    "1 Year free support included with every project",
+    "Passionate about crafting premium digital experiences that help businesses grow and succeed."
+    "Unlimited redesigns until you’re fully satisfied with the design.
 ];
 
 export default function AboutPage() {
