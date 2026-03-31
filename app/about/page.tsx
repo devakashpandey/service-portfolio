@@ -63,25 +63,25 @@ export default function AboutPage() {
                             </motion.div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 text-center max-w-4xl mx-auto">
-                                <div className="p-6 md:p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm group hover:border-indigo-500/30 transition-all duration-500">
+                                <div className="p-6 md:p-7 rounded-3xl bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/10 backdrop-blur-sm group hover:border-indigo-500/30 transition-all duration-500 shadow-sm dark:shadow-none">
                                     <div className="w-10 h-10 bg-indigo-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                         <Lightbulb className="w-5 h-5 text-indigo-500" />
                                     </div>
-                                    <h3 className="font-bold mb-2 text-sm md:text-base">Strategize</h3>
+                                    <h3 className="font-bold mb-2 text-sm md:text-base text-foreground">Strategize</h3>
                                     <p className="text-[11px] text-muted-foreground leading-relaxed">Deep dive into your business goals to define a foolproof roadmap.</p>
                                 </div>
-                                <div className="p-6 md:p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm group hover:border-purple-500/30 transition-all duration-500">
+                                <div className="p-6 md:p-7 rounded-3xl bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/10 backdrop-blur-sm group hover:border-purple-500/30 transition-all duration-500 shadow-sm dark:shadow-none">
                                     <div className="w-10 h-10 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                         <Code2 className="w-5 h-5 text-purple-500" />
                                     </div>
-                                    <h3 className="font-bold mb-2 text-sm md:text-base">Execute</h3>
+                                    <h3 className="font-bold mb-2 text-sm md:text-base text-foreground">Execute</h3>
                                     <p className="text-[11px] text-muted-foreground leading-relaxed">High-quality code meets premium design for an elite user experience.</p>
                                 </div>
-                                <div className="p-6 md:p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm group hover:border-pink-500/30 transition-all duration-500 sm:col-span-2 md:col-span-1">
+                                <div className="p-6 md:p-7 rounded-3xl bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/10 backdrop-blur-sm group hover:border-pink-500/30 transition-all duration-500 sm:col-span-2 md:col-span-1 shadow-sm dark:shadow-none">
                                     <div className="w-10 h-10 bg-pink-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                         <TrendingUp className="w-5 h-5 text-pink-500" />
                                     </div>
-                                    <h3 className="font-bold mb-2 text-sm md:text-base">Elevate</h3>
+                                    <h3 className="font-bold mb-2 text-sm md:text-base text-foreground">Elevate</h3>
                                     <p className="text-[11px] text-muted-foreground leading-relaxed">Optimizing products for growth, speed, and real business results.</p>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 </section>
 
                 {/* The Akky Labs Edge */}
-                <section className="relative z-10 py-16 md:py-24 bg-zinc-950/20">
+                <section className="relative z-10 py-16 md:py-24 bg-zinc-50 dark:bg-zinc-950/20 border-y border-zinc-200 dark:border-white/5">
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -108,12 +108,12 @@ export default function AboutPage() {
                                             { title: "Conversion Focus", desc: "Designed to turn visitors into long-term customers." },
                                             { title: "Ongoing Support", desc: "Free technical support to ensure smooth operations." }
                                         ].map((item, i) => (
-                                            <div key={i} className="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                                            <div key={i} className="flex gap-4 p-4 rounded-2xl bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors shadow-sm dark:shadow-none">
                                                 <div className="p-2 bg-indigo-500/10 rounded-lg h-fit">
                                                     <CheckCircle2 className="w-5 h-5 text-indigo-500" />
                                                 </div>
                                                 <div>
-                                                    <div className="font-bold text-sm mb-0.5">{item.title}</div>
+                                                    <div className="font-bold text-sm mb-0.5 text-foreground">{item.title}</div>
                                                     <p className="text-[10px] text-muted-foreground leading-tight">{item.desc}</p>
                                                 </div>
                                             </div>
@@ -217,11 +217,11 @@ export default function AboutPage() {
                                     { title: "Strategic Partner", icon: Handshake, desc: "Long-term commitment to your business growth." },
                                     { title: "AI-Powered", icon: Brain, desc: "Cutting-edge automation built into your core systems." },
                                 ].map((item, i) => (
-                                    <div key={i} className="group p-5 md:p-6 rounded-[1.5rem] md:rounded-[2rem] bg-zinc-900/40 border border-white/5 hover:border-indigo-500/30 hover:bg-zinc-900/60 transition-all duration-300">
+                                    <div key={i} className="group p-5 md:p-6 rounded-[1.5rem] md:rounded-[2rem] bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/5 hover:border-indigo-500/30 hover:bg-zinc-50 dark:hover:bg-zinc-900/60 transition-all duration-300 shadow-sm dark:shadow-none">
                                         <div className="w-10 h-10 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                             <item.icon className="w-5 h-5 text-indigo-500" />
                                         </div>
-                                        <h3 className="font-bold text-sm md:text-base mb-2">{item.title}</h3>
+                                        <h3 className="font-bold text-sm md:text-base mb-2 text-foreground">{item.title}</h3>
                                         <p className="text-[11px] text-muted-foreground leading-relaxed">{item.desc}</p>
                                     </div>
                                 ))}
@@ -233,18 +233,22 @@ export default function AboutPage() {
                 {/* New Closing Section */}
                 <section className="relative z-10 py-12 md:py-20 mb-8 md:mb-12">
                     <div className="container mx-auto px-6">
-                        <div className="max-w-4xl mx-auto rounded-[2rem] md:rounded-[3rem] p-8 md:p-14 bg-linear-to-br from-indigo-500/10 via-zinc-900/50 to-purple-500/10 border border-white/10 text-center relative overflow-hidden backdrop-blur-3xl">
-                            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 leading-tight tracking-tight">
-                                Partner with <span className="text-indigo-500 underline decoration-indigo-500/30 underline-offset-8">Akky Labs</span> today.<br className="hidden md:block" />
-                                Let&apos;s build the future of your business together.
+                        <div className="max-w-4xl mx-auto rounded-[2rem] md:rounded-[3rem] p-8 md:p-14 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-white/10 text-center relative overflow-hidden backdrop-blur-3xl shadow-lg shadow-black/5 dark:shadow-none">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight tracking-tight px-2">
+                                Building the future of your business together.
                             </h2>
-                            <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base max-w-xl mx-auto">
+                            <p className="text-muted-foreground mb-6 md:mb-8 text-xs md:text-sm max-w-xl mx-auto">
                                 Experience, transparency, and high-end technology—all working toward your growth.
                             </p>
-                            <button className="px-6 md:px-8 py-3 md:py-4 bg-foreground text-background font-black rounded-full hover:scale-105 active:scale-95 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] transition-all text-base md:text-lg group flex items-center gap-3 mx-auto">
+                            <a 
+                                href={`https://wa.me/${personalInfo.whatsapp}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 md:px-8 py-3 bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-black rounded-full hover:scale-105 active:scale-95 shadow-xl shadow-indigo-500/25 transition-all text-sm md:text-base group flex items-center gap-2 mx-auto w-fit"
+                            >
                                 Start Your Journey
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                            </button>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                            </a>
                         </div>
                     </div>
                 </section>
