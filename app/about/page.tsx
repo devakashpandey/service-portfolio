@@ -27,12 +27,6 @@ const philosophy = [
     { title: "Advisory Partnership", icon: Handshake, desc: "We act as your CTO-on-demand, providing high-level technical consulting and strategy." },
 ];
 
-const targetAudience = [
-    { title: "Ambitious Startups", desc: "Turning your 0 to 1 ideas into market-ready digital products fast.", icon: Rocket },
-    { title: "Growth Brands", desc: "Scaling your online presence with custom web and e-commerce systems.", icon: Layout },
-    { title: "Tech-Forward SMBs", desc: "Automating repetitive tasks with smart AI and custom software.", icon: Sparkles },
-];
-
 export default function AboutPage() {
     return (
         <>
@@ -172,31 +166,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* Ideal Partners */}
-                <section className="relative z-10 py-16 md:py-24 overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="max-w-6xl mx-auto">
-                            <div className="text-center md:text-left mb-12 md:mb-16">
-                                <h2 className="text-3xl md:text-5xl font-black tracking-tight">Who and <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Why?</span></h2>
-                                <p className="text-muted-foreground text-base md:text-lg italic mt-4">We partner with brands that value quality and long-term success.</p>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                                {targetAudience.map((target, i) => (
-                                    <div key={i} className="relative group p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-linear-to-b from-indigo-500/5 to-transparent border border-indigo-500/10 hover:border-indigo-500/30 transition-all duration-500 overflow-hidden">
-                                        <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
-                                            <target.icon className="w-24 h-24 md:w-32 md:h-32" />
-                                        </div>
-                                        <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-indigo-500/20 flex items-center justify-center mb-6 md:mb-8">
-                                            <target.icon className="w-6 h-6 md:w-8 md:h-8 text-indigo-500" />
-                                        </div>
-                                        <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{target.title}</h3>
-                                        <p className="text-muted-foreground leading-relaxed text-xs md:text-sm">{target.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
 
                 {/* Mission & Vision */}
                 <section className="relative z-10 py-16 md:py-24 pb-24 md:pb-40">
