@@ -90,6 +90,29 @@ export const services: Service[] = [
 // Add your demo projects here
 export const demos: Demo[] = [
   {
+    id: "101",
+    title: "Triveda Technologies",
+    description: "A strategic technology partner helping organizations design, build, and scale impactful digital products.",
+    image: "/newtri1.png",
+    images: ["/newtri1.png", "/newtri2.png", "/newtri3.png", "/newtri4.png"],
+    category: "saas",
+    link: "https://new-triveda-technologies.vercel.app/",
+    tags: ["Tech Partner", "AI Solutions", "Digital Products"],
+    featured: true,
+  },
+  {
+    id: "15",
+    title: "Shopping Platform",
+    description:
+      "A high-end ecommerce platform with premium fashion collection, seamless shopping experience, and modern UI/UX design.",
+    image: "/ecomm1.png",
+    images: ["/ecomm1.png", "/ecomm2.png", "/ecomm3.png", "/ecomm4.png", "/ecomm5.png", "/ecomm6.png"],
+    category: "ecommerce",
+    link: "https://unisex-store.vercel.app/",
+    tags: ["Ecommerce", "Fashion", "Premium"],
+    featured: true,
+  },
+  {
     id: "8",
     title: "Urban Cafe Bistro",
     description:
@@ -111,6 +134,17 @@ export const demos: Demo[] = [
     category: "wellness",
     link: "https://gym-portal-webapp.vercel.app/",
     tags: ["Gym", "Fitness", "Workout"],
+    featured: true,
+  },
+  {
+    id: "102",
+    title: "SaaS Product Landing",
+    description: "High-converting mordern landing page for a SaaS startup with dynamic pricing and feature highlights.",
+    image: "/tri0.png",
+    images: ["/tri0.png", "/tri1.png", "/tri2.png", "/tri3.png"],
+    category: "saas",
+    link: "https://triveda-technologies.vercel.app/",
+ tags: ["SaaS", "Tech", "Landing Page"],
     featured: true,
   },
   {
@@ -136,18 +170,7 @@ export const demos: Demo[] = [
     link: "https://new-course-platform.vercel.app/",
     tags: ["Courses", "Education", "Learning"],
   },
-    {
-    id: "15",
-    title: "Shopping Platform",
-    description:
-      "A high-end ecommerce platform with premium fashion collection, seamless shopping experience, and modern UI/UX design.",
-    image: "/ecomm1.png",
-    images: ["/ecomm1.png", "/ecomm2.png", "/ecomm3.png", "/ecomm4.png", "/ecomm5.png", "/ecomm6.png"],
-    category: "ecommerce",
-    link: "https://unisex-store.vercel.app/",
-    tags: ["Ecommerce", "Fashion", "Premium"],
-    featured: true,
-  },
+
 
    {
     id: "8",
@@ -171,6 +194,19 @@ export const demos: Demo[] = [
     category: "education",
     link: "https://unisex-store.vercel.app/",
     tags: ["Coaching", "Education", "Learning"],
+  },
+
+    {
+    id: "16",
+    title: "Green Ganga Associates",
+    description:
+      "A professional landscaping and gardening website, specializing in outdoor space design and maintenance.",
+    image: "/greenganga1.png",
+    images: ["/greenganga1.png", "/greenganga2.png", "/greenganga3.png"],
+    category: "realestate",
+    link: "https://www.greengangaassociates.com/",
+    tags: ["Landscaping", "Gardening", "Design"],
+    featured: true,
   },
 
   {
@@ -217,28 +253,8 @@ export const demos: Demo[] = [
     link: "#",
     tags: ["Hotel", "Hospitality", "Booking"],
   },
-  {
-    id: "13",
-    title: "SaaS Product Landing",
-    description:
-      "High-converting landing page for a SaaS startup with dynamic pricing and feature highlights.",
-    image: "/demos/demo_saas.png",
-    category: "saas",
-    link: "#",
-    tags: ["SaaS", "Tech", "Landing Page"],
-  },
-  {
-    id: "16",
-    title: "Green Ganga Associates",
-    description:
-      "A professional landscaping and gardening website, specializing in outdoor space design and maintenance.",
-    image: "/greenganga1.png",
-    images: ["/greenganga1.png", "/greenganga2.png", "/greenganga3.png"],
-    category: "realestate",
-    link: "https://www.greengangaassociates.com/",
-    tags: ["Landscaping", "Gardening", "Design"],
-    featured: true,
-  },
+
+
 ];
 
 // ===== AGENCY INFO =====
