@@ -283,22 +283,14 @@ export const personalInfo = {
 export const testimonials = [
   {
     id: "1",
-    name: "Sagar Tiwari",
+    name: "Govind Singh",
     business: "Global Education Platform",
     feedback:
       "The EdTech platform Akky Labs built for us is world-class. The student dashboard and interactive learning features have completely transformed how we deliver our courses online.",
     rating: 5,
-    avatar: "SS",
+    avatar: "GS",
   },
-  {
-    id: "2",
-    name: "Anurag Kashyap",
-    business: "E-commerce Retail",
-    feedback:
-      "Our sales have significantly increased since launching the new store. The checkout process is seamless, and the mobile experience is incredibly smooth. Highly professional team!",
-    rating: 5,
-    avatar: "PK",
-  },
+
   {
     id: "3",
     name: "Rohit Singh",
@@ -316,6 +308,7 @@ export const testimonials = [
       "I needed a robust platform to sell my digital courses, and the team at Akky Labs delivered exactly that. The integration with payment gateways and the content security features are top-notch.",
     rating: 5,
     avatar: "KS",
+    image: "/clients/shikhar.jpeg",
   },
   {
     id: "5",
@@ -325,6 +318,7 @@ export const testimonials = [
       "The jewelry web app looks absolutely premium! The high-quality image rendering and the focus on details really help showcase our collection. Exceptional development work.",
     rating: 5,
     avatar: "CG",
+    image: "/clients/charchit.jpeg",
   },
   {
     id: "6",
@@ -344,6 +338,15 @@ export const testimonials = [
     rating: 5,
     avatar: "AS",
     image: "/clients/adityasharma.jpeg",
+  },
+  {
+    id: "8",
+    name: "Suraj Singh",
+    business: "Triveda Technologies",
+    feedback:
+      "Akky Labs delivered a high-tech modern 3D website for us with amazing speed. The site is incredibly smooth and speed-optimized, perfectly showcasing our AI solutions and tech services.",
+    rating: 5,
+    avatar: "TT",
   },
 ];
 

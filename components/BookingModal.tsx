@@ -76,42 +76,42 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogContent className="w-[95vw] max-w-[480px] p-0 overflow-hidden border-none bg-background shadow-2xl z-50 rounded-[1.5rem] md:rounded-[2rem]">
+            <DialogContent className="w-[95vw] max-w-[480px] p-0 overflow-hidden border border-white/10 bg-zinc-950 shadow-[0_0_50px_-12px_rgba(79,70,229,0.3)] z-50 rounded-[1.5rem] md:rounded-[2rem]">
                 <div className="p-5 md:p-8 max-h-[90vh] overflow-y-auto custom-scrollbar">
                     {!isSuccess ? (
                         <div className="animate-fade-in-up">
                             <DialogHeader className="mb-5">
-                                <DialogTitle className="text-xl md:text-2xl font-bold flex items-center gap-2">
-                                    <Calendar className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                                <DialogTitle className="text-xl md:text-2xl font-black flex items-center gap-2 text-foreground">
+                                    <Calendar className="w-5 h-5 md:w-6 md:h-6 text-indigo-500" />
                                     Book a Meeting
                                 </DialogTitle>
-                                <DialogDescription className="text-sm">
+                                <DialogDescription className="text-sm text-muted-foreground/80">
                                     Fill in your details to schedule a call.
                                 </DialogDescription>
                             </DialogHeader>
-
+ 
                             {/* Availability Card */}
-                            <div className="mb-5 p-3.5 rounded-2xl bg-primary/5 border border-primary/10 flex gap-3 items-start">
-                                <Info className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                            <div className="mb-5 p-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex gap-3 items-start backdrop-blur-md">
+                                <Info className="w-4 h-4 text-indigo-500 mt-0.5 shrink-0" />
                                 <div className="space-y-1">
-                                    <p className="text-[10px] font-extrabold uppercase tracking-widest text-primary">Availability (IST)</p>
-                                    <div className="grid grid-cols-1 gap-0.5 text-[11px] md:text-xs text-muted-foreground font-medium">
-                                        <p> <b>Mon - Fri:</b> 07:30 PM - 11:30 PM</p>
-                                        <p> <b>Sat - Sun:</b> 11:00 AM - 11:30 PM</p>
+                                    <p className="text-[10px] font-black uppercase tracking-widest text-indigo-500">Availability (IST)</p>
+                                    <div className="grid grid-cols-1 gap-0.5 text-[11px] md:text-xs text-foreground/90 font-bold">
+                                        <p> <span className="opacity-60 font-medium">Mon - Fri:</span> 07:30 PM - 11:30 PM</p>
+                                        <p> <span className="opacity-60 font-medium">Sat - Sun:</span> 11:00 AM - 11:30 PM</p>
                                     </div>
                                 </div>
                             </div>
-
+ 
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div className="space-y-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Full Name</label>
+                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Full Name</label>
                                         <div className="relative">
                                             <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                                             <Input
                                                 placeholder="Enter your name"
                                                 required
-                                                className="pl-10 h-11 bg-muted/20 border-border/40 focus:ring-primary/20 rounded-xl text-sm"
+                                                className="pl-10 h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm transition-all"
                                                 value={formData.name}
                                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             />
@@ -119,48 +119,48 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                     </div>
 
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Email Address</label>
+                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Email Address</label>
                                         <div className="relative">
                                             <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                                             <Input
                                                 type="email"
                                                 placeholder="Enter your email"
                                                 required
-                                                className="pl-10 h-11 bg-muted/20 border-border/40 focus:ring-primary/20 rounded-xl text-sm"
+                                                className="pl-10 h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm transition-all"
                                                 value={formData.email}
                                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             />
                                         </div>
                                     </div>
-
+ 
                                     <div className="grid grid-cols-2 gap-3">
                                         <div className="space-y-1.5">
-                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Date</label>
+                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Date</label>
                                             <Input
                                                 type="date"
                                                 required
-                                                className="h-11 bg-muted/20 border-border/40 focus:ring-primary/20 rounded-xl text-sm px-3"
+                                                className="h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm px-3 transition-all color-scheme-dark"
                                                 value={formData.date}
                                                 min={new Date().toISOString().split('T')[0]}
                                                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                                             />
                                         </div>
                                         <div className="space-y-1.5">
-                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Time</label>
+                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Time</label>
                                             <Input
                                                 type="time"
                                                 required
-                                                className="h-11 bg-muted/20 border-border/40 focus:ring-primary/20 rounded-xl text-sm px-3"
+                                                className="h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm px-3 transition-all color-scheme-dark"
                                                 value={formData.time}
                                                 onChange={(e) => setFormData({ ...formData, time: e.target.value })}
                                             />
                                         </div>
                                     </div>
                                 </div>
-
+ 
                                 <Button
                                     type="submit"
-                                    className="w-full h-12 text-base font-bold mt-2 rounded-xl shadow-lg shadow-primary/10 gap-2 mb-2"
+                                    className="w-full h-12 text-base font-black mt-2 bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl shadow-lg shadow-indigo-500/20 gap-2 mb-2 transition-all active:scale-95"
                                     disabled={loading || !formData.name || !formData.email || !formData.date || !formData.time}
                                 >
                                     {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}

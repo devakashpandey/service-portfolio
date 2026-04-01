@@ -51,14 +51,14 @@ export default function AboutPage() {
                                 <span className="inline-block px-4 py-1.5 mb-6 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase bg-indigo-500/10 text-indigo-500 rounded-full border border-indigo-500/20">
                                     Crafting Digital Success
                                 </span>
-                                <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-[1.1]">
+                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[1.1]">
                                     Building Value.<br />
                                     <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
                                         Scaling Growth.
                                     </span>
                                 </h1>
                                 <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10">
-                                    At {personalInfo.brandName}, we bridge the gap between creative vision and technical execution, transforming complex business requirements into high-performance digital <span className="text-indigo-500 font-bold">solutions</span> that scale. We aren&apos;t just developers we are your strategic partners, providing the technical leadership needed for startups to disrupt and enterprises to win in the digital economy.
+                                    At <span className="text-foreground font-bold">Akky Labs</span>, we help brands build and scale their digital presence. Whether you&apos;re starting from zero or need to optimize your current platform for more <span className="text-indigo-500 font-bold">lead generation</span>, we bridge the gap with deep industry research. We aren&apos;t just developers - we are your strategic partners who handle the technology so you can focus on scaling your brand.
                                 </p>
                             </motion.div>
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
                         <div className="max-w-6xl mx-auto">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                                 <div className="space-y-6 md:space-y-8">
-                                    <h2 className="text-3xl md:text-5xl font-black tracking-tight">
+                                    <h2 className="text-4xl md:text-6xl font-black tracking-tight">
                                         The <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Difference</span>
                                     </h2>
                                     <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -175,7 +175,7 @@ export default function AboutPage() {
                             <div className="p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-linear-to-br from-indigo-600 via-indigo-700 to-indigo-900 text-white relative overflow-hidden group">
                                 <div className="relative z-10">
                                     <Target className="w-10 h-10 md:w-14 md:h-14 mb-6 md:mb-8 opacity-90" />
-                                    <h3 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 uppercase tracking-tight">The <span className="text-white/80">Mission</span></h3>
+                                    <h3 className="text-4xl md:text-6xl font-black mb-4 md:mb-6 uppercase tracking-tight">The <span className="text-white/80">Mission</span></h3>
                                     <p className="text-lg md:text-xl opacity-90 leading-relaxed font-medium">
                                         To empower the next generation of businesses with intelligent, scalable, and high-converting technology.
                                     </p>
@@ -187,7 +187,7 @@ export default function AboutPage() {
                             <div className="p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-linear-to-br from-purple-600 via-purple-700 to-purple-900 text-white relative overflow-hidden group">
                                 <div className="relative z-10">
                                     <Sparkles className="w-10 h-10 md:w-14 md:h-14 mb-6 md:mb-8 opacity-90" />
-                                    <h3 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 uppercase tracking-tight">The <span className="text-white/80">Vision</span></h3>
+                                    <h3 className="text-4xl md:text-6xl font-black mb-4 md:mb-6 uppercase tracking-tight">The <span className="text-white/80">Vision</span></h3>
                                     <p className="text-lg md:text-xl opacity-90 leading-relaxed font-medium">
                                         To become the world&apos;s most trusted partner for premium digital growth and AI transformation.
                                     </p>
@@ -205,8 +205,7 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
                             <div className="text-center mb-12 md:mb-16">
-                                <h2 className="text-3xl md:text-5xl font-black tracking-tight uppercase">Why You Trust <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Us</span></h2>
-                                <div className="h-1 w-16 md:w-20 bg-indigo-500 mx-auto mt-4 rounded-full" />
+                                <h2 className="text-4xl md:text-6xl font-black tracking-tight">Why Clients Trust <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Us</span></h2>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                                 {[
@@ -240,7 +239,7 @@ export default function AboutPage() {
                             <p className="text-muted-foreground mb-6 md:mb-8 text-xs md:text-sm max-w-xl mx-auto">
                                 Experience, transparency, and high-end technology—all working toward your growth.
                             </p>
-                            <a 
+                            <a
                                 href={`https://wa.me/${personalInfo.whatsapp}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
