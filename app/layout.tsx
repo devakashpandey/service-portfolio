@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
@@ -17,6 +17,13 @@ const outfit = Outfit({
   preload: true,
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0A0A0A",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.akkylabs.com"),
   title: {
@@ -24,37 +31,22 @@ export const metadata: Metadata = {
     template: "%s | Akky Labs",
   },
   description:
-    "Professional web development services for shops and businesses. Get custom websites, web apps, and mobile apps to grow your business online. 3+ years of experience delivering premium digital solutions.",
+    "Professional web development for businesses. Get custom websites, web apps, and mobile apps to grow online. 3+ years experience delivering premium solutions.",
   keywords: [
+    "Akky Labs",
+    "Akash Pandey",
     "web developer",
     "website design",
     "web app development",
     "mobile app development",
     "business website",
-    "e-commerce website",
-    "shop website",
     "freelance developer",
     "India",
-    "web development services",
-    "website design company",
-    "freelance web developer",
     "custom website development",
     "ecommerce website development",
-    "business website design",
-    "web application development",
-    "hire web developer",
-    "responsive website design",
     "professional web developer",
-    "frontend developer",
-    "full stack web developer",
     "react js developer",
     "next js developer",
-    "startup website development",
-    "saas website development",
-    "portfolio website design",
-    "website redesign services",
-    "affordable web developer",
-    "web developer in India",
   ],
   authors: [{ name: "Akky Labs", url: "https://www.akkylabs.com/" }],
   creator: "Akky Labs",
@@ -66,13 +58,20 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
       { url: "/favicon-96.png", sizes: "96x96", type: "image/png" },
       { url: "/logo.png", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: "/favicon-96.png",
+    shortcut: "/favicon.ico",
     apple: [
       { url: "/logo.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/logo.png",
+      },
     ],
   },
   manifest: "/manifest.json",
@@ -82,7 +81,7 @@ export const metadata: Metadata = {
     title: "Akky Labs",
   },
   openGraph: {
-    title: "Akky Labs | Web Developer & App Solutions",
+    title: "Akky Labs | Software Developer & Web Solutions",
     description:
       "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
     type: "website",
@@ -104,6 +103,7 @@ export const metadata: Metadata = {
     description:
       "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
     images: ["/logo.png"],
+    creator: "@akkylabs",
   },
   robots: {
     index: true,
@@ -120,8 +120,8 @@ export const metadata: Metadata = {
     canonical: "https://www.akkylabs.com",
   },
   verification: {
-    // Yahan apna Google Search Console code dalo:
     // google: "yaha-code-aayega",
+    // bing: "yaha-bing-code-aayega",
   },
   category: "technology",
 };
