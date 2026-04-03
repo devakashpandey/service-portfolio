@@ -18,7 +18,7 @@ export default function AllProjectsPage() {
                 <div className="container relative z-10 mx-auto px-6 py-12 md:py-20">
                     <div className="max-w-3xl mx-auto text-center mb-16">
                         <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
-                            All <span className="text-primary">Projects</span>
+                            All <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Projects</span>
                         </h1>
                         <p className="text-lg text-muted-foreground">
                             Explore all my projects across different industries.

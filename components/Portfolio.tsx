@@ -60,7 +60,7 @@ export default function Portfolio() {
                                     top: `calc(${index * 2}rem + 8rem)`
                                 }}
                             >
-                                <div className="group relative bg-white dark:bg-zinc-950 border border-black/5 dark:border-white/[0.08] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-indigo-500/10 hover:border-indigo-500/20 will-change-transform">
+                                <div className="group relative bg-white dark:bg-zinc-950 border border-black/5 dark:border-white/8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-indigo-500/10 hover:border-indigo-500/20 will-change-transform">
                                     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 overflow-hidden lg:min-h-[540px]">
                                         {/* Project Info */}
                                         <div className="p-6 md:p-10 lg:p-12 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-white dark:bg-zinc-950">
@@ -101,15 +101,17 @@ export default function Portfolio() {
                                                 </div>
                                             </div>
 
-                                            <div className="flex flex-wrap gap-4 mt-auto">
-                                                <Button asChild size="lg" className="h-10 md:h-12 lg:h-14 px-6 md:px-8 lg:px-10 rounded-full bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none shadow-xl shadow-indigo-500/25 active:scale-[0.98] transition-all font-bold text-sm md:text-base">
-                                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 lg:gap-3">
-                                                        Explore Full Project
-                                                        <ExternalLink className="w-4 h-4 lg:w-5 lg:h-5" />
-                                                    </a>
-                                                </Button>
-                                            </div>
-                                        </div>
+                                             {project.link && (
+                                                <div className="flex flex-wrap gap-4 mt-auto">
+                                                    <Button asChild size="lg" className="h-10 md:h-12 lg:h-14 px-6 md:px-8 lg:px-10 rounded-full bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none shadow-xl shadow-indigo-500/25 active:scale-[0.98] transition-all font-bold text-sm md:text-base">
+                                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 lg:gap-3">
+                                                            Explore Full Project
+                                                            <ExternalLink className="w-4 h-4 lg:w-5 lg:h-5" />
+                                                        </a>
+                                                    </Button>
+                                                </div>
+                                             )}
+                                         </div>
 
                                         {/* Project Image Panel with slider */}
                                         <div className="relative h-[250px] md:h-[350px] lg:h-full bg-muted/30 overflow-hidden group/img order-1 lg:order-2">
@@ -128,7 +130,7 @@ export default function Portfolio() {
                                                         onClick={() => prevImage(project.id, projectImages.length)}
                                                         variant="outline"
                                                         size="icon"
-                                                        className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-full bg-background/80 backdrop-blur-md border-border/40 hover:bg-indigo-500 hover:text-white transition-all shadow-xl"
+                                                        className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 hover:bg-indigo-600 transition-all shadow-xl"
                                                     >
                                                         <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                                                     </Button>
@@ -146,7 +148,7 @@ export default function Portfolio() {
                                                         onClick={() => nextImage(project.id, projectImages.length)}
                                                         variant="outline"
                                                         size="icon"
-                                                        className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-full bg-background/80 backdrop-blur-md border-border/40 hover:bg-indigo-500 hover:text-white transition-all shadow-xl"
+                                                        className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 hover:bg-indigo-600 transition-all shadow-xl"
                                                     >
                                                         <ChevronRight className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                                                     </Button>

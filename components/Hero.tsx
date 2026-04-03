@@ -55,7 +55,7 @@ export default function Hero() {
                                         className="object-contain p-4"
                                     />
                                 </div>
-                                <div className="absolute -bottom-1 -right-1 w-9 h-9 bg-white/40 dark:bg-zinc-900/50 backdrop-blur-xl rounded-xl border border-black/5 dark:border-white/[0.08] flex items-center justify-center text-xl shadow-md ring-2 ring-indigo-500/10 dark:ring-zinc-950">
+                                <div className="absolute -bottom-1 -right-1 w-9 h-9 bg-white/40 dark:bg-zinc-900/50 backdrop-blur-xl rounded-xl border border-black/5 dark:border-white/8 flex items-center justify-center text-xl shadow-md ring-2 ring-indigo-500/10 dark:ring-zinc-950">
                                     🇮🇳
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ export default function Hero() {
                                 </div>
                                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-none flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
                                     <span className="block">Digital Presence &</span>
-                                    <span className="italic bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Success</span>
+                                    <span className="italic bg-linear-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Success</span>
                                 </h1>
                             </div>
 

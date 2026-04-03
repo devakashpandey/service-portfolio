@@ -42,7 +42,7 @@ export default function Services() {
                         return (
                             <Card
                                 key={service.id}
-                                className={`group relative flex flex-col bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border-black/5 dark:border-white/[0.08] overflow-hidden rounded-2xl transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 opacity-0 animate-fade-in-up ${accent.border}`}
+                                className={`group relative flex flex-col bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border-black/5 dark:border-white/8 overflow-hidden rounded-2xl transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 opacity-0 animate-fade-in-up ${accent.border}`}
                                 style={{ animationDelay: `${index * 150}ms` }}
                             >
                                 <CardHeader className="p-5 pt-4 relative z-10 pb-1">

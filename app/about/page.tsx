@@ -53,7 +53,7 @@ export default function AboutPage() {
                                 </span>
                                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[1.1]">
                                     Building Value.<br />
-                                    <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
+                                    <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">
                                         Scaling Growth.
                                     </span>
                                 </h1>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                                 <div className="space-y-6 md:space-y-8">
                                     <h2 className="text-4xl md:text-6xl font-black tracking-tight">
-                                        The <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Difference</span>
+                                        The <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Difference</span>
                                     </h2>
                                     <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                                         We treat your project as our own. Our focus goes beyond just writing code we focus on the <span className="text-foreground font-bold">outcome</span>. By combining modern tech stacks with a revenue-first mindset, we ensure your digital presence delivers measurable value.
@@ -205,7 +205,7 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
                             <div className="text-center mb-12 md:mb-16">
-                                <h2 className="text-4xl md:text-6xl font-black tracking-tight">Why Clients Trust <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Us</span></h2>
+                                <h2 className="text-4xl md:text-6xl font-black tracking-tight">Why Clients Trust <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Us</span></h2>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                                 {[

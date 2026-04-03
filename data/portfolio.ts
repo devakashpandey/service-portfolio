@@ -8,7 +8,7 @@ export interface Demo {
   image: string;
   images?: string[];
   category: string;
-  link: string;
+  link?: string;
   tags: string[];
   featured?: boolean;
 }
@@ -108,7 +108,7 @@ export const demos: Demo[] = [
     image: "/ecomm1.png",
     images: ["/ecomm1.png", "/ecomm2.png", "/ecomm3.png", "/ecomm4.png", "/ecomm5.png", "/ecomm6.png"],
     category: "ecommerce",
-    link: "https://unisex-store.vercel.app/",
+    // link: "https://unisex-store.vercel.app/",
     tags: ["Ecommerce", "Fashion", "Premium"],
     featured: true,
   },
@@ -120,7 +120,7 @@ export const demos: Demo[] = [
     image: "/cafe1.png",
     images: ["/cafe1.png", "/cafe2.png", "/cafe3.png", "/cafe4.png"],
     category: "hospitality",
-    link: "https://my-cafe-webapp.vercel.app/",
+    // link: "https://my-cafe-webapp.vercel.app/",
     tags: ["Cafe", "Bistro", "Food"],
     featured: true,
   },
@@ -132,7 +132,7 @@ export const demos: Demo[] = [
     image: "/gym1.png",
     images: ["/gym1.png", "/gym2.png", "/gym3.png", "/gym4.png"],
     category: "wellness",
-    link: "https://gym-portal-webapp.vercel.app/",
+    // link: "https://gym-portal-webapp.vercel.app/",
     tags: ["Gym", "Fitness", "Workout"],
     featured: true,
   },
@@ -155,7 +155,7 @@ export const demos: Demo[] = [
     image: "/jwell1.png",
     images: ["/jwell1.png", "/jwell2.png", "/jwell3.png", "/jwell4.png"],
     category: "ecommerce",
-    link: "https://jyoti-jewellers.vercel.app/",
+    // link: "https://jyoti-jewellers.vercel.app/",
     tags: ["Jewellery", "Luxury", "E-commerce"],
     featured: true,
   },
@@ -167,7 +167,7 @@ export const demos: Demo[] = [
     image: "/course1.png",
     images: ["/course1.png", "/course2.png", "/course3.png"],
     category: "education",
-    link: "https://new-course-platform.vercel.app/",
+    // link: "https://new-course-platform.vercel.app/",
     tags: ["Courses", "Education", "Learning"],
   },
 
@@ -180,7 +180,7 @@ export const demos: Demo[] = [
     image: "/salon1.png",
     images: ["/salon1.png", "/salon2.png", "/salon3.png", "/salon4.png", "/salon5.png"],
     category: "wellness",
-    link: "https://luxe-salon-weapp.vercel.app/",
+    // link: "https://luxe-salon-weapp.vercel.app/",
     tags: ["Salon", "Beauty", "Service"],
     featured: true,
   },
@@ -206,7 +206,7 @@ export const demos: Demo[] = [
     image: "/restro1.png",
     images: ["/restro1.png", "/restro2.png", "/restro3.png", "/restro4.png"],
     category: "hospitality",
-    link: "https://restro-cafe-webapp.vercel.app/",
+    // link: "https://restro-cafe-webapp.vercel.app/",
     tags: ["Restaurant", "Cafe", "Premium"],
     featured: false,
   },
@@ -218,7 +218,7 @@ export const demos: Demo[] = [
       "Educational website for coaching centers with course listings, fee management, and student login.",
     image: "/demos/demo_coaching.png",
     category: "education",
-    link: "https://unisex-store.vercel.app/",
+    // link: "https://unisex-store.vercel.app/",
     tags: ["Coaching", "Education", "Learning"],
   },
 
@@ -230,7 +230,7 @@ export const demos: Demo[] = [
       "Property listing website for agents with advanced search, virtual tours, and lead generation.",
     image: "/demos/demo_realestate.png",
     category: "realestate",
-    link: "#",
+    // link: "#",
     tags: ["Property", "Real Estate", "Listings"],
     featured: true,
   },
@@ -242,7 +242,7 @@ export const demos: Demo[] = [
       "Modern beauty parlour website with gallery, price list, and WhatsApp booking.",
     image: "/demos/demo_beauty.png",
     category: "wellness",
-    link: "#",
+    // link: "#",
     tags: ["Beauty", "Parlour", "Service"],
   },
 
@@ -253,7 +253,7 @@ export const demos: Demo[] = [
       "Healthcare portal for hospitals with doctor schedules, OPD booking, and emergency info.",
     image: "/demos/demo_hospital.png",
     category: "healthcare",
-    link: "#",
+    // link: "#",
     tags: ["Hospital", "Health", "Management"],
   },
  
@@ -264,7 +264,7 @@ export const demos: Demo[] = [
       "Elegant hotel website with room gallery, online booking, and local tour packages.",
     image: "/demos/demo_hotel.png",
     category: "hospitality",
-    link: "#",
+    // link: "#",
     tags: ["Hotel", "Hospitality", "Booking"],
   },
  

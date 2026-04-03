@@ -32,7 +32,7 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
     return (
         <Card
             key={demo.id}
-            className="group overflow-hidden border-black/5 dark:border-white/[0.08] bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl flex flex-col h-full p-0 transition-all duration-300 ease-out hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1.5"
+            className="group overflow-hidden border-black/5 dark:border-white/8 bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl flex flex-col h-full p-0 transition-all duration-300 ease-out hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1.5"
         >
             <CardHeader className="p-0 border-b border-border/10 block">
                 <div className="relative aspect-video overflow-hidden bg-muted">
@@ -57,7 +57,7 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
                         <div className="absolute inset-x-0 bottom-4 flex justify-between px-3 items-center">
                             <button
                                 onClick={prevImage}
-                                className="p-1.5 rounded-full bg-background/80 backdrop-blur-md text-foreground border border-border/40 hover:bg-primary hover:text-white transition-colors opacity-0 group-hover:opacity-100"
+                                className="p-1.5 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 hover:bg-indigo-600 transition-colors opacity-0 group-hover:opacity-100"
                                 aria-label="Previous image"
                             >
                                 <ChevronLeft className="w-4 h-4" />
@@ -75,7 +75,7 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
 
                             <button
                                 onClick={nextImage}
-                                className="p-1.5 rounded-full bg-background/80 backdrop-blur-md text-foreground border border-border/40 hover:bg-primary hover:text-white transition-colors opacity-0 group-hover:opacity-100"
+                                className="p-1.5 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 hover:bg-indigo-600 transition-colors opacity-0 group-hover:opacity-100"
                                 aria-label="Next image"
                             >
                                 <ChevronRight className="w-4 h-4" />
@@ -87,16 +87,18 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
             <CardContent className="p-6 flex flex-col grow gap-0">
                 <div className="flex justify-between items-start mb-2 gap-2">
                     <h3 className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-1">{demo.title}</h3>
-                    <a
-                        href={demo.link}
-                        target={demo.link !== "#" ? "_blank" : "_self"}
-                        rel="noopener noreferrer"
-                        className="group/btn flex items-center gap-1.5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-wider bg-transparent text-primary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 whitespace-nowrap border border-primary/20 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:scale-95"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        View
-                        <Eye className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:scale-110" />
-                    </a>
+                     {demo.link && (
+                        <a
+                            href={demo.link}
+                            target={demo.link !== "#" ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                            className="group/btn flex items-center gap-1.5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-wider bg-transparent text-primary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 whitespace-nowrap border border-primary/20 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:scale-95"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            View
+                            <Eye className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:scale-110" />
+                        </a>
+                    )}
                 </div>
                 <p className="text-[13px] text-muted-foreground mb-5 line-clamp-2 leading-relaxed">
                     {demo.description}
