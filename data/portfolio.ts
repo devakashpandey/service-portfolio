@@ -185,16 +185,6 @@ export const demos: Demo[] = [
     featured: true,
   },
 
-  {
-    id: "4",
-    title: "Coaching Center Platform",
-    description:
-      "Educational website for coaching centers with course listings, fee management, and student login.",
-    image: "/demos/demo_coaching.png",
-    category: "education",
-    link: "https://unisex-store.vercel.app/",
-    tags: ["Coaching", "Education", "Learning"],
-  },
 
     {
     id: "16",
@@ -208,6 +198,30 @@ export const demos: Demo[] = [
     tags: ["Landscaping", "Gardening", "Design"],
     featured: true,
   },
+
+   {
+    id: "restro-cafe",
+    title: "Restro & Cafe",
+    description: "A premium restaurant and cafe platform with an elegant menu, reservations, and a warm dining atmosphere.",
+    image: "/restro1.png",
+    images: ["/restro1.png", "/restro2.png", "/restro3.png", "/restro4.png"],
+    category: "hospitality",
+    link: "https://restro-cafe-webapp.vercel.app/",
+    tags: ["Restaurant", "Cafe", "Premium"],
+    featured: false,
+  },
+
+  {
+    id: "4",
+    title: "Coaching Center Platform",
+    description:
+      "Educational website for coaching centers with course listings, fee management, and student login.",
+    image: "/demos/demo_coaching.png",
+    category: "education",
+    link: "https://unisex-store.vercel.app/",
+    tags: ["Coaching", "Education", "Learning"],
+  },
+
 
   {
     id: "5",
@@ -253,6 +267,7 @@ export const demos: Demo[] = [
     link: "#",
     tags: ["Hotel", "Hospitality", "Booking"],
   },
+ 
 
 
 ];
