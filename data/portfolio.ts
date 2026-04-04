@@ -282,7 +282,7 @@ export const personalInfo = {
   experience: "3+",
   projectsCompleted: "20+", 
   happyClients: "10+",
-  email: "devakashpandey04@gmail.com",
+  email: "akkylabs@outlook.com",
   phone: "+91 8709412383",
   whatsapp: "918709412383",
   location: "India",

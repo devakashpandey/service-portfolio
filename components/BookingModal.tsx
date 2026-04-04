@@ -35,27 +35,48 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
         setLoading(true);
 
         const templateParams = {
-            name: formData.name,
-            email: formData.email,
             from_name: formData.name,
             from_email: formData.email,
+            user_name: formData.name,
+            user_email: formData.email,
+            reply_to: formData.email,
+            to_name: personalInfo.name,
+            to_email: "akkylabs@outlook.com",
             meeting_date: formData.date,
             meeting_time: formData.time,
             message: formData.message || "Quick Booking",
-            to_email: "devakashpandey04@gmail.com"
         };
 
         try {
-            await emailjs.send(
-                'service_u696v1g',
+            console.log("Sending booking requests...", templateParams);
+            
+            // 1. Send Welcome Confirmation to Customer
+            const customerResponse = emailjs.send(
+                'service_ws8py68',
                 'template_18cex89',
                 templateParams,
                 'G62PMHVouqoQ5_9s7'
             );
+
+            // 2. Send Admin Notification to You (Akash)
+            const adminResponse = emailjs.send(
+                'service_ws8py68',
+                'template_e0uubqq',
+                templateParams,
+                'G62PMHVouqoQ5_9s7'
+            );
+
+            // Wait for both to complete
+            const [custRes, admRes] = await Promise.all([customerResponse, adminResponse]);
+            
+            console.log("Customer Email Success:", custRes.status, custRes.text);
+            console.log("Admin Email Success:", admRes.status, admRes.text);
+            
             setIsSuccess(true);
         } catch (error: any) {
-            console.error("Booking Error:", error);
-            setIsSuccess(true); // Fallback to success for WhatsApp
+            console.error("EmailJS Submission Failed:", error);
+            // Fallback to true to allow WhatsApp confirmation even if email fails
+            setIsSuccess(true);
         } finally {
             setLoading(false);
         }
@@ -89,7 +110,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                     Fill in your details to schedule a call.
                                 </DialogDescription>
                             </DialogHeader>
- 
+
                             {/* Availability Card */}
                             <div className="mb-5 p-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex gap-3 items-start backdrop-blur-md">
                                 <Info className="w-4 h-4 text-indigo-500 mt-0.5 shrink-0" />
@@ -101,7 +122,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                     </div>
                                 </div>
                             </div>
- 
+
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div className="space-y-4">
                                     <div className="space-y-1.5">
@@ -132,7 +153,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                             />
                                         </div>
                                     </div>
- 
+
                                     <div className="grid grid-cols-2 gap-3">
                                         <div className="space-y-1.5">
                                             <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Date</label>
@@ -157,7 +178,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                         </div>
                                     </div>
                                 </div>
- 
+
                                 <Button
                                     type="submit"
                                     className="w-full h-12 text-base font-black mt-2 bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl shadow-lg shadow-indigo-500/20 gap-2 mb-2 transition-all active:scale-95"
