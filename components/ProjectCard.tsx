@@ -43,6 +43,7 @@ export default function ProjectCard({ demo }: ProjectCardProps) {
                         src={images[currentImageIndex]}
                         alt={`${demo.title} - Image ${currentImageIndex + 1}`}
                         fill
+                        unoptimized={true}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className={`object-cover transition-all duration-700 ${isLoading ? 'scale-110 blur-sm opacity-0' : 'scale-100 blur-0 opacity-100'}`}
                         priority={false}

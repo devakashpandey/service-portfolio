@@ -127,6 +127,7 @@ export const metadata: Metadata = {
 };
 
 import { Providers } from "@/components/Providers";
+import PWARegistration from "@/components/PWARegistration";
 
 export default function RootLayout({
   children,
@@ -201,6 +202,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${outfit.variable} antialiased`}>
+        <PWARegistration />
         <Providers>{children}</Providers>
 
         <GoogleAnalytics gaId="G-WE8HT2M4GN" />

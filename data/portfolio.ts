@@ -1,5 +1,5 @@
 // ===== PORTFOLIO DATA =====
-// Easy to edit - Just update this file to add/remove demos
+
 
 export interface Demo {
   id: string;
@@ -93,8 +93,8 @@ export const demos: Demo[] = [
     id: "101",
     title: "Triveda Technologies",
     description: "A strategic technology partner helping organizations design, build, and scale impactful digital products.",
-    image: "/newtri1.png",
-    images: ["/newtri1.png", "/newtri2.png", "/newtri3.png", "/newtri4.png"],
+    image: "/newtri1.png?v=2",
+    images: ["/newtri1.png?v=2", "/newtri2.png?v=2", "/newtri3.png?v=2", "/newtri4.png?v=2"],
     category: "saas",
     link: "https://new-triveda-technologies.vercel.app/",
     tags: ["Tech Partner", "AI Solutions", "Digital Products"],
@@ -105,23 +105,34 @@ export const demos: Demo[] = [
     title: "Shopping Platform",
     description:
       "A high-end ecommerce platform with premium fashion collection, seamless shopping experience, and modern UI/UX design.",
-    image: "/ecomm1.png",
-    images: ["/ecomm1.png", "/ecomm2.png", "/ecomm3.png", "/ecomm4.png", "/ecomm5.png", "/ecomm6.png"],
+    image: "/ecomm1.png?v=2",
+    images: ["/ecomm1.png?v=2", "/ecomm2.png?v=2", "/ecomm3.png?v=2", "/ecomm4.png?v=2", "/ecomm5.png?v=2", "/ecomm6.png?v=2"],
     category: "ecommerce",
     // link: "https://unisex-store.vercel.app/",
     tags: ["Ecommerce", "Fashion", "Premium"],
     featured: true,
   },
   {
-    id: "8",
-    title: "Urban Cafe Bistro",
+    id: "10",
+    title: "City Hospital Management",
     description:
-      "A premium cafe and bistro website with digital menu, online ordering, and table reservation system.",
-    image: "/cafe1.png",
-    images: ["/cafe1.png", "/cafe2.png", "/cafe3.png", "/cafe4.png"],
+      "Healthcare portal for hospitals with doctor schedules, OPD booking, and emergency info.",
+    image: "/hospi1.png?v=2",
+    images: ["/hospi1.png?v=2", "/hospi2.png?v=2", "/hospi3.png?v=2", "/hospi4.png?v=2"],
+    category: "healthcare",
+    // link: "https://medvault-webapp.vercel.app/",
+    tags: ["Hospital", "Health", "Management"],
+    featured: true,
+  },
+  {
+    id: "restro-cafe",
+    title: "Restro & Cafe",
+    description: "A premium restaurant and cafe platform with an elegant menu, reservations, and a warm dining atmosphere.",
+    image: "/restro1.png?v=2",
+    images: ["/restro1.png?v=2", "/restro2.png?v=2", "/restro3.png?v=2", "/restro4.png?v=2"],
     category: "hospitality",
-    // link: "https://my-cafe-webapp.vercel.app/",
-    tags: ["Cafe", "Bistro", "Food"],
+    // link: "https://restro-cafe-webapp.vercel.app/",
+    tags: ["Restaurant", "Cafe", "Premium"],
     featured: true,
   },
   {
@@ -129,8 +140,8 @@ export const demos: Demo[] = [
     title: "Gym Portal",
     description:
       "Gym management website with plan subscription, trainer profiles, and workout tracking.",
-    image: "/gym1.png",
-    images: ["/gym1.png", "/gym2.png", "/gym3.png", "/gym4.png"],
+    image: "/gym1.png?v=2",
+    images: ["/gym1.png?v=2", "/gym2.png?v=2", "/gym3.png?v=2", "/gym4.png?v=2"],
     category: "wellness",
     // link: "https://gym-portal-webapp.vercel.app/",
     tags: ["Gym", "Fitness", "Workout"],
@@ -140,11 +151,11 @@ export const demos: Demo[] = [
     id: "102",
     title: "SaaS Product Landing",
     description: "High-converting mordern landing page for a SaaS startup with dynamic pricing and feature highlights.",
-    image: "/tri0.png",
-    images: ["/tri0.png", "/tri1.png", "/tri2.png", "/tri3.png"],
+    image: "/tri0.png?v=2",
+    images: ["/tri0.png?v=2", "/tri1.png?v=2", "/tri2.png?v=2", "/tri3.png?v=2"],
     category: "saas",
     link: "https://triveda-technologies.vercel.app/",
- tags: ["SaaS", "Tech", "Landing Page"],
+    tags: ["SaaS", "Tech", "Landing Page"],
     featured: true,
   },
   {
@@ -152,8 +163,8 @@ export const demos: Demo[] = [
     title: "Jewelry Shop",
     description:
       "Premium jewelry e-commerce website with elegant product display and secure checkout.",
-    image: "/jwell1.png",
-    images: ["/jwell1.png", "/jwell2.png", "/jwell3.png", "/jwell4.png"],
+    image: "/jwell1.png?v=2",
+    images: ["/jwell1.png?v=2", "/jwell2.png?v=2", "/jwell3.png?v=2", "/jwell4.png?v=2"],
     category: "ecommerce",
     // link: "https://jyoti-jewellers.vercel.app/",
     tags: ["Jewellery", "Luxury", "E-commerce"],
@@ -164,112 +175,88 @@ export const demos: Demo[] = [
     title: "Premium Course Platform",
     description:
       "A complete education platform for selling and managing online courses with student dashboard.",
-    image: "/course1.png",
-    images: ["/course1.png", "/course2.png", "/course3.png"],
+    image: "/course1.png?v=2",
+    images: ["/course1.png?v=2", "/course2.png?v=2", "/course3.png?v=2"],
     category: "education",
     // link: "https://new-course-platform.vercel.app/",
     tags: ["Courses", "Education", "Learning"],
   },
-
-
-   {
-    id: "8",
+  {
+    id: "salon-premium",
     title: "Premium Unisex Salon",
     description:
       "A professional unisex salon website with service menu, expert stylists, and online appointment booking.",
-    image: "/salon1.png",
-    images: ["/salon1.png", "/salon2.png", "/salon3.png", "/salon4.png", "/salon5.png"],
+    image: "/salon1.png?v=2",
+    images: ["/salon1.png?v=2", "/salon2.png?v=2", "/salon3.png?v=2", "/salon4.png?v=2", "/salon5.png?v=2"],
     category: "wellness",
     // link: "https://luxe-salon-weapp.vercel.app/",
     tags: ["Salon", "Beauty", "Service"],
     featured: true,
   },
-
-
-    {
+  {
     id: "16",
     title: "Green Ganga Associates",
     description:
       "A professional landscaping and gardening website, specializing in outdoor space design and maintenance.",
-    image: "/greenganga1.png",
-    images: ["/greenganga1.png", "/greenganga2.png", "/greenganga3.png"],
+    image: "/greenganga1.png?v=2",
+    images: ["/greenganga1.png?v=2", "/greenganga2.png?v=2", "/greenganga3.png?v=2"],
     category: "realestate",
     link: "https://www.greengangaassociates.com/",
     tags: ["Landscaping", "Gardening", "Design"],
     featured: true,
   },
-
-   {
-    id: "restro-cafe",
-    title: "Restro & Cafe",
-    description: "A premium restaurant and cafe platform with an elegant menu, reservations, and a warm dining atmosphere.",
-    image: "/restro1.png",
-    images: ["/restro1.png", "/restro2.png", "/restro3.png", "/restro4.png"],
+  {
+    id: "8",
+    title: "Urban Cafe Bistro",
+    description: "A premium cafe and bistro website with digital menu, online ordering, and table reservation system.",
+    image: "/cafe1.png?v=2",
+    images: ["/cafe1.png?v=2", "/cafe2.png?v=2", "/cafe3.png?v=2", "/cafe4.png?v=2"],
     category: "hospitality",
-    // link: "https://restro-cafe-webapp.vercel.app/",
-    tags: ["Restaurant", "Cafe", "Premium"],
+    // link: "https://my-cafe-webapp.vercel.app/",
+    tags: ["Cafe", "Bistro", "Food"],
     featured: false,
   },
-
   {
     id: "4",
     title: "Coaching Center Platform",
     description:
       "Educational website for coaching centers with course listings, fee management, and student login.",
-    image: "/demos/demo_coaching.png",
+    image: "/demos/demo_coaching.png?v=2",
     category: "education",
     // link: "https://unisex-store.vercel.app/",
     tags: ["Coaching", "Education", "Learning"],
   },
-
-
   {
     id: "5",
     title: "Real Estate Property Portal",
     description:
       "Property listing website for agents with advanced search, virtual tours, and lead generation.",
-    image: "/demos/demo_realestate.png",
+    image: "/demos/demo_realestate.png?v=2",
     category: "realestate",
     // link: "#",
     tags: ["Property", "Real Estate", "Listings"],
     featured: true,
   },
- 
   {
     id: "7",
     title: "Beauty Parlour Website",
     description:
       "Modern beauty parlour website with gallery, price list, and WhatsApp booking.",
-    image: "/demos/demo_beauty.png",
+    image: "/demos/demo_beauty.png?v=2",
     category: "wellness",
     // link: "#",
     tags: ["Beauty", "Parlour", "Service"],
   },
-
-  {
-    id: "10",
-    title: "City Hospital Management",
-    description:
-      "Healthcare portal for hospitals with doctor schedules, OPD booking, and emergency info.",
-    image: "/demos/demo_hospital.png",
-    category: "healthcare",
-    // link: "#",
-    tags: ["Hospital", "Health", "Management"],
-  },
- 
   {
     id: "12",
     title: "Grand Hotel Website",
     description:
       "Elegant hotel website with room gallery, online booking, and local tour packages.",
-    image: "/demos/demo_hotel.png",
+    image: "/demos/demo_hotel.png?v=2",
     category: "hospitality",
     // link: "#",
     tags: ["Hotel", "Hospitality", "Booking"],
   },
- 
-
-
 ];
 
 // ===== AGENCY INFO =====

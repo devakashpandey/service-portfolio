@@ -119,6 +119,7 @@ export default function Portfolio() {
                                                 src={projectImages[currentIndex]}
                                                 alt={`${project.title} - Preview ${currentIndex + 1}`}
                                                 fill
+                                                unoptimized={true}
                                                 className="object-cover object-top transition-all duration-700"
                                                 priority={index === 0}
                                             />
