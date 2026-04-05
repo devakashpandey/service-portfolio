@@ -221,10 +221,12 @@ export const demos: Demo[] = [
     title: "Coaching Center Platform",
     description:
       "Educational website for coaching centers with course listings, fee management, and student login.",
-    image: "/demos/demo_coaching.png?v=2",
+    image: "/education1.png?v=2",
+    images: ["/education1.png?v=2", "/education2.png?v=2", "/education3.png?v=2", "/education4.png?v=2", "/education5.png?v=2", "/education6.png?v=2", "/education7.png?v=2"],
     category: "education",
-    // link: "https://unisex-store.vercel.app/",
+    // link: "https://education-system-webapp.vercel.app/",
     tags: ["Coaching", "Education", "Learning"],
+    featured: true,
   },
   {
     id: "5",
