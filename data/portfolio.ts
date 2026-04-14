@@ -228,6 +228,17 @@ export const demos: Demo[] = [
     tags: ["Coaching", "Education", "Learning"],
     featured: true,
   },
+   {
+    id: "tattoo-studio",
+    title: "Premium Tattoo Studio",
+    description: "A professional tattoo studio web application featuring a stunning portfolio, artist profiles, and a modern, edgy design.",
+    image: "/tattoo1.png?v=2",
+    images: ["/tattoo1.png?v=2", "/tattoo2.png?v=2", "/tattoo3.png?v=2", "/tattoo4.png?v=2", "/tattoo5.png?v=2"],
+    category: "wellness",
+    // link: "https://tattoo-shop-webapp.vercel.app/",
+    tags: ["Tattoo Studio", "Portfolio", "Appointment"],
+    featured: false,
+  },
   {
     id: "5",
     title: "Real Estate Property Portal",
@@ -259,6 +270,7 @@ export const demos: Demo[] = [
     // link: "#",
     tags: ["Hotel", "Hospitality", "Booking"],
   },
+ 
 ];
 
 // ===== AGENCY INFO =====
