@@ -276,12 +276,12 @@ export const demos: Demo[] = [
 // ===== AGENCY INFO =====
 export const personalInfo = {
   name: "Akash Pandey",
-  founder: "Akash Pandey",
+  founder: "Akash Pandey", 
   brandName: "Akky Labs",
   title: "Software & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
   experience: "3+",
-  projectsCompleted: "30+", 
+  projectsCompleted: "25+", 
   happyClients: "15+",
   email: "akkylabs@outlook.com",
   phone: "+91 8709412383",
