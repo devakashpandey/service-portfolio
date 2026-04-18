@@ -175,9 +175,10 @@ export const demos: Demo[] = [
     title: "Premium Course Platform",
     description:
       "A complete education platform for selling and managing online courses with student dashboard.",
-    image: "/course1.png?v=2",
-    images: ["/course1.png?v=2", "/course2.png?v=2", "/course3.png?v=2"],
+    image: "/course1.png",
+    images: ["/course1.png", "/course2.png", "/course3.png", "/course4.png", "/course5.png", "/course6.png", "/course7.png"],
     category: "education",
+    featured: true,
     // link: "https://new-course-platform.vercel.app/",
     tags: ["Courses", "Education", "Learning"],
   },
