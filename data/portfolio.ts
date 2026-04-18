@@ -302,17 +302,16 @@ export const testimonials = [
     name: "Govind Singh",
     business: "Global Education Platform",
     feedback:
-      "The EdTech platform Akky Labs built for us is world-class. The student dashboard and interactive learning features have completely transformed how we deliver our courses online.",
+      "Akky Labs built a great EdTech platform for us. The student dashboard and interactive features are very easy to use. Our online courses are running much better now.",
     rating: 5,
     avatar: "GS",
   },
-
   {
     id: "3",
     name: "Rohit Singh",
     business: "AI Video Tech Startup",
     feedback:
-      "Working with Akky Labs on our AI video generator was a great experience. They understood the complex technical requirements perfectly and produced a high-performance web app our users love.",
+      "The team really understood our complex AI video startup needs. They delivered a high-quality web app that is fast and very smooth. Highly satisfied with their work.",
     rating: 5,
     avatar: "RS",
   },
@@ -321,7 +320,7 @@ export const testimonials = [
     name: "Kumar Shikhar",
     business: "Course Selling Platform",
     feedback:
-      "I needed a robust platform to sell my digital courses, and the team at Akky Labs delivered exactly that. The integration with payment gateways and the content security features are top-notch.",
+      "Akky Labs built a great course platform for me. The separate dashboards for student learning and owner management work perfectly. I can easily upload courses and blogs now. Great work!",
     rating: 5,
     avatar: "KS",
     image: "/clients/shikhar.jpeg",
@@ -331,7 +330,7 @@ export const testimonials = [
     name: "Charchit Gupta",
     business: "Luxury Jewelry Brand",
     feedback:
-      "The jewelry web app looks absolutely premium! The high-quality image rendering and the focus on details really help showcase our collection. Exceptional development work.",
+      "Our jewelry web app looks really premium and elegant. The images look sharp and every detail is captured perfectly. It's exactly what our luxury brand needed.",
     rating: 5,
     avatar: "CG",
     image: "/clients/charchit.jpeg",
@@ -341,7 +340,7 @@ export const testimonials = [
     name: "Raushan Kumar",
     business: "Cafe & Lounge",
     feedback:
-      "The table reservation system has automated our entire booking process. Our customers find it very easy to use, and it has significantly improved our cafe's daily operations.",
+      "Cafe ke liye table reservation system mast banaya hai. Booking process ab ekdum auto ho gaya hai aur customers ko bhi use karne me maza aata hai. Kaam fast ho gaya!",
     rating: 5,
     avatar: "RK",
   },
@@ -350,7 +349,7 @@ export const testimonials = [
     name: "Aditya Sharma",
     business: "Landscaping & Gardening Service",
     feedback:
-      "Akky Labs delivered our landscaping website incredibly fast! The smooth animations, clean UI, and on-page SEO give it a truly premium feel. Highly recommended!",
+      "Akky Labs made our landscaping site very quickly. Animations are smooth and the UI is very clean. Even the SEO part was handled well. Definitely worth the investment.",
     rating: 5,
     avatar: "AS",
     image: "/clients/adityasharma.jpeg",
@@ -360,9 +359,19 @@ export const testimonials = [
     name: "Suraj Singh",
     business: "Triveda Technologies",
     feedback:
-      "Akky Labs delivered a high-tech modern 3D website for us with amazing speed. The site is incredibly smooth and speed-optimized, perfectly showcasing our AI solutions and tech services.",
+      "They built a modern 3D website for our tech agency. The site is super fast and looks very professional. Our clients are really impressed with the new look.",
     rating: 5,
     avatar: "TT",
+  },
+  {
+    id: "9",
+    name: "Satish Keshari",
+    business: "Premium Tattoo Studio",
+    feedback:
+      "Tattoo studio ke liye ekdum modern webapp banaya hai. Booking aur price estimator ka system bahut helpful hai. SEO ki wajah se log humein ab asaani se search kar paa rahe hain.",
+    rating: 5,
+    avatar: "SK",
+    image: "/clients/satish.png",
   },
 ];
 
