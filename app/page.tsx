@@ -14,15 +14,18 @@ const Contact = dynamic(() => import("@/components/Contact"), { ssr: true });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
 const WhatsAppFloat = dynamic(() => import("@/components/WhatsAppFloat"), { ssr: true });
 
+const BusinessComparison = dynamic(() => import("@/components/BusinessComparison"), { ssr: true });
+
 export default function Home() {
   return (
     <>
       <Navbar />
       <main>
         <Hero />
+        <BusinessComparison />
+        <GrowthSection />
         <Services />
         <Features />
-        <GrowthSection />
         <Portfolio />
         <Testimonials />
         <WhyUs />

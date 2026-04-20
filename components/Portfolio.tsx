@@ -1,7 +1,7 @@
 "use client";
 
-import { demos } from "@/data/portfolio";
-import { ChevronLeft, ChevronRight, ExternalLink, Layout, Palette } from "lucide-react";
+import { demos, Demo } from "@/data/portfolio";
+import { ChevronLeft, ChevronRight, ExternalLink, Eye, Layout, Palette, Rocket, TrendingUp, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,8 @@ import { useState } from "react";
 export default function Portfolio() {
     // Get the first 5 projects from the array for the home page
     const featuredDemos = demos.slice(0, 5);
+
+
 
     // Initial state for image indexes of featured projects
     const [projectImageIndexes, setProjectImageIndexes] = useState<{ [key: string]: number }>(
@@ -31,13 +33,13 @@ export default function Portfolio() {
     };
 
     return (
-        <section id="portfolio" className="py-24 bg-background overflow-visible">
+        <section id="portfolio" className="py-12 md:py-24 bg-background overflow-visible">
             <div className="container mx-auto px-6">
                 <div className="relative text-center mb-20">
                     <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl md:text-9xl lg:text-[14rem] font-black text-transparent [webkit-text-stroke:1.5px_hsl(var(--foreground)/0.08)] select-none tracking-[0.2em] uppercase whitespace-nowrap z-0 pointer-events-none">
                         Works
                     </span>
-                    <h2 className="relative z-10 text-3xl md:text-5xl font-bold tracking-tight">
+                    <h2 className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
                         Featured <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Projects</span>
                     </h2>
                     <p className="relative z-10 text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
@@ -68,10 +70,15 @@ export default function Portfolio() {
                                                 <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-500 text-[10px] font-black uppercase tracking-widest border border-indigo-500/20">
                                                     {project.category}
                                                 </span>
-                                                <span className="w-1.5 h-1.5 rounded-full bg-border" />
-                                                <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-                                                    Featured Work
-                                                </span>
+                                                {project.impact && (
+                                                    <>
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-border" />
+                                                        <span className="flex items-center gap-1 text-[10px] font-black text-indigo-500 uppercase tracking-widest">
+                                                            <TrendingUp className="w-3 h-3" />
+                                                            {project.impact}
+                                                        </span>
+                                                    </>
+                                                )}
                                             </div>
 
                                             <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-5 group-hover:text-indigo-500 transition-colors">
@@ -86,31 +93,35 @@ export default function Portfolio() {
                                                 <div className="space-y-0">
                                                     <div className="flex items-center gap-3 text-foreground/90">
                                                         <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
-                                                            <Layout className="w-5 h-5 text-indigo-500" />
+                                                            <Rocket className="w-5 h-5 text-indigo-500" />
                                                         </div>
-                                                        <span className="text-base font-bold italic tracking-tight uppercase">Responsive</span>
+                                                        <span className="text-base font-bold italic tracking-tight uppercase">High Conversion</span>
                                                     </div>
                                                 </div>
                                                 <div className="space-y-0">
                                                     <div className="flex items-center gap-3 text-foreground/90">
                                                         <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                                                            <Palette className="w-5 h-5 text-purple-500" />
+                                                            <Zap className="w-5 h-5 text-purple-500" />
                                                         </div>
-                                                        <span className="text-base font-bold italic tracking-tight uppercase">Modern UI</span>
+                                                        <span className="text-base font-bold italic tracking-tight uppercase">Fast Loading</span>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                             {project.link && (
-                                                <div className="flex flex-wrap gap-4 mt-auto">
-                                                    <Button asChild size="lg" className="h-10 md:h-12 lg:h-14 px-6 md:px-8 lg:px-10 rounded-full bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none shadow-xl shadow-indigo-500/25 active:scale-[0.98] transition-all font-bold text-sm md:text-base">
-                                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 lg:gap-3">
-                                                            Explore Full Project
-                                                            <ExternalLink className="w-4 h-4 lg:w-5 lg:h-5" />
-                                                        </a>
-                                                    </Button>
-                                                </div>
-                                             )}
+                                             <div className="flex flex-wrap gap-4 mt-auto">
+                                                {project.link && (
+                                                    <div className="group/eye relative">
+                                                        <Button asChild size="lg" className="h-10 md:h-12 lg:h-14 w-10 md:w-12 lg:w-14 p-0 rounded-full bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none shadow-xl shadow-indigo-500/25 active:scale-[0.98] transition-all">
+                                                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                                                <Eye className="w-5 h-5 lg:w-6 lg:h-6" />
+                                                            </a>
+                                                        </Button>
+                                                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold rounded-lg opacity-0 group-hover/eye:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-2xl translate-y-1 group-hover/eye:translate-y-0 border border-white/5">
+                                                            View Full Website
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
                                          </div>
 
                                         {/* Project Image Panel with slider */}
@@ -163,15 +174,17 @@ export default function Portfolio() {
                     })}
                 </div>
 
-                <div className="mt-24 flex justify-center">
-                    <Button asChild variant="outline" size="lg" className="h-14 px-10 rounded-2xl font-bold group gap-2 border-indigo-500/20 hover:border-indigo-500 hover:bg-indigo-500/5 transition-all text-base">
+                <div className="mt-16 md:mt-24 flex justify-center">
+                    <Button asChild variant="outline" size="lg" className="h-11 md:h-14 px-6 md:px-10 rounded-xl md:rounded-2xl font-bold group gap-2 border-indigo-500/20 hover:border-indigo-500 hover:bg-indigo-500/5 transition-all text-sm md:text-base">
                         <Link href="/projects/all-projects">
                             Browse All Works
-                            <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </Button>
                 </div>
             </div>
+
+
         </section>
     );
 }

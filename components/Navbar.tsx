@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { personalInfo } from "@/data/portfolio";
-import { Moon, Sun, Menu, X, Mail, MessageSquare } from "lucide-react";
+import { Moon, Sun, Menu, X, MessageSquare } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
@@ -118,60 +118,62 @@ export default function Navbar() {
                                 <Menu className="h-4 w-4" />
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-full sm:w-[400px] border-l bg-background p-0" showCloseButton={false}>
-                            <div className="flex flex-col h-full relative z-10">
-                                <SheetHeader className="p-4 border-b bg-muted/30 flex flex-row items-center justify-between space-y-0">
-                                    <SheetTitle className="flex items-center gap-3 text-left">
-                                        <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center shadow-lg ring-4 ring-background/50">
-                                            <Image
-                                                src="/logo.png"
-                                                alt="Logo"
-                                                width={64}
-                                                height={64}
-                                                className="object-contain"
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-bold text-xl leading-none">{personalInfo.brandName}</p>
-                                            <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] mt-2">{personalInfo.title}</p>
-                                        </div>
-                                    </SheetTitle>
-                                    <SheetClose asChild>
-                                        <Button variant="ghost" size="icon" className="rounded-full h-12 w-12 hover:bg-muted/50 transition-colors">
-                                            <X className="h-6 w-6" />
-                                            <span className="sr-only">Close</span>
-                                        </Button>
-                                    </SheetClose>
-                                </SheetHeader>
+                        <SheetContent side="right" className="w-full sm:w-[350px] border-l border-white/5 bg-zinc-950/95 backdrop-blur-3xl p-0 flex flex-col" showCloseButton={false}>
+                            {/* Decorative background glow */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-                                <div className="flex-1 flex flex-col items-center justify-center gap-6 p-4">
-                                    {navLinks.map((link) => (
-                                        <SheetClose asChild key={link.label}>
-                                            <Link
-                                                href={link.href}
-                                                className="text-2xl font-extrabold tracking-tight hover:text-indigo-500 transition-all active:scale-95 text-foreground/70"
-                                            >
+                            <SheetHeader className="p-8 pb-10 flex flex-row items-center justify-between space-y-0 relative z-10">
+                                <SheetTitle className="text-left">
+                                    <span className="text-xl font-bold tracking-tighter text-white block">
+                                        {personalInfo.brandName}
+                                    </span>
+
+                                </SheetTitle>
+                                <SheetClose asChild>
+                                    <Button variant="ghost" size="icon" className="rounded-full h-10 w-10 text-white/50 hover:text-white hover:bg-white/5 transition-all">
+                                        <X className="h-5 w-5" />
+                                    </Button>
+                                </SheetClose>
+                            </SheetHeader>
+
+                            <div className="flex-1 flex flex-col gap-10 p-8 pt-4 relative z-10">
+                                {navLinks.map((link, index) => (
+                                    <SheetClose asChild key={link.label}>
+                                        <Link
+                                            href={link.href}
+                                            className="group flex items-center gap-4 transition-all"
+                                        >
+                                            <span className="text-[10px] font-bold text-indigo-500/40 group-hover:text-indigo-500 transition-colors tracking-tighter">
+                                                0{index + 1}
+                                            </span>
+                                            <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white group-hover:translate-x-2 transition-all">
                                                 {link.label}
-                                            </Link>
-                                        </SheetClose>
-                                    ))}
+                                            </span>
+                                        </Link>
+                                    </SheetClose>
+                                ))}
+                            </div>
+
+                            <div className="p-8 space-y-8 relative z-10">
+                                {/* Subtle Socials */}
+                                <div className="flex items-center gap-4 px-1">
+                                    <div className="h-px flex-1 bg-white/5" />
+                                    <div className="flex gap-4">
+                                        {["TW", "IG", "LI"].map(social => (
+                                            <span key={social} className="text-[9px] font-black text-white/20 hover:text-indigo-500 cursor-pointer transition-colors tracking-widest">{social}</span>
+                                        ))}
+                                    </div>
+                                    <div className="h-px flex-1 bg-white/5" />
                                 </div>
 
-                                <div className="p-6 border-t bg-muted/20 flex flex-col items-center gap-4">
-                                    <p className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.4em]">Get in touch</p>
-                                    <div className="flex gap-6">
-                                        <Button asChild variant="outline" size="icon" className="rounded-xl h-12 w-12 border-border/50 hover:border-indigo-500 hover:text-indigo-500 transition-all shadow-xl bg-background hover:-translate-y-1">
-                                            <a href={`mailto:${personalInfo.email}`} aria-label="Email">
-                                                <Mail className="h-5 w-5" />
-                                            </a>
-                                        </Button>
-                                        <Button asChild variant="outline" size="icon" className="rounded-xl h-12 w-12 border-border/50 hover:border-green-500 hover:text-green-500 transition-all shadow-xl bg-background hover:-translate-y-1">
-                                            <a href={`https://wa.me/${personalInfo.whatsapp}`} aria-label="WhatsApp">
-                                                <MessageSquare className="h-5 w-5" />
-                                            </a>
-                                        </Button>
-                                    </div>
-                                </div>
+                                <SheetClose asChild>
+                                    <Button
+                                        asChild
+                                        className="w-full h-12 rounded-full bg-white text-black hover:bg-zinc-200 font-bold uppercase tracking-[0.2em] text-[10px] transition-all active:scale-[0.98] shadow-2xl shadow-white/5"
+                                    >
+                                        <a href="#contact">Book a Meeting</a>
+                                    </Button>
+                                </SheetClose>
                             </div>
                         </SheetContent>
                     </Sheet>

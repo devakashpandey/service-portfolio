@@ -132,11 +132,7 @@ export default function Footer() {
                                 <span>{personalInfo.location}</span>
                             </li>
                         </ul>
-                        {/* CTA Button */}
-                        <Link href="/#contact" className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-indigo-600 to-purple-600 text-white text-xs font-bold uppercase tracking-widest rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/20 active:scale-95">
-                            Get Free Quote
-                            <MessageSquare className="w-3.5 h-3.5" />
-                        </Link>
+
                     </div>
                 </div>
             </div>

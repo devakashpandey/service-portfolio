@@ -12,7 +12,9 @@ import {
     Instagram,
     MessageSquare,
     Globe,
-    Calendar
+    Calendar,
+    Star,
+    Sparkles
 } from "lucide-react";
 import Image from "next/image";
 import { BookingModal } from "./BookingModal";
@@ -114,20 +116,46 @@ export default function Hero() {
 
                     {/* RIGHT SIDE: Content */}
                     <div className="lg:col-span-6 space-y-6 order-1 lg:order-2 lg:pl-4">
-                        <div className="space-y-2">
-                            <div className="space-y-4">
+                        <div className="space-y-4">
+
+
+                            <div className="space-y-2">
                                 <div className="inline-block border-b border-border/60 pb-1 opacity-0 animate-fade-in-up">
                                     <p className="text-muted-foreground text-lg md:text-xl font-medium italic">Transform your business into a digital brand</p>
                                 </div>
-                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-foreground tracking-tighter leading-none flex flex-col gap-1 opacity-0 animate-fade-in-up delay-100">
-                                    <span className="block">Digital Presence &</span>
-                                    <span className="italic bg-linear-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Success</span>
+                                <h1 className="text-[2.5rem] sm:text-5xl lg:text-6xl font-extrabold text-foreground tracking-tighter leading-[1.1] opacity-0 animate-fade-in-up delay-[150ms]">
+                                    Digital Presence & <span className="italic bg-linear-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent pr-2">Success</span>
                                 </h1>
+
+                                {/* Social Proof */}
+                                <div className="flex items-center gap-6 pt-4 opacity-0 animate-fade-in-up delay-[200ms]">
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="flex -space-x-2">
+                                            {["satish.png", "adityasharma.jpeg", "charchit.jpeg", "shikhar.jpeg"].map((img, i) => (
+                                                <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-muted overflow-hidden">
+                                                    <Image src={`/clients/${img}`} alt="Client" width={32} height={32} className="object-cover h-full w-full" unoptimized />
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="flex flex-col -gap-0.5 ml-1">
+                                            {/* <div className="flex items-center">
+                                                {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-3 h-3 fill-amber-500 text-amber-500" />)}
+                                                <span className="text-xs font-black ml-1.5">4.9/5</span>
+                                            </div> */}
+                                            <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-tight">15+ Happy Clients</p>
+                                        </div>
+                                    </div>
+                                    <div className="hidden md:block w-px h-8 bg-border/60" />
+                                    <div className="hidden md:flex flex-col">
+                                        <span className="text-xs font-bold tracking-loose uppercase ">Multiple Industries</span>
+                                        <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-tight">Global Success</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="space-y-4 opacity-0 animate-fade-in-up delay-200">
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                    I help businesses across industries build a professional online presence that strengthens credibility, turns visitors into real enquiries, builds trust, and improves efficiency through smart digital solutions, useful AI features, and simple automation tools.
+                                    I help businesses across industries build a professional online presence that strengthens credibility, turns visitors into real enquiries, builds trust, and improves efficiency through smart digital solutions.
                                 </p>
                             </div>
                         </div>
@@ -154,7 +182,7 @@ export default function Hero() {
                             <Button
                                 onClick={() => setIsBookingOpen(true)}
                                 size="lg"
-                                className="h-12 px-8 rounded-xl text-base font-bold shadow-md shadow-indigo-500/15 gap-2 cursor-pointer bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+                                className="h-12 px-4 rounded-xl text-base font-bold shadow-md shadow-indigo-500/15 gap-2 cursor-pointer bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
                             >
                                 Book a Meeting
                                 <Calendar className="w-4 h-4" />

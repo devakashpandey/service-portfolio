@@ -37,7 +37,7 @@ export default function GrowthSection() {
     ];
 
     return (
-        <section id="growth" className="py-20 bg-background relative overflow-hidden">
+        <section id="growth" className="py-12 md:py-24 bg-background relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:items-stretch items-center max-w-6xl mx-auto">
 
@@ -48,7 +48,7 @@ export default function GrowthSection() {
                                 <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
                                 <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-500">Grow Business Online</span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15]">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
                                 Why your Business needs an <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Online Presence?</span>
                             </h2>
                             <p className="text-base text-muted-foreground leading-relaxed max-w-sm">

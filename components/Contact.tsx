@@ -27,7 +27,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 md:py-28 bg-background relative overflow-hidden">
+        <section id="contact" className="py-12 md:py-28 bg-background relative overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-1/4 -right-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
@@ -41,7 +41,7 @@ export default function Contact() {
                             <span className="absolute -top-10 -left-6 text-7xl md:text-8xl lg:text-[11rem] font-black text-transparent [webkit-text-stroke:1.5px_hsl(var(--foreground)/0.08)] select-none tracking-[0.2em] uppercase whitespace-nowrap z-0 pointer-events-none">
                                 Contact
                             </span>
-                            <h2 className="relative z-10 text-3xl md:text-5xl font-bold tracking-tight mb-6">
+                            <h2 className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                                 Ready to scale your <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">business?</span>
                             </h2>
                             <p className="relative z-10 text-lg text-muted-foreground leading-relaxed max-w-lg">
@@ -86,27 +86,27 @@ export default function Contact() {
                     </div>
 
                     {/* Right Side: Modern Inquiry Form */}
-                    <div className="bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] rounded-[2.5rem] p-6 md:p-10 shadow-sm relative">
-                        <div className="mb-8">
-                            <h3 className="text-2xl font-bold mb-2">Start a conversation</h3>
-                            <p className="text-sm text-muted-foreground">Tell me about your project and I&apos;ll get back to you.</p>
+                    <div className="bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-10 shadow-sm relative">
+                        <div className="mb-6 md:mb-8">
+                            <h3 className="text-xl md:text-2xl font-bold mb-2">Start a conversation</h3>
+                            <p className="text-xs md:text-sm text-muted-foreground">Tell me about your project and I&apos;ll get back to you.</p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="space-y-4">
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">What&apos;s your name?</label>
+                            <div className="space-y-6 md:space-y-4">
+                                <div className="space-y-4">
+                                    <label className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">What&apos;s your name?</label>
                                     <Input
                                         required
                                         disabled={isSubmitting}
                                         placeholder="Type your name here..."
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        className="h-14 bg-muted/30 border-none rounded-2xl px-6 focus:ring-2 focus:ring-indigo-500/20 transition-all"
+                                        className="h-12 md:h-14 text-sm md:text-base bg-muted/30 border-none rounded-xl md:rounded-2xl px-6 focus:ring-2 focus:ring-indigo-500/20 transition-all"
                                     />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Your Phone / WhatsApp</label>
+                                <div className="space-y-4">
+                                    <label className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Your Phone / WhatsApp</label>
                                     <Input
                                         required
                                         disabled={isSubmitting}
@@ -114,11 +114,11 @@ export default function Contact() {
                                         placeholder="+91 00000 00000"
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                        className="h-14 bg-muted/30 border-none rounded-2xl px-6 focus:ring-2 focus:ring-indigo-500/20 transition-all"
+                                        className="h-12 md:h-14 text-sm md:text-base bg-muted/30 border-none rounded-xl md:rounded-2xl px-6 focus:ring-2 focus:ring-indigo-500/20 transition-all"
                                     />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Project Details</label>
+                                <div className="space-y-4">
+                                    <label className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Project Details</label>
                                     <Textarea
                                         required
                                         disabled={isSubmitting}
@@ -126,7 +126,7 @@ export default function Contact() {
                                         placeholder="What are you looking to build?"
                                         value={formData.project}
                                         onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                                        className="bg-muted/30 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500/20 transition-all resize-none"
+                                        className="bg-muted/30 border-none rounded-xl md:rounded-2xl px-6 py-4 text-sm md:text-base focus:ring-2 focus:ring-indigo-500/20 transition-all resize-none"
                                     />
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ export default function Contact() {
                                 type="submit"
                                 size="lg"
                                 disabled={isSubmitting}
-                                className="w-full h-14 rounded-2xl text-base font-bold gap-3 shadow-xl shadow-indigo-500/20 transition-all active:scale-[0.98] bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none"
+                                className="w-full h-12 md:h-14 rounded-xl md:rounded-2xl text-sm md:text-base font-bold gap-3 shadow-xl shadow-indigo-500/20 transition-all active:scale-[0.98] bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none"
                             >
                                 {isSubmitting ? (
                                     <>

@@ -77,13 +77,13 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
 
 export default function Features() {
     return (
-        <section id="features" className="relative z-10 py-20 md:py-32 bg-linear-to-b from-background via-indigo-50/30 dark:via-indigo-950/10 to-background overflow-hidden">
+        <section id="features" className="relative z-10 py-12 md:py-32 bg-linear-to-b from-background via-indigo-50/30 dark:via-indigo-950/10 to-background overflow-hidden">
             <div className="container relative z-10 mx-auto px-6 mb-16">
                 <div className="relative text-center space-y-4">
                     <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl md:text-9xl lg:text-[14rem] font-black text-transparent [webkit-text-stroke:1.5px_hsl(var(--foreground)/0.08)] select-none tracking-[0.2em] uppercase whitespace-nowrap z-0 pointer-events-none">
                         Features
                     </span>
-                    <h2 className="relative z-10 text-3xl md:text-5xl font-bold tracking-tight">
+                    <h2 className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
                         Features we <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Provide</span>
                     </h2>
                     <p className="relative z-10 text-lg text-muted-foreground max-w-2xl mx-auto ">
