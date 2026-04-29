@@ -128,6 +128,7 @@ export const metadata: Metadata = {
 
 import { Providers } from "@/components/Providers";
 import PWARegistration from "@/components/PWARegistration";
+import { GlobalErrorHandler } from "@/components/GlobalErrorHandler";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -204,8 +205,20 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('error', function(event) {
+                if (event.message && (event.message.indexOf('ChunkLoadError') > -1 || event.message.indexOf('Loading chunk') > -1)) {
+                  window.location.reload();
+                }
+              });
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.variable} ${outfit.variable} antialiased`}>
+        <GlobalErrorHandler />
         <PWARegistration />
         <Providers>{children}</Providers>
 
