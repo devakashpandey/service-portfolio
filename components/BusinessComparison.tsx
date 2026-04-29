@@ -37,7 +37,7 @@ const comparisonData = [
 
 export default function BusinessComparison() {
   return (
-    <section className="py-12 md:py-24 bg-zinc-50 dark:bg-zinc-950/50 relative overflow-hidden">
+    <section className="pt-16 pb-6 md:py-24 bg-zinc-50 dark:bg-zinc-950/50 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
@@ -104,7 +104,7 @@ export default function BusinessComparison() {
           </div>
 
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 mb-8">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 mb-0 md:mb-8">
               <span className="text-sm font-semibold italic">“This single change usually increases lead conversion by over 100%</span>
             </div>
           </div>

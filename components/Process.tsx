@@ -42,7 +42,7 @@ export default function Process() {
 
                                 <div className="relative z-10">
                                     <h3 className={`text-base font-bold mb-2 ${color.text}`}>{step.title}</h3>
-                                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                                    <p className="text-[13px] md:text-sm text-muted-foreground leading-relaxed">
                                         {step.description}
                                     </p>
                                 </div>

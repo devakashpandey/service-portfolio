@@ -37,7 +37,7 @@ export default function GrowthSection() {
     ];
 
     return (
-        <section id="growth" className="py-12 md:py-24 bg-background relative overflow-hidden">
+        <section id="growth" className="pt-6 pb-12 md:py-24 bg-background relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:items-stretch items-center max-w-6xl mx-auto">
 

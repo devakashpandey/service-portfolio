@@ -178,19 +178,17 @@ export default function Hero() {
 
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-wrap gap-4 pt-1 opacity-0 animate-fade-in-up delay-[400ms]">
+                        <div className="flex items-center gap-3 md:gap-4 pt-1 opacity-0 animate-fade-in-up delay-[400ms]">
                             <Button
                                 onClick={() => setIsBookingOpen(true)}
-                                size="lg"
-                                className="h-12 px-4 rounded-xl text-base font-bold shadow-md shadow-indigo-500/15 gap-2 cursor-pointer bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+                                className="h-10 md:h-12 px-4 md:px-6 rounded-lg text-sm md:text-base font-bold shadow-md shadow-indigo-500/15 gap-1.5 md:gap-2 cursor-pointer bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white whitespace-nowrap"
                             >
                                 Book a Meeting
-                                <Calendar className="w-4 h-4" />
+                                <Calendar className="w-3.5 h-3.5 md:w-4 md:h-4" />
                             </Button>
-                            <Button asChild variant="ghost" size="lg" className="h-12 px-8 rounded-xl text-base font-bold gap-2 text-muted-foreground hover:text-foreground">
+                            <Button asChild variant="ghost" className="h-10 md:h-12 px-4 md:px-8 rounded-xl text-sm md:text-base font-bold gap-2 text-muted-foreground hover:text-foreground whitespace-nowrap">
                                 <a href="#portfolio">
                                     View Works
-
                                 </a>
                             </Button>
                         </div>

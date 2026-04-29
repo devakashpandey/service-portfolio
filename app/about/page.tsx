@@ -68,21 +68,21 @@ export default function AboutPage() {
                                         <Lightbulb className="w-5 h-5 text-indigo-500" />
                                     </div>
                                     <h3 className="font-bold mb-2 text-sm md:text-base text-foreground">Strategize</h3>
-                                    <p className="text-[11px] text-muted-foreground leading-relaxed">Deep dive into your business goals to define a foolproof roadmap.</p>
+                                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">Deep dive into your business goals to define a foolproof roadmap.</p>
                                 </div>
                                 <div className="p-6 md:p-7 rounded-3xl bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/10 backdrop-blur-sm group hover:border-purple-500/30 transition-all duration-500 shadow-sm dark:shadow-none">
                                     <div className="w-10 h-10 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                         <Code2 className="w-5 h-5 text-purple-500" />
                                     </div>
                                     <h3 className="font-bold mb-2 text-sm md:text-base text-foreground">Execute</h3>
-                                    <p className="text-[11px] text-muted-foreground leading-relaxed">High-quality code meets premium design for an elite user experience.</p>
+                                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">High-quality code meets premium design for an elite user experience.</p>
                                 </div>
                                 <div className="p-6 md:p-7 rounded-3xl bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/10 backdrop-blur-sm group hover:border-pink-500/30 transition-all duration-500 sm:col-span-2 md:col-span-1 shadow-sm dark:shadow-none">
                                     <div className="w-10 h-10 bg-pink-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                         <TrendingUp className="w-5 h-5 text-pink-500" />
                                     </div>
                                     <h3 className="font-bold mb-2 text-sm md:text-base text-foreground">Elevate</h3>
-                                    <p className="text-[11px] text-muted-foreground leading-relaxed">Optimizing products for growth, speed, and real business results.</p>
+                                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">Optimizing products for growth, speed, and real business results.</p>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
                         <div className="max-w-6xl mx-auto">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                                 <div className="space-y-6 md:space-y-8">
-                                    <h2 className="text-4xl md:text-6xl font-black tracking-tight">
+                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
                                         The <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Difference</span>
                                     </h2>
                                     <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -114,7 +114,7 @@ export default function AboutPage() {
                                                 </div>
                                                 <div>
                                                     <div className="font-bold text-sm mb-0.5 text-foreground">{item.title}</div>
-                                                    <p className="text-[10px] text-muted-foreground leading-tight">{item.desc}</p>
+                                                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -156,8 +156,8 @@ export default function AboutPage() {
                                             <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-500/20 transition-colors">
                                                 <stat.icon className="w-5 h-5 text-indigo-500" />
                                             </div>
-                                            <p className="text-2xl font-black text-foreground mb-1">{stat.value}</p>
-                                            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{stat.label}</p>
+                                            <p className="text-2xl font-bold text-foreground mb-1">{stat.value}</p>
+                                            <p className="text-[10px] font-normal uppercase tracking-[0.2em] text-muted-foreground">{stat.label}</p>
                                         </CardContent>
                                     </Card>
                                 ))}
@@ -172,30 +172,95 @@ export default function AboutPage() {
                 <section className="relative z-10 py-16 md:py-24 pb-24 md:pb-40">
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                            <div className="p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-linear-to-br from-indigo-600 via-indigo-700 to-indigo-900 text-white relative overflow-hidden group">
-                                <div className="relative z-10">
-                                    <Target className="w-10 h-10 md:w-14 md:h-14 mb-6 md:mb-8 opacity-90" />
-                                    <h3 className="text-4xl md:text-6xl font-black mb-4 md:mb-6 uppercase tracking-tight">The <span className="text-white/80">Mission</span></h3>
-                                    <p className="text-lg md:text-xl opacity-90 leading-relaxed font-medium">
+
+                            {/* Mission Card */}
+                            <div className="relative p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-linear-to-br from-indigo-500 via-indigo-600 to-indigo-800 text-white overflow-hidden group shadow-2xl shadow-indigo-500/30">
+                                {/* Subtle dot grid */}
+                                <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle at 1.5px 1.5px, white 1px, transparent 0)', backgroundSize: '20px 20px' }} />
+                                {/* Top accent strip */}
+                                <div className="absolute top-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-white/40 to-transparent" />
+                                {/* Glow blob */}
+                                <div className="absolute -top-12 -left-12 w-48 h-48 bg-white/10 rounded-full blur-3xl pointer-events-none group-hover:bg-white/15 transition-all duration-700" />
+
+                                <div className="relative z-10 flex flex-col h-full">
+                                    {/* Label */}
+                                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-200 mb-5 block">Our Purpose</span>
+
+                                    {/* Icon + Title row */}
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
+                                            <Target className="w-6 h-6 md:w-7 md:h-7" />
+                                        </div>
+                                        <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-none">
+                                            The <span className="text-white/80">Mission</span>
+                                        </h3>
+                                    </div>
+
+
+
+                                    {/* Description */}
+                                    <p className="text-base md:text-lg opacity-85 leading-relaxed font-medium flex-1">
                                         To empower the next generation of businesses with intelligent, scalable, and high-converting technology.
                                     </p>
+
+                                    {/* Pills */}
+                                    <div className="flex flex-wrap gap-2 mt-8">
+                                        {["Scalable", "Intelligent", "High-Converting"].map(k => (
+                                            <span key={k} className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm">{k}</span>
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className="absolute bottom-0 right-0 p-4 opacity-10 group-hover:scale-125 transition-transform duration-1000">
-                                    <Target className="w-48 h-48 md:w-80 md:h-80 -mr-10 -mb-10 md:-mr-20 md:-mb-20" />
+
+                                {/* BG watermark icon */}
+                                <div className="absolute bottom-0 right-0 p-4 opacity-[0.07] group-hover:scale-110 transition-transform duration-1000 pointer-events-none">
+                                    <Target className="w-56 h-56 md:w-80 md:h-80 -mr-10 -mb-10 md:-mr-20 md:-mb-20" />
                                 </div>
                             </div>
-                            <div className="p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-linear-to-br from-purple-600 via-purple-700 to-purple-900 text-white relative overflow-hidden group">
-                                <div className="relative z-10">
-                                    <Sparkles className="w-10 h-10 md:w-14 md:h-14 mb-6 md:mb-8 opacity-90" />
-                                    <h3 className="text-4xl md:text-6xl font-black mb-4 md:mb-6 uppercase tracking-tight">The <span className="text-white/80">Vision</span></h3>
-                                    <p className="text-lg md:text-xl opacity-90 leading-relaxed font-medium">
+
+                            {/* Vision Card */}
+                            <div className="relative p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] bg-linear-to-br from-purple-500 via-purple-600 to-purple-800 text-white overflow-hidden group shadow-2xl shadow-purple-500/30">
+                                {/* Subtle dot grid */}
+                                <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle at 1.5px 1.5px, white 1px, transparent 0)', backgroundSize: '20px 20px' }} />
+                                {/* Top accent strip */}
+                                <div className="absolute top-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-white/40 to-transparent" />
+                                {/* Glow blob */}
+                                <div className="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-3xl pointer-events-none group-hover:bg-white/15 transition-all duration-700" />
+
+                                <div className="relative z-10 flex flex-col h-full">
+                                    {/* Label */}
+                                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-purple-200 mb-5 block">Our Direction</span>
+
+                                    {/* Icon + Title row */}
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
+                                            <Sparkles className="w-6 h-6 md:w-7 md:h-7" />
+                                        </div>
+                                        <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-none">
+                                            The <span className="text-white/80">Vision</span>
+                                        </h3>
+                                    </div>
+
+
+
+                                    {/* Description */}
+                                    <p className="text-base md:text-lg opacity-85 leading-relaxed font-medium flex-1">
                                         To become the world&apos;s most trusted partner for premium digital growth and AI transformation.
                                     </p>
+
+                                    {/* Pills */}
+                                    <div className="flex flex-wrap gap-2 mt-8">
+                                        {["Trusted", "Global", "AI-Powered"].map(k => (
+                                            <span key={k} className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm">{k}</span>
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className="absolute bottom-0 right-0 p-4 opacity-10 group-hover:scale-125 transition-transform duration-1000">
-                                    <Sparkles className="w-48 h-48 md:w-80 md:h-80 -mr-10 -mb-10 md:-mr-20 md:-mb-20" />
+
+                                {/* BG watermark icon */}
+                                <div className="absolute bottom-0 right-0 p-4 opacity-[0.07] group-hover:scale-110 transition-transform duration-1000 pointer-events-none">
+                                    <Sparkles className="w-56 h-56 md:w-80 md:h-80 -mr-10 -mb-10 md:-mr-20 md:-mb-20" />
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
@@ -205,7 +270,7 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
                             <div className="text-center mb-12 md:mb-16">
-                                <h2 className="text-4xl md:text-6xl font-black tracking-tight">Why Clients Trust <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Us</span></h2>
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">Why Clients Trust <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">Us</span></h2>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                                 {[
@@ -221,7 +286,7 @@ export default function AboutPage() {
                                             <item.icon className="w-5 h-5 text-indigo-500" />
                                         </div>
                                         <h3 className="font-bold text-sm md:text-base mb-2 text-foreground">{item.title}</h3>
-                                        <p className="text-[11px] text-muted-foreground leading-relaxed">{item.desc}</p>
+                                        <p className="text-[13px] text-muted-foreground leading-relaxed">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
