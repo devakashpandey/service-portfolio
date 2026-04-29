@@ -11,7 +11,6 @@ export interface Demo {
   link?: string;
   tags: string[];
   featured?: boolean;
-  impact?: string; // e.g., "+40% Leads"
   caseStudy?: {
     problem: string;
     solution: string;
@@ -106,7 +105,6 @@ export const demos: Demo[] = [
     link: "https://new-triveda-technologies.vercel.app/",
     tags: ["Tech Partner", "AI Solutions", "Digital Products"],
     featured: true,
-    impact: "3x Scale Velocity",
     caseStudy: {
       problem: "Triveda needed a world-class digital presence to match their high-end technology consulting services.",
       solution: "Built a high-performance 3D-integrated website with interactive service modules and smooth motion geometry.",
@@ -125,7 +123,6 @@ export const demos: Demo[] = [
     // link: "https://modern-ecommerce.vercel.app/",
     tags: ["Ecommerce", "Fashion", "Premium"],
     featured: true,
-    impact: "+45% Conversion Rate",
     caseStudy: {
        problem: "Low customer retention due to a slow, cluttered mobile shopping experience.",
        solution: "Redesigned with mobile-first approach, 1-click checkout, and high-res optimized product galleries.",
@@ -143,7 +140,6 @@ export const demos: Demo[] = [
     category: "healthcare",
     tags: ["Hospital", "Health", "Management"],
     featured: true,
-    impact: "500+ Monthly Bookings",
     caseStudy: {
        problem: "Patients faced long wait times and difficulty in checking doctor availability.",
        solution: "Implemented a real-time booking system and digital OPD schedule accessible via WhatsApp.",
@@ -160,7 +156,6 @@ export const demos: Demo[] = [
     category: "hospitality",
     tags: ["Restaurant", "Cafe", "Premium"],
     featured: true,
-    impact: "2x Reservations",
     caseStudy: {
        problem: "The cafe lacked a digital menu and had to process all reservations via phone manually.",
        solution: "Designed a stunning visual menu and integrated a seamless table reservation system.",
@@ -178,7 +173,6 @@ export const demos: Demo[] = [
     category: "wellness",
     tags: ["Gym", "Fitness", "Workout"],
     featured: true,
-    impact: "30% more Memberships",
     caseStudy: {
        problem: "Struggling to convert walk-ins into long-term members without a digital plan showcase.",
        solution: "Created a premium membership portal with interactive plan comparison and trainer bio pages.",
@@ -197,7 +191,6 @@ export const demos: Demo[] = [
     category: "ecommerce",
     tags: ["Jewellery", "Luxury", "E-commerce"],
     featured: true,
-    impact: "Premium Brand Trust",
     caseStudy: {
        problem: "The client needed a website that looked as expensive and trustworthy as their jewelry.",
        solution: "Implemented a 'gold & dark' theme with micro-animations and ultra-high-res zooming.",
@@ -228,7 +221,6 @@ export const demos: Demo[] = [
     category: "education",
     featured: true,
     tags: ["Courses", "Education", "Learning"],
-    impact: "1000+ Active Students",
     caseStudy: {
        problem: "Difficulty in managing multiple courses and handling student payments manually.",
        solution: "Built a custom LMS with automated enrollment and a personalized learning dashboard.",
@@ -246,7 +238,6 @@ export const demos: Demo[] = [
     category: "wellness",
     tags: ["Salon", "Beauty", "Service"],
     featured: true,
-    impact: "+60% Monthly Leads",
     caseStudy: {
        problem: "Operating at 40% capacity because customers didn't know the full service list.",
        solution: "Designed a digital catalog and 'Book Now' WhatsApp integration for every service.",
@@ -266,7 +257,6 @@ export const demos: Demo[] = [
     link: "https://www.greengangaassociates.com/",
     tags: ["Landscaping", "Gardening", "Design"],
     featured: true,
-    impact: "+50% High-Value Leads",
     caseStudy: {
        problem: "The client lacked a digital footprint to showcase their luxury landscaping projects to high-end clients.",
        solution: "Built a visual-heavy portfolio with high-resolution galleries and project-specific breakdown modules.",
@@ -284,7 +274,6 @@ export const demos: Demo[] = [
     // link: "https://my-cafe-webapp.vercel.app/",
     tags: ["Cafe", "Bistro", "Food"],
     featured: false,
-    impact: "Zero Overbooking Errors",
     caseStudy: {
        problem: "Manual reservation management led to overbooking and missed customer calls during peak hours.",
        solution: "Implemented a real-time table booking system and a high-contrast digital mobile menu.",
@@ -303,7 +292,6 @@ export const demos: Demo[] = [
     // link: "https://education-system-webapp.vercel.app/",
     tags: ["Coaching", "Education", "Learning"],
     featured: true,
-    impact: "40% Less Admin Work",
     caseStudy: {
        problem: "The center struggled with manual fee collection tracking and notifying students about new course schedules.",
        solution: "Developed a secure student-teacher portal with automated enrollment and a fee management dashboard.",
@@ -320,7 +308,6 @@ export const demos: Demo[] = [
     category: "wellness",
     tags: ["Tattoo Studio", "Portfolio", "Appointment"],
     featured: false,
-    impact: "3x Portfolio Views",
     caseStudy: {
        problem: "Artists were spending too much time showing portfolios in person instead of consulting.",
        solution: "Created a high-impact digital gallery with artist-specific collections and an edgy dark mode design.",
@@ -338,7 +325,6 @@ export const demos: Demo[] = [
     images: ["/beauty1.png", "/beauty2.png", "/beauty3.png", "/beauty4.png", "/beauty5.png"],
     category: "wellness",
     tags: ["Beauty", "Parlour", "Service"],
-    impact: "2.5x More Enquiries",
     caseStudy: {
        problem: "Customers were confused about service pricing and booking procedures, leading to dropped leads.",
        solution: "Simplified the pricing table and added a high-converting 3-step digital booking guide.",
@@ -355,7 +341,6 @@ export const demos: Demo[] = [
     images: ["/hotel1.png", "/hotel2.png", "/hotel3.png", "/hotel4.png", "/hotel5.png", "/hotel6.png", "/hotel7.png"],
     category: "hospitality",
     tags: ["Hotel", "Hospitality", "Booking"],
-    impact: "+40% Direct Bookings",
     caseStudy: {
        problem: "The hotel was losing revenue due to high commission fees paid to third-party booking platforms.",
        solution: "Built a premium direct booking experience with room showcase sliders and exclusive offers.",
@@ -373,7 +358,6 @@ export const demos: Demo[] = [
     category: "realestate",
     tags: ["Property", "Real Estate", "Listings"],
     featured: true,
-    impact: "4x Lead Quality",
     caseStudy: {
        problem: "The agent received numerous low-quality leads, wasting time for the sales team.",
        solution: "Implemented a multi-step property preference form with smart filtering for high-intent buyers.",

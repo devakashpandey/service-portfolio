@@ -1,7 +1,7 @@
 "use client";
 
 import { demos, Demo } from "@/data/portfolio";
-import { ChevronLeft, ChevronRight, ExternalLink, Eye, Layout, Palette, Rocket, TrendingUp, Zap } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, Eye, Layout, Palette, Rocket, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -70,15 +70,6 @@ export default function Portfolio() {
                                                 <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-500 text-[10px] font-black uppercase tracking-widest border border-indigo-500/20">
                                                     {project.category}
                                                 </span>
-                                                {project.impact && (
-                                                    <>
-                                                        <span className="w-1.5 h-1.5 rounded-full bg-border" />
-                                                        <span className="flex items-center gap-1 text-[10px] font-black text-indigo-500 uppercase tracking-widest">
-                                                            <TrendingUp className="w-3 h-3" />
-                                                            {project.impact}
-                                                        </span>
-                                                    </>
-                                                )}
                                             </div>
 
                                             <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-5 group-hover:text-indigo-500 transition-colors">

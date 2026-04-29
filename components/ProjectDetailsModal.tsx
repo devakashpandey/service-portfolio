@@ -62,14 +62,6 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }: Projec
                             </p>
                         </div>
 
-                        {/* Result/Impact Badge */}
-                        {project.impact && (
-                            <div className="bg-indigo-600/10 border border-indigo-500/20 rounded-2xl p-6 flex flex-col gap-2 items-center text-center transform transition-all hover:scale-[1.02]">
-                                <span className="text-indigo-500 font-black text-xs uppercase tracking-[0.2em]">The Result</span>
-                                <span className="text-2xl md:text-3xl font-black text-indigo-500 italic drop-shadow-sm">{project.impact}</span>
-                                <p className="text-sm font-medium text-muted-foreground/80">Guaranteed business growth with optimized UI/UX</p>
-                            </div>
-                        )}
 
                         {/* Case Study Details */}
                         {project.caseStudy && (
