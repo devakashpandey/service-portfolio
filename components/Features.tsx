@@ -64,7 +64,7 @@ function FeatureRow({ features, direction }: { features: typeof row1; direction:
                 {duplicatedFeatures.map((feature, index) => (
                     <div
                         key={`${feature.text}-${index}`}
-                        className="flex items-center gap-2 px-4 py-2 bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] rounded-full whitespace-nowrap shadow-sm hover:shadow-md transition-all duration-300"
+                        className="flex items-center gap-2 px-4 py-2 bg-white/40 dark:bg-zinc-900/50 backdrop-blur-md border border-zinc-200/50 dark:border-white/[0.08] rounded-full whitespace-nowrap shadow-none transition-all duration-300"
                     >
                         <feature.icon className={`w-3.5 h-3.5 ${feature.accent}`} />
                         <span className="text-[13px] font-medium text-foreground/80">{feature.text}</span>

@@ -43,7 +43,7 @@ export default function Testimonials() {
                     {duplicatedTestimonials.map((testimonial, idx) => (
                         <Card
                             key={`${testimonial.id}-${idx}`}
-                            className="w-[280px] md:w-[350px] shrink-0 bg-white/70 dark:bg-zinc-900/60 backdrop-blur-xl border-black/5 dark:border-white/[0.08] shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 rounded-2xl"
+                            className="w-[280px] md:w-[350px] shrink-0 bg-white dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-white/[0.08] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)] transition-all duration-300 rounded-3xl"
                         >
                             <CardContent className="p-5 md:p-6 flex flex-col h-full gap-4">
                                 {/* Top: Quote Icon */}

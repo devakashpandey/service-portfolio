@@ -48,7 +48,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Stacking Cards Container */}
-                <div className="relative max-w-6xl mx-auto space-y-0">
+                <div className="relative max-w-6xl mx-auto space-y-0 pb-10">
                     {featuredDemos.map((project, index) => {
                         const projectImages = project.images && project.images.length > 0 ? project.images : [project.image];
                         const currentIndex = projectImageIndexes[project.id] ?? 0;
@@ -56,13 +56,13 @@ export default function Portfolio() {
                         return (
                             <div
                                 key={project.id}
-                                className="sticky top-24 md:top-32 w-full mb-8 md:mb-20 last:mb-0"
+                                className="sticky w-full mb-8 md:mb-16"
                                 style={{
                                     zIndex: index + 1,
                                     top: `calc(${index * 2}rem + 8rem)`
                                 }}
                             >
-                                <div className="group relative bg-white dark:bg-zinc-950 border border-black/5 dark:border-white/8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-indigo-500/10 hover:border-indigo-500/20 will-change-transform">
+                                <div className="group relative bg-white dark:bg-zinc-950 border border-black/5 dark:border-white/8 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-md transition-all duration-500 hover:shadow-indigo-500/10 hover:border-indigo-500/20 will-change-transform">
                                     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 overflow-hidden lg:min-h-[540px]">
                                         {/* Project Info */}
                                         <div className="p-6 md:p-10 lg:p-12 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-white dark:bg-zinc-950">
@@ -165,7 +165,7 @@ export default function Portfolio() {
                     })}
                 </div>
 
-                <div className="mt-16 md:mt-24 flex justify-center">
+                <div className="mt-8 md:mt-12 flex justify-center">
                     <Button asChild variant="outline" size="lg" className="h-11 md:h-14 px-6 md:px-10 rounded-xl md:rounded-2xl font-bold group gap-2 border-indigo-500/20 hover:border-indigo-500 hover:bg-indigo-500/5 transition-all text-sm md:text-base">
                         <Link href="/projects/all-projects">
                             Browse All Works

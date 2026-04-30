@@ -134,6 +134,8 @@ import { cn } from "@/lib/utils";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 
+import ClickSpark from "@/components/ui/ClickSpark";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -220,7 +222,15 @@ export default function RootLayout({
       <body className={`${inter.variable} ${outfit.variable} antialiased`}>
         <GlobalErrorHandler />
         <PWARegistration />
-        <Providers>{children}</Providers>
+        <ClickSpark
+          sparkColor='#fff'
+          sparkSize={10}
+          sparkRadius={15}
+          sparkCount={8}
+          duration={400}
+        >
+          <Providers>{children}</Providers>
+        </ClickSpark>
 
         <GoogleAnalytics gaId="G-WE8HT2M4GN" />
       </body>

@@ -58,8 +58,8 @@ export default function GrowthSection() {
 
                         <div className="grid grid-cols-2 gap-3">
                             {cards.map((item, idx) => (
-                                <div key={idx} className="p-4 rounded-2xl border border-black/5 dark:border-white/[0.08] bg-white/40 dark:bg-zinc-900/40 backdrop-blur-xl hover:border-indigo-500/20 transition-all duration-300 group">
-                                    <item.icon className="w-5 h-5 text-indigo-500/70 mb-2 group-hover:scale-110 transition-transform" />
+                                <div key={idx} className="p-4 rounded-2xl border border-zinc-200/50 dark:border-white/[0.08] bg-white/30 dark:bg-zinc-900/40 backdrop-blur-md transition-all duration-300 group">
+                                    <item.icon className="w-5 h-5 text-indigo-500/70 mb-2 transition-transform" />
                                     <h3 className="font-bold text-base mb-1">{item.title}</h3>
                                     <p className="text-sm text-muted-foreground leading-tight">{item.desc}</p>
                                 </div>
@@ -69,7 +69,7 @@ export default function GrowthSection() {
 
                     {/* RIGHT SIDE: Compact Premium Card */}
                     <div className="lg:col-span-7 w-full lg:h-full">
-                        <div className="relative p-8 md:p-10 rounded-[2rem] bg-white/70 dark:bg-zinc-900/50 backdrop-blur-xl border border-black/5 dark:border-white/[0.08] shadow-sm overflow-hidden group h-full flex flex-col">
+                        <div className="relative p-8 md:p-10 rounded-[2rem] bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md border border-zinc-200/60 dark:border-white/[0.08] shadow-none overflow-hidden group h-full flex flex-col">
                             {/* Subtle Gradient Glow */}
                             <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all duration-700 pointer-events-none" />
 

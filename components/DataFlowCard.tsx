@@ -3,6 +3,8 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import GlareHover from "./ui/GlareHover/GlareHover";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 interface DataFlowCardProps {
     children: React.ReactNode;
@@ -17,9 +19,39 @@ export const DataFlowCard: React.FC<DataFlowCardProps> = ({
     badgeText,
     cardClassName 
 }) => {
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const mouseXSpring = useSpring(x);
+    const mouseYSpring = useSpring(y);
+
+    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["8deg", "-8deg"]);
+    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-8deg", "8deg"]);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        const xPct = mouseX / width - 0.5;
+        const yPct = mouseY / height - 0.5;
+        x.set(xPct);
+        y.set(yPct);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        y.set(0);
+    };
+
     return (
-        <div className={cn("flex justify-center items-center py-8 md:py-10 w-full", className)}>
-            <div className="relative group w-full max-w-sm">
+        <div 
+            className={cn("flex justify-center items-center py-8 md:py-10 w-full", className)}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+        >
+            <div className="relative group w-full max-w-sm" style={{ perspective: "1000px" }}>
                 {/* SVG Pathway - Above */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full w-full h-24 md:h-32 z-0 pointer-events-none">
                     <svg width="100%" height="100%" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -89,22 +121,44 @@ export const DataFlowCard: React.FC<DataFlowCardProps> = ({
                 {/* Glow Background */}
                 <div className="absolute -inset-10 bg-indigo-500/10 rounded-full blur-[80px] opacity-50 transition-opacity duration-1000" />
                 
-                <Card className={cn(
-                    "relative border-black/5 dark:border-white/[0.08] bg-white dark:bg-zinc-950 backdrop-blur-3xl overflow-hidden shadow-sm z-10 transition-all duration-700",
-                    cardClassName
-                )}>
-                    <CardContent className="p-0 w-full h-full flex flex-col items-center justify-center relative">
-                        {/* Animated Grid Background */}
-                        <div className="absolute inset-0 opacity-[0.05] z-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #6366f1 1px, transparent 0)', backgroundSize: '16px 16px' }} />
-                        
-                        {/* Children Content */}
-                        <div className="relative z-10 w-full h-full">
-                            {children}
-                        </div>
-                        
+                <motion.div
+                    className="w-full"
+                    style={{
+                        rotateX,
+                        rotateY,
+                        transformStyle: "preserve-3d",
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 30
+                    }}
+                >
+                    <GlareHover
+                        borderRadius="24px"
+                        glareColor="#cbd5e1"
+                        glareOpacity={0.2}
+                        glareSize={100}
+                        transitionDuration={1200}
+                        className="w-full"
+                    >
+                        <Card className={cn(
+                            "relative border-zinc-200/60 dark:border-white/[0.08] bg-white/50 dark:bg-zinc-950 backdrop-blur-3xl overflow-hidden shadow-none z-10 transition-all duration-700",
+                            cardClassName
+                        )}>
+                            <CardContent className="p-0 w-full h-full flex flex-col items-center justify-center relative">
+                                {/* Animated Grid Background */}
+                                <div className="absolute inset-0 opacity-[0.05] z-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #6366f1 1px, transparent 0)', backgroundSize: '16px 16px' }} />
+                                
+                                {/* Children Content */}
+                                <div className="relative z-10 w-full h-full">
+                                    {children}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </GlareHover>
+                </motion.div>
 
-                    </CardContent>
-                </Card>
 
                 {/* Floating Badge (Optional) */}
                 {badgeText && (
