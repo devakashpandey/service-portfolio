@@ -187,6 +187,12 @@
   will-change: transform;
 }
 
+/* Contain marquee rows to prevent layout thrashing */
+.marquee-row {
+  contain: layout style;
+  will-change: transform;
+}
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {

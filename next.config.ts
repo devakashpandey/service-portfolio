@@ -10,16 +10,20 @@ const nextConfig: NextConfig = {
   },
   // Enable compression
   compress: true,
-  // Optimize for production
+  // Remove X-Powered-By header
   poweredByHeader: false,
-  // Enable React strict mode for better performance
+  // Enable React strict mode
   reactStrictMode: true,
-  // Experimental optimizations
   experimental: {
     // Optimize package imports for tree-shaking
-    optimizePackageImports: ["lucide-react", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
+    optimizePackageImports: [
+      "lucide-react",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "framer-motion",
+      "radix-ui",
+    ],
   },
 };
 
 export default nextConfig;
-

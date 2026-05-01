@@ -97,7 +97,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogContent className="w-[95vw] max-w-[480px] p-0 overflow-hidden border border-white/10 bg-zinc-950 shadow-[0_0_50px_-12px_rgba(79,70,229,0.3)] z-50 rounded-[1.5rem] md:rounded-[2rem]">
+            <DialogContent className="w-[95vw] max-w-[480px] p-0 overflow-hidden border border-border bg-background shadow-[0_0_50px_-12px_rgba(79,70,229,0.3)] z-50 rounded-[1.5rem] md:rounded-[2rem]">
                 <div className="p-5 md:p-8 max-h-[90vh] overflow-y-auto custom-scrollbar">
                     {!isSuccess ? (
                         <div className="animate-fade-in-up">
@@ -106,13 +106,13 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                     <Calendar className="w-5 h-5 md:w-6 md:h-6 text-indigo-500" />
                                     Book a Meeting
                                 </DialogTitle>
-                                <DialogDescription className="text-sm text-muted-foreground/80">
+                                <DialogDescription className="text-sm text-muted-foreground">
                                     Fill in your details to schedule a call.
                                 </DialogDescription>
                             </DialogHeader>
 
                             {/* Availability Card */}
-                            <div className="mb-5 p-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex gap-3 items-start backdrop-blur-md">
+                            <div className="mb-5 p-4 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 flex gap-3 items-start backdrop-blur-md">
                                 <Info className="w-4 h-4 text-indigo-500 mt-0.5 shrink-0" />
                                 <div className="space-y-1">
                                     <p className="text-[10px] font-black uppercase tracking-widest text-indigo-500">Availability (IST)</p>
@@ -126,13 +126,13 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div className="space-y-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Full Name</label>
+                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Full Name</label>
                                         <div className="relative">
                                             <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                                             <Input
                                                 placeholder="Enter your name"
                                                 required
-                                                className="pl-10 h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm transition-all"
+                                                className="pl-10 h-11 bg-muted/30 border-border focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm transition-all"
                                                 value={formData.name}
                                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             />
@@ -140,14 +140,14 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
                                     </div>
 
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Email Address</label>
+                                        <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Email Address</label>
                                         <div className="relative">
                                             <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                                             <Input
                                                 type="email"
                                                 placeholder="Enter your email"
                                                 required
-                                                className="pl-10 h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm transition-all"
+                                                className="pl-10 h-11 bg-muted/30 border-border focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm transition-all"
                                                 value={formData.email}
                                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             />
@@ -156,22 +156,22 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
                                     <div className="grid grid-cols-2 gap-3">
                                         <div className="space-y-1.5">
-                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Date</label>
+                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Date</label>
                                             <Input
                                                 type="date"
                                                 required
-                                                className="h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm px-3 transition-all color-scheme-dark"
+                                                className="h-11 bg-muted/30 border-border focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm px-3 transition-all dark:color-scheme-dark"
                                                 value={formData.date}
                                                 min={new Date().toISOString().split('T')[0]}
                                                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                                             />
                                         </div>
                                         <div className="space-y-1.5">
-                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 ml-1">Time</label>
+                                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">Time</label>
                                             <Input
                                                 type="time"
                                                 required
-                                                className="h-11 bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm px-3 transition-all color-scheme-dark"
+                                                className="h-11 bg-muted/30 border-border focus:border-indigo-500/50 focus:ring-0 rounded-xl text-sm px-3 transition-all dark:color-scheme-dark"
                                                 value={formData.time}
                                                 onChange={(e) => setFormData({ ...formData, time: e.target.value })}
                                             />

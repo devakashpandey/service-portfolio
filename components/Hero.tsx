@@ -20,24 +20,16 @@ import Image from "next/image";
 import { BookingModal } from "./BookingModal";
 import { useState } from "react";
 import { DataFlowCard } from "./DataFlowCard";
-import SoftAurora from "./ui/SoftAurora/SoftAurora";
 
 export default function Hero() {
     const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     return (
-        <section className="relative min-h-[85vh] pt-10 pb-16 md:pt-20 lg:py-0 flex items-center justify-center overflow-hidden bg-background mt-10">
-            {/* Soft Aurora Background Effect */}
-            <div className="absolute inset-0 z-0 pointer-events-none opacity-30 md:opacity-40 dark:opacity-40 md:dark:opacity-50">
-                <SoftAurora
-                    speed={0.3}
-                    scale={1.8}
-                    brightness={1.2}
-                    bandSpread={0.5}
-                    color1="#4f46e5"
-                    color2="#9333ea"
-                    enableMouseInteraction={true}
-                />
+        <section className="relative min-h-[90vh] pt-24 pb-16 md:pt-32 lg:pt-36 lg:pb-20 flex items-center justify-center overflow-hidden bg-background">
+            {/* CSS Aurora Background Effect - replaces heavy WebGL shader */}
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+                <div className="absolute top-[-20%] left-[20%] w-[60%] h-[60%] rounded-full bg-indigo-500/20 blur-[120px] animate-pulse" style={{ animationDuration: '6s' }} />
+                <div className="absolute top-[10%] right-[10%] w-[40%] h-[50%] rounded-full bg-purple-500/15 blur-[100px] animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }} />
             </div>
 
             {/* Custom Booking Modal */}
@@ -169,7 +161,7 @@ export default function Hero() {
 
                             <div className="space-y-4 opacity-0 animate-fade-in-up delay-200">
                                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                                    I help businesses across industries build a professional online presence that strengthens credibility, turns visitors into real enquiries, builds trust, and improves efficiency through smart digital solutions.
+                                    I help businesses build a strong online presence that enhances credibility, builds trust, and converts visitors into real enquiries through smart digital solutions. From custom websites to automation and scalable systems, I deliver solutions for each business’s needs.
                                 </p>
                             </div>
                         </div>

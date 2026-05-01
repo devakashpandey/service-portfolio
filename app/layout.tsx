@@ -1,21 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Inter, Outfit, Geist } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  preload: true,
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-  preload: true,
-});
 
 export const viewport: Viewport = {
   themeColor: "#0A0A0A",
@@ -131,10 +117,7 @@ import PWARegistration from "@/components/PWARegistration";
 import { GlobalErrorHandler } from "@/components/GlobalErrorHandler";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-
-import ClickSpark from "@/components/ui/ClickSpark";
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export default function RootLayout({
   children,
@@ -219,19 +202,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${outfit.variable} antialiased`}>
+      <body className="antialiased">
         <GlobalErrorHandler />
         <PWARegistration />
-        <ClickSpark
-          sparkColor='#fff'
-          sparkSize={10}
-          sparkRadius={15}
-          sparkCount={8}
-          duration={400}
-        >
-          <Providers>{children}</Providers>
-        </ClickSpark>
-
+        <Providers>{children}</Providers>
         <GoogleAnalytics gaId="G-WE8HT2M4GN" />
       </body>
     </html>

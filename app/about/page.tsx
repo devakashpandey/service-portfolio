@@ -51,14 +51,14 @@ export default function AboutPage() {
                                 <span className="inline-block px-4 py-1.5 mb-6 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase bg-indigo-500/10 text-indigo-500 rounded-full border border-indigo-500/20">
                                     Crafting Digital Success
                                 </span>
-                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-[1.1]">
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-[1.1]">
                                     Building Value.<br />
                                     <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-purple-600">
                                         Scaling Growth.
                                     </span>
                                 </h1>
                                 <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10">
-                                    At <span className="text-foreground font-bold">Akky Labs</span>, we help brands build and scale their digital presence. Whether you&apos;re starting from zero or need to optimize your current platform for more <span className="text-indigo-500 font-bold">lead generation</span>, we bridge the gap with deep industry research. We aren&apos;t just developers - we are your strategic partners who handle the technology so you can focus on scaling your brand.
+                                    At <span className="text-foreground font-bold">Akky Labs</span>, we help brands build and scale their digital presence. Whether you&apos;re starting from zero or need to optimize your current platform for more <span className="text-indigo-500 font-bold">lead generation</span>. We bridge the gap with deep industry research. We aren&apos;t just developers - we are your strategic partners who handle the technology so you can focus on scaling your brand.
                                 </p>
                             </motion.div>
 
@@ -276,7 +276,7 @@ export default function AboutPage() {
                                 {[
                                     { title: "Portfolio Success", icon: ShieldCheck, desc: "Proven track record of high-impact digital delivery." },
                                     { title: "Rapid Execution", icon: Zap, desc: "Fast-to-market development without compromising quality." },
-                                    { title: "Direct Access", icon: MessageSquare, desc: "Zero middlemen—work directly with the technology experts." },
+                                    { title: "Direct Access", icon: MessageSquare, desc: "No middlemen - work directly with the technology experts." },
                                     { title: "Outcome-Driven", icon: Target, desc: "Focus on real business results over just writing code." },
                                     { title: "Strategic Partner", icon: Handshake, desc: "Long-term commitment to your business growth." },
                                     { title: "AI-Powered", icon: Brain, desc: "Cutting-edge automation built into your core systems." },
