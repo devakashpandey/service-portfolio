@@ -31,7 +31,7 @@ export default function WhatsAppFloat() {
 
     return (
         <div
-            className={`fixed bottom-6 right-4 md:right-6 z-50 flex flex-col gap-3 transition-all duration-500 transform ${isVisible ? "translate-y-0 opacity-100 scale-100" : "translate-y-4 opacity-0 scale-90 pointer-events-none"
+            className={`fixed bottom-6 right-4 md:right-6 z-50 flex flex-col items-center gap-3 transition-all duration-500 transform ${isVisible ? "translate-y-0 opacity-100 scale-100" : "translate-y-4 opacity-0 scale-90 pointer-events-none"
                 }`}
         >
             {/* Scroll to Top Button */}
