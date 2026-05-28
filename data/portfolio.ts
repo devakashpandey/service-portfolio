@@ -1,4 +1,4 @@
-// ===== PORTFOLIO DATA =====
+
 
 
 export interface Demo {
@@ -102,7 +102,7 @@ export const demos: Demo[] = [
     image: "/newtri1.png?v=2",
     images: ["/newtri1.png?v=2", "/newtri2.png?v=2", "/newtri3.png?v=2", "/newtri4.png?v=2"],
     category: "saas",
-    link: "https://new-triveda-technologies.vercel.app/",
+    link: "https://trivedatechnologies.com",
     tags: ["Tech Partner", "AI Solutions", "Digital Products"],
     featured: true,
     caseStudy: {
@@ -124,10 +124,10 @@ export const demos: Demo[] = [
     tags: ["Ecommerce", "Fashion", "Premium"],
     featured: true,
     caseStudy: {
-       problem: "Low customer retention due to a slow, cluttered mobile shopping experience.",
-       solution: "Redesigned with mobile-first approach, 1-click checkout, and high-res optimized product galleries.",
-       result: "Reduced cart abandonment by 60% and increased mobile revenue by 45%.",
-       whyItWorks: ["Lightning-fast checkout", "Visual hierarchy", "Social proof integration"],
+      problem: "Low customer retention due to a slow, cluttered mobile shopping experience.",
+      solution: "Redesigned with mobile-first approach, 1-click checkout, and high-res optimized product galleries.",
+      result: "Reduced cart abandonment by 60% and increased mobile revenue by 45%.",
+      whyItWorks: ["Lightning-fast checkout", "Visual hierarchy", "Social proof integration"],
     }
   },
   {
@@ -141,10 +141,10 @@ export const demos: Demo[] = [
     tags: ["Hospital", "Health", "Management"],
     featured: true,
     caseStudy: {
-       problem: "Patients faced long wait times and difficulty in checking doctor availability.",
-       solution: "Implemented a real-time booking system and digital OPD schedule accessible via WhatsApp.",
-       result: "Over 500 appointments booked digitally in the first month, reducing front-desk load by 40%.",
-       whyItWorks: ["Clean interface for all ages", "Urgent CTA placement", "Trust-building doctor profiles"],
+      problem: "Patients faced long wait times and difficulty in checking doctor availability.",
+      solution: "Implemented a real-time booking system and digital OPD schedule accessible via WhatsApp.",
+      result: "Over 500 appointments booked digitally in the first month, reducing front-desk load by 40%.",
+      whyItWorks: ["Clean interface for all ages", "Urgent CTA placement", "Trust-building doctor profiles"],
     }
   },
   {
@@ -157,10 +157,10 @@ export const demos: Demo[] = [
     tags: ["Restaurant", "Cafe", "Premium"],
     featured: true,
     caseStudy: {
-       problem: "The cafe lacked a digital menu and had to process all reservations via phone manually.",
-       solution: "Designed a stunning visual menu and integrated a seamless table reservation system.",
-       result: "Weekend reservations doubled and staff manual work reduced by 15 hours per week.",
-       whyItWorks: ["Appetizing visual design", "Instant booking confirmation", "Mobile-optimized menu"],
+      problem: "The cafe lacked a digital menu and had to process all reservations via phone manually.",
+      solution: "Designed a stunning visual menu and integrated a seamless table reservation system.",
+      result: "Weekend reservations doubled and staff manual work reduced by 15 hours per week.",
+      whyItWorks: ["Appetizing visual design", "Instant booking confirmation", "Mobile-optimized menu"],
     }
   },
   {
@@ -174,13 +174,13 @@ export const demos: Demo[] = [
     tags: ["Gym", "Fitness", "Workout"],
     featured: true,
     caseStudy: {
-       problem: "Struggling to convert walk-ins into long-term members without a digital plan showcase.",
-       solution: "Created a premium membership portal with interactive plan comparison and trainer bio pages.",
-       result: "Increased membership sign-ups by 30% through focused lead-capture forms.",
-       whyItWorks: ["High-energy aesthetic", "Compelling membership tiers", "Fast lead turnaround"],
+      problem: "Struggling to convert walk-ins into long-term members without a digital plan showcase.",
+      solution: "Created a premium membership portal with interactive plan comparison and trainer bio pages.",
+      result: "Increased membership sign-ups by 30% through focused lead-capture forms.",
+      whyItWorks: ["High-energy aesthetic", "Compelling membership tiers", "Fast lead turnaround"],
     }
   },
- 
+
   {
     id: "2",
     title: "Luxury Jewelry Shop",
@@ -192,13 +192,13 @@ export const demos: Demo[] = [
     tags: ["Jewellery", "Luxury", "E-commerce"],
     featured: true,
     caseStudy: {
-       problem: "The client needed a website that looked as expensive and trustworthy as their jewelry.",
-       solution: "Implemented a 'gold & dark' theme with micro-animations and ultra-high-res zooming.",
-       result: "Brand perception shifted significantly, leading to higher average order values.",
-       whyItWorks: ["Premium typography", "Minimalist luxury UX", "Refined animations"],
+      problem: "The client needed a website that looked as expensive and trustworthy as their jewelry.",
+      solution: "Implemented a 'gold & dark' theme with micro-animations and ultra-high-res zooming.",
+      result: "Brand perception shifted significantly, leading to higher average order values.",
+      whyItWorks: ["Premium typography", "Minimalist luxury UX", "Refined animations"],
     }
   },
-    
+
   {
     id: "102",
     title: "SaaS Product Landing",
@@ -222,10 +222,10 @@ export const demos: Demo[] = [
     featured: true,
     tags: ["Courses", "Education", "Learning"],
     caseStudy: {
-       problem: "Difficulty in managing multiple courses and handling student payments manually.",
-       solution: "Built a custom LMS with automated enrollment and a personalized learning dashboard.",
-       result: "Successfully scaled to 1000+ students without increasing administrative staff.",
-       whyItWorks: ["Structured learning flow", "Progress tracking", "Secure payment gateway"],
+      problem: "Difficulty in managing multiple courses and handling student payments manually.",
+      solution: "Built a custom LMS with automated enrollment and a personalized learning dashboard.",
+      result: "Successfully scaled to 1000+ students without increasing administrative staff.",
+      whyItWorks: ["Structured learning flow", "Progress tracking", "Secure payment gateway"],
     }
   },
   {
@@ -239,13 +239,13 @@ export const demos: Demo[] = [
     tags: ["Salon", "Beauty", "Service"],
     featured: true,
     caseStudy: {
-       problem: "Operating at 40% capacity because customers didn't know the full service list.",
-       solution: "Designed a digital catalog and 'Book Now' WhatsApp integration for every service.",
-       result: "Booking enquiries increased by 60% within 30 days of launch.",
-       whyItWorks: ["Visual-heavy gallery", "Direct WhatsApp CTA", "Professional service cards"],
+      problem: "Operating at 40% capacity because customers didn't know the full service list.",
+      solution: "Designed a digital catalog and 'Book Now' WhatsApp integration for every service.",
+      result: "Booking enquiries increased by 60% within 30 days of launch.",
+      whyItWorks: ["Visual-heavy gallery", "Direct WhatsApp CTA", "Professional service cards"],
     }
   },
- 
+
   {
     id: "16",
     title: "Green Ganga Associates",
@@ -258,10 +258,10 @@ export const demos: Demo[] = [
     tags: ["Landscaping", "Gardening", "Design"],
     featured: true,
     caseStudy: {
-       problem: "The client lacked a digital footprint to showcase their luxury landscaping projects to high-end clients.",
-       solution: "Built a visual-heavy portfolio with high-resolution galleries and project-specific breakdown modules.",
-       result: "Secured 5 major landscaping contracts for luxury estates within months of launch.",
-       whyItWorks: ["Premium visual story", "Trust-building project logs", "Fast mobile experience"],
+      problem: "The client lacked a digital footprint to showcase their luxury landscaping projects to high-end clients.",
+      solution: "Built a visual-heavy portfolio with high-resolution galleries and project-specific breakdown modules.",
+      result: "Secured 5 major landscaping contracts for luxury estates within months of launch.",
+      whyItWorks: ["Premium visual story", "Trust-building project logs", "Fast mobile experience"],
     }
   },
   {
@@ -275,10 +275,10 @@ export const demos: Demo[] = [
     tags: ["Cafe", "Bistro", "Food"],
     featured: false,
     caseStudy: {
-       problem: "Manual reservation management led to overbooking and missed customer calls during peak hours.",
-       solution: "Implemented a real-time table booking system and a high-contrast digital mobile menu.",
-       result: "Staff manual work reduced by 15 hours per week and peak-hour efficiency improved by 40%.",
-       whyItWorks: ["Instant confirmation logic", "Visual menu hierarchy", "Optimized for mobile footfall"],
+      problem: "Manual reservation management led to overbooking and missed customer calls during peak hours.",
+      solution: "Implemented a real-time table booking system and a high-contrast digital mobile menu.",
+      result: "Staff manual work reduced by 15 hours per week and peak-hour efficiency improved by 40%.",
+      whyItWorks: ["Instant confirmation logic", "Visual menu hierarchy", "Optimized for mobile footfall"],
     }
   },
   {
@@ -293,10 +293,10 @@ export const demos: Demo[] = [
     tags: ["Coaching", "Education", "Learning"],
     featured: true,
     caseStudy: {
-       problem: "The center struggled with manual fee collection tracking and notifying students about new course schedules.",
-       solution: "Developed a secure student-teacher portal with automated enrollment and a fee management dashboard.",
-       result: "Administrative overhead reduced by 40%, allowing the staff to focus more on student success.",
-       whyItWorks: ["Simplified fee management", "Student-focused UX", "Secure data handling"],
+      problem: "The center struggled with manual fee collection tracking and notifying students about new course schedules.",
+      solution: "Developed a secure student-teacher portal with automated enrollment and a fee management dashboard.",
+      result: "Administrative overhead reduced by 40%, allowing the staff to focus more on student success.",
+      whyItWorks: ["Simplified fee management", "Student-focused UX", "Secure data handling"],
     }
   },
   {
@@ -309,13 +309,13 @@ export const demos: Demo[] = [
     tags: ["Tattoo Studio", "Portfolio", "Appointment"],
     featured: false,
     caseStudy: {
-       problem: "Artists were spending too much time showing portfolios in person instead of consulting.",
-       solution: "Created a high-impact digital gallery with artist-specific collections and an edgy dark mode design.",
-       result: "Increased digital portfolio sharing, leading to 3x more pre-consulted and high-intent clients.",
-       whyItWorks: ["Edgy dark mode design", "High-contrast visuals", "Artist authority cues"],
+      problem: "Artists were spending too much time showing portfolios in person instead of consulting.",
+      solution: "Created a high-impact digital gallery with artist-specific collections and an edgy dark mode design.",
+      result: "Increased digital portfolio sharing, leading to 3x more pre-consulted and high-intent clients.",
+      whyItWorks: ["Edgy dark mode design", "High-contrast visuals", "Artist authority cues"],
     }
   },
- 
+
   {
     id: "7",
     title: "Beauty Parlour Website",
@@ -326,10 +326,10 @@ export const demos: Demo[] = [
     category: "wellness",
     tags: ["Beauty", "Parlour", "Service"],
     caseStudy: {
-       problem: "Customers were confused about service pricing and booking procedures, leading to dropped leads.",
-       solution: "Simplified the pricing table and added a high-converting 3-step digital booking guide.",
-       result: "Increased monthly booking enquiries by 2.5x within just 30 days of launch.",
-       whyItWorks: ["Clear CTA placement", "Trust elements", "Mobile optimized"],
+      problem: "Customers were confused about service pricing and booking procedures, leading to dropped leads.",
+      solution: "Simplified the pricing table and added a high-converting 3-step digital booking guide.",
+      result: "Increased monthly booking enquiries by 2.5x within just 30 days of launch.",
+      whyItWorks: ["Clear CTA placement", "Trust elements", "Mobile optimized"],
     }
   },
   {
@@ -342,14 +342,14 @@ export const demos: Demo[] = [
     category: "hospitality",
     tags: ["Hotel", "Hospitality", "Booking"],
     caseStudy: {
-       problem: "The hotel was losing revenue due to high commission fees paid to third-party booking platforms.",
-       solution: "Built a premium direct booking experience with room showcase sliders and exclusive offers.",
-       result: "Achieved a 40% share in direct bookings within 2 months, saving thousands in commissions.",
-       whyItWorks: ["Premium room gallery", "Fast loading speeds", "Scarcity/Offer elements"],
+      problem: "The hotel was losing revenue due to high commission fees paid to third-party booking platforms.",
+      solution: "Built a premium direct booking experience with room showcase sliders and exclusive offers.",
+      result: "Achieved a 40% share in direct bookings within 2 months, saving thousands in commissions.",
+      whyItWorks: ["Premium room gallery", "Fast loading speeds", "Scarcity/Offer elements"],
     }
   },
 
-   {
+  {
     id: "5",
     title: "Property Portal",
     description:
@@ -359,10 +359,10 @@ export const demos: Demo[] = [
     tags: ["Property", "Real Estate", "Listings"],
     featured: true,
     caseStudy: {
-       problem: "The agent received numerous low-quality leads, wasting time for the sales team.",
-       solution: "Implemented a multi-step property preference form with smart filtering for high-intent buyers.",
-       result: "The conversion rate from lead to property viewing increased by 4x.",
-       whyItWorks: ["Strategic form design", "Visual property filters", "Authority positioning"],
+      problem: "The agent received numerous low-quality leads, wasting time for the sales team.",
+      solution: "Implemented a multi-step property preference form with smart filtering for high-intent buyers.",
+      result: "The conversion rate from lead to property viewing increased by 4x.",
+      whyItWorks: ["Strategic form design", "Visual property filters", "Authority positioning"],
     }
   },
 ];
@@ -370,12 +370,12 @@ export const demos: Demo[] = [
 // ===== AGENCY INFO =====
 export const personalInfo = {
   name: "Akash Pandey",
-  founder: "Akash Pandey", 
+  founder: "Akash Pandey",
   brandName: "Akky Labs",
   title: "Software & App Developer",
   tagline: "Building AI-Powered Digital Success for Your Business",
   experience: "3+",
-  projectsCompleted: "25+", 
+  projectsCompleted: "25+",
   happyClients: "15+",
   email: "akkylabs@outlook.com",
   phone: "+91 8709412383",
@@ -521,7 +521,7 @@ export const faqs = [
     question: "Can I update the website myself?",
     answer: "Yes, I build websites with easy-to-use dashboards so you can update text, images, and other content without any coding knowledge.",
   },
- 
+
   {
     question: "What information do I need to get started?",
     answer: "You just need to provide your business details, goals, and any specific preferences you have. I'll handle the rest, from planning to launch.",

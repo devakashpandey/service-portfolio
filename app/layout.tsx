@@ -13,7 +13,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.akkylabs.com"),
   title: {
-    default: "Akky Labs | Software Developer & Web Solutions for Your Business",
+    default: "Akky Labs | Digital Web Solutions to Grow Your Business",
     template: "%s | Akky Labs",
   },
   description:
@@ -24,15 +24,33 @@ export const metadata: Metadata = {
     "web developer",
     "website design",
     "web app development",
-    "mobile app development",
+    "mobile app development in bihar",
     "business website",
-    "freelance developer",
+    "freelance developer akky labs",
     "India",
     "custom website development",
     "ecommerce website development",
     "professional web developer",
     "react js developer",
     "next js developer",
+    "akky labs services",
+    "web development services",
+    "web development agency",
+    "web development company",
+    "web development company in India",
+    "digital marketing company in India",
+    "akash pandey software developer",
+    "akash pandey website builder",
+    "professional web development company",
+    "eccomerce website developer",
+    "akky labs bihar",
+    "akkylabs ara",
+    "web development company ara",
+    "web development company bihar",
+    "web development company near me",
+    "app development ara",
+    "app development bihar",
+    "akkylabs automation services"
   ],
   authors: [{ name: "Akky Labs", url: "https://www.akkylabs.com/" }],
   creator: "Akky Labs",
@@ -67,7 +85,7 @@ export const metadata: Metadata = {
     title: "Akky Labs",
   },
   openGraph: {
-    title: "Akky Labs | Software Developer & Web Solutions",
+    title: "Akky Labs | Digital Web Solutions to Grow Your Business",
     description:
       "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
     type: "website",
@@ -85,7 +103,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akky Labs | Web Developer & App Solutions",
+    title: "Akky Labs | Digital Web Solutions to Grow Your Business",
     description:
       "Transform your business with professional websites and apps. Custom solutions for shops and businesses.",
     images: ["/logo.png"],
