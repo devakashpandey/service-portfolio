@@ -95,7 +95,7 @@ export default function Contact() {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="space-y-6 md:space-y-4">
                                 <div className="space-y-4">
-                                    <label className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">What&apos;s your name?</label>
+                                    <label className="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-muted-foreground ml-1 pb-2">What&apos;s your name?</label>
                                     <Input
                                         required
                                         disabled={isSubmitting}
@@ -106,7 +106,7 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div className="space-y-4">
-                                    <label className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Your Phone / WhatsApp</label>
+                                    <label className="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-muted-foreground ml-1">Your Phone / WhatsApp</label>
                                     <Input
                                         required
                                         disabled={isSubmitting}
@@ -118,7 +118,7 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div className="space-y-4">
-                                    <label className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Project Details</label>
+                                    <label className="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-muted-foreground ml-1">Project Details</label>
                                     <Textarea
                                         required
                                         disabled={isSubmitting}
@@ -135,7 +135,7 @@ export default function Contact() {
                                 type="submit"
                                 size="lg"
                                 disabled={isSubmitting}
-                                className="w-full h-12 md:h-14 rounded-xl md:rounded-2xl text-sm md:text-base font-bold gap-3 shadow-xl shadow-indigo-500/20 transition-all active:scale-[0.98] bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none"
+                                className="w-full h-12 md:h-14 rounded-xl md:rounded-2xl text-sm md:text-base font-bold gap-3 shadow-xl shadow-indigo-500/20 transition-all active:scale-[0.98] bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none cursor-pointer"
                             >
                                 {isSubmitting ? (
                                     <>

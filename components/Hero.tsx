@@ -151,11 +151,8 @@ export default function Hero() {
                                             <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-tight">15+ Happy Clients</p>
                                         </div>
                                     </div>
-                                    <div className="hidden md:block w-px h-8 bg-border/60" />
-                                    <div className="hidden md:flex flex-col">
-                                        <span className="text-xs font-bold tracking-loose uppercase ">Multiple Industries</span>
-                                        <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-tight">Global Success</span>
-                                    </div>
+                                    {/* <div className="hidden md:block w-px h-8 bg-border/60" /> */}
+
                                 </div>
                             </div>
 
@@ -187,9 +184,9 @@ export default function Hero() {
                         <div className="flex items-center gap-3 md:gap-4 pt-1 opacity-0 animate-fade-in-up delay-[400ms]">
                             <Button
                                 onClick={() => setIsBookingOpen(true)}
-                                className="h-10 md:h-12 px-4 md:px-6 rounded-lg text-sm md:text-base font-bold shadow-md shadow-indigo-500/15 gap-1.5 md:gap-2 cursor-pointer bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white whitespace-nowrap"
+                                className="h-10 md:h-12 px-4 md:px-6 rounded-lg text-sm md:text-base font-semibold shadow-md shadow-indigo-500/15 gap-1.5 md:gap-2 cursor-pointer bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white whitespace-nowrap"
                             >
-                                Book a Meeting
+                                Book a Free Meeting
                                 <Calendar className="w-3.5 h-3.5 md:w-4 md:h-4" />
                             </Button>
                             <Button asChild variant="ghost" className="h-10 md:h-12 px-4 md:px-8 rounded-xl text-sm md:text-base font-bold gap-2 text-muted-foreground hover:text-foreground whitespace-nowrap">

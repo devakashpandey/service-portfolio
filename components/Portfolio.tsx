@@ -1,7 +1,7 @@
 "use client";
 
 import { demos, Demo } from "@/data/portfolio";
-import { ChevronLeft, ChevronRight, ExternalLink, Eye, Layout, Palette, Rocket, Zap } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, ExternalLink, Eye, Layout, Palette, Rocket, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -75,12 +75,57 @@ export default function Portfolio() {
                                             <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-5 group-hover:text-indigo-500 transition-colors">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8 max-w-xl line-clamp-2 md:line-clamp-none">
+                                            <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-5 max-w-xl line-clamp-2 md:line-clamp-none">
                                                 {project.description}
                                             </p>
 
+                                            {/* Project Tags */}
+                                            {project.tags && project.tags.length > 0 && (
+                                                <div className="flex flex-wrap gap-1.5 mb-5">
+                                                    {project.tags.map(tag => (
+                                                        <span key={tag} className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-100 dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 border border-black/5 dark:border-white/5">
+                                                            #{tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
+
+                                            {/* Key Highlights & Impact */}
+                                            {project.caseStudy && (
+                                                <div className="mb-6 space-y-4">
+                                                    {project.caseStudy.whyItWorks && (
+                                                        <div className="space-y-2">
+                                                            <span className="text-[10px] font-black text-indigo-500 dark:text-indigo-400 uppercase tracking-widest block">
+                                                                Key Highlights
+                                                            </span>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                                                {project.caseStudy.whyItWorks.map((item, idx) => (
+                                                                    <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-foreground/80">
+                                                                        <div className="w-5 h-5 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center text-emerald-500 shrink-0">
+                                                                            <Check className="w-3 h-3" />
+                                                                        </div>
+                                                                        <span className="font-semibold tracking-tight">{item}</span>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    )}
+
+                                                    {project.caseStudy.result && (
+                                                        <div className="pt-3 border-t border-black/5 dark:border-white/5 flex items-center gap-2 text-xs sm:text-sm">
+                                                            <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-extrabold uppercase text-[9px] tracking-wider shrink-0">
+                                                                Result
+                                                            </span>
+                                                            <span className="text-muted-foreground font-medium">
+                                                                {project.caseStudy.result}
+                                                            </span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
+
                                             {/* Extra details only for Desktop/Large Screens - Hidden on Mobile/Tab */}
-                                            <div className="hidden lg:grid grid-cols-2 gap-8 mb-8">
+                                            <div className="hidden lg:grid grid-cols-2 gap-8 mb-6">
                                                 <div className="space-y-0">
                                                     <div className="flex items-center gap-3 text-foreground/90">
                                                         <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
@@ -100,35 +145,68 @@ export default function Portfolio() {
                                             </div>
 
                                              <div className="flex flex-wrap gap-4 mt-auto">
-                                                {project.link && (
+                                                {project.link ? (
                                                     <div className="group/eye relative">
                                                         <Button asChild size="lg" className="h-10 md:h-12 lg:h-14 w-10 md:w-12 lg:w-14 p-0 rounded-full bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-none shadow-xl shadow-indigo-500/25 active:scale-[0.98] transition-all">
                                                             <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                                                <Eye className="w-5 h-5 lg:w-6 lg:h-6" />
+                                                                 <Eye className="w-5 h-5 lg:w-6 lg:h-6" />
                                                             </a>
                                                         </Button>
                                                         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold rounded-lg opacity-0 group-hover/eye:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-2xl translate-y-1 group-hover/eye:translate-y-0 border border-white/5">
                                                             View Full Website
                                                         </div>
                                                     </div>
+                                                ) : (
+                                                     <a href="#contact" className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-indigo-500/10 hover:bg-indigo-500 text-indigo-500 hover:text-white border border-indigo-500/20 transition-all shadow-sm active:scale-[0.98] font-bold text-xs uppercase tracking-wider">
+                                                         Request Live Demo
+                                                     </a>
                                                 )}
                                             </div>
                                          </div>
 
                                         {/* Project Image Panel with slider */}
-                                        <div className="relative h-[250px] md:h-[350px] lg:h-full bg-muted/30 overflow-hidden group/img order-1 lg:order-2">
-                                            <Image
-                                                src={projectImages[currentIndex]}
-                                                alt={`${project.title} - Preview ${currentIndex + 1}`}
-                                                fill
-                                                unoptimized={true}
-                                                className="object-cover object-top transition-all duration-700"
-                                                priority={index === 0}
-                                            />
+                                        <div className="relative min-h-[300px] sm:min-h-[400px] lg:h-full bg-zinc-50/50 dark:bg-zinc-900/10 overflow-hidden group/img order-1 lg:order-2 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                                            
+                                            {/* Blurred Background to make it look premium and vibrant */}
+                                            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+                                                <Image
+                                                    src={projectImages[currentIndex]}
+                                                    alt=""
+                                                    fill
+                                                    unoptimized={true}
+                                                    className="object-cover blur-2xl opacity-20 dark:opacity-30 scale-110 transition-all duration-700"
+                                                />
+                                            </div>
+
+                                            {/* Browser Mockup Container */}
+                                            <div className="relative w-full max-w-[95%] lg:max-w-full rounded-xl md:rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 shadow-2xl bg-zinc-950 flex flex-col transition-all duration-500 hover:scale-[1.02] z-10">
+                                                
+                                                {/* Browser Header Bar */}
+                                                <div className="flex items-center gap-1.5 px-3 py-2 bg-zinc-100 dark:bg-zinc-900 border-b border-black/5 dark:border-white/5 shrink-0 select-none">
+                                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500/80" />
+                                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-500/80" />
+                                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500/80" />
+                                                    <div className="ml-3 flex-1 max-w-[120px] sm:max-w-[200px] lg:max-w-xs h-3.5 sm:h-4.5 rounded bg-zinc-200/50 dark:bg-zinc-800/50 border border-black/5 dark:border-white/5 flex items-center justify-center text-[8px] sm:text-[9px] text-zinc-500 font-mono overflow-hidden truncate">
+                                                        {project.link ? project.link.replace(/^https?:\/\//, '') : project.title.toLowerCase().replace(/\s+/g, '') + '.com'}
+                                                    </div>
+                                                </div>
+
+                                                {/* Browser Viewport Area - Aspect ratio matches the standard desktop screenshot aspect ratio */}
+                                                <div className="relative w-full aspect-[293/160] overflow-hidden bg-zinc-900/50 dark:bg-zinc-950">
+                                                    <Image
+                                                        src={projectImages[currentIndex]}
+                                                        alt={`${project.title} - Preview ${currentIndex + 1}`}
+                                                        fill
+                                                        unoptimized={true}
+                                                        className="object-cover object-top transition-all duration-700"
+                                                        priority={index === 0}
+                                                    />
+                                                </div>
+                                            </div>
 
                                             {/* Image Navigation */}
                                             {projectImages.length > 1 && (
-                                                <div className="absolute inset-x-0 bottom-4 md:bottom-6 lg:bottom-10 flex justify-between px-4 md:px-6 lg:px-10 items-center">
+                                                <div className="absolute inset-x-0 bottom-4 md:bottom-6 lg:bottom-10 flex justify-between px-4 md:px-6 lg:px-10 items-center z-20">
                                                     <Button
                                                         onClick={() => prevImage(project.id, projectImages.length)}
                                                         variant="outline"

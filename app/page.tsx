@@ -15,6 +15,8 @@ const Contact = dynamic(() => import("@/components/Contact"));
 const Footer = dynamic(() => import("@/components/Footer"));
 const WhatsAppFloat = dynamic(() => import("@/components/WhatsAppFloat"));
 const BusinessComparison = dynamic(() => import("@/components/BusinessComparison"));
+const MarqueeCTA = dynamic(() => import("@/components/MarqueeCTA"));
+const Clients = dynamic(() => import("@/components/Clients"));
 
 export default function Home() {
   return (
@@ -22,6 +24,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Clients />
         <BusinessComparison />
         <GrowthSection />
         <Services />
@@ -30,6 +33,7 @@ export default function Home() {
         <Testimonials />
         <WhyUs />
         <FAQ />
+        <MarqueeCTA />
         <Contact />
       </main>
       <Footer />

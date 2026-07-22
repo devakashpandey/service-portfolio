@@ -105,7 +105,7 @@ export default function BusinessComparison() {
 
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 mb-0 md:mb-8">
-              <span className="text-sm font-semibold italic">“This single change usually increases lead conversion by over 100%</span>
+              <span className="text-sm font-semibold italic">“This single change usually increases lead conversion by over 80%</span>
             </div>
           </div>
         </div>

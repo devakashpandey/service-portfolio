@@ -20,7 +20,7 @@ export default function GrowthSection() {
             desc: "Fast, stable, and reliable digital solutions tailored for your business."
         },
         {
-            title: "1-Year Full Support",
+            title: "6 Months Full Support",
             desc: "Reliable assistance to keep your platform running smoothly."
         },
         {

@@ -152,6 +152,25 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            {/* Huge Static Brand Text at the bottom */}
+            <div className="relative w-full overflow-hidden select-none pb-8 pt-4 border-t border-black/5 dark:border-white/[0.02] flex items-center justify-center">
+                <style dangerouslySetInnerHTML={{__html: `
+                    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap');
+                    .footer-brand-text-static {
+                        font-family: 'Unbounded', sans-serif;
+                        font-weight: 900;
+                        font-size: 10vw;
+                        line-height: 1;
+                        letter-spacing: 0.05em;
+                        text-align: center;
+                    }
+                `}} />
+                
+                <h2 className="footer-brand-text-static text-black/45 dark:text-white/30 select-none uppercase">
+                    AKKY LABS
+                </h2>
+            </div>
         </footer>
     );
 }
