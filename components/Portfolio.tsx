@@ -110,17 +110,6 @@ export default function Portfolio() {
                                                             </div>
                                                         </div>
                                                     )}
-
-                                                    {project.caseStudy.result && (
-                                                        <div className="pt-3 border-t border-black/5 dark:border-white/5 flex items-center gap-2 text-xs sm:text-sm">
-                                                            <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-extrabold uppercase text-[9px] tracking-wider shrink-0">
-                                                                Result
-                                                            </span>
-                                                            <span className="text-muted-foreground font-medium">
-                                                                {project.caseStudy.result}
-                                                            </span>
-                                                        </div>
-                                                    )}
                                                 </div>
                                             )}
 
