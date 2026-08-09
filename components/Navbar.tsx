@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { personalInfo } from "@/data/portfolio";
-import { Moon, Sun, Menu, X, MessageSquare } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Menu, X, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
     Sheet,
@@ -18,7 +17,6 @@ import Image from "next/image";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -90,15 +88,6 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                        aria-label="Toggle theme"
-                        className="rounded-full h-9 w-9 md:h-10 md:w-10 hover:bg-indigo-500/5 text-foreground"
-                    >
-                        {theme === "dark" ? <Sun className="h-4 w-4 md:h-5 md:w-5" /> : <Moon className="h-4 w-4 md:h-5 md:w-5" />}
-                    </Button>
 
                     <div className="hidden lg:flex items-center gap-4">
                         <Button

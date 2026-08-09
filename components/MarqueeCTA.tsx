@@ -30,9 +30,9 @@ export default function MarqueeCTA() {
             `}} />
             
             <div className="relative flex overflow-x-hidden w-full">
-                <div className="animate-marquee-left-to-right flex whitespace-nowrap gap-16 shrink-0 min-w-full justify-around items-center">
+                <div className="animate-marquee-left-to-right flex whitespace-nowrap gap-8 sm:gap-12 md:gap-16 shrink-0 items-center pr-8 sm:pr-12 md:pr-16">
                     {marqueeItems.map((text, idx) => (
-                        <div key={idx} className="flex items-center gap-6">
+                        <div key={idx} className="flex items-center gap-8 sm:gap-12 md:gap-16">
                             <span className="font-sans font-black text-zinc-950 dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors duration-300">
                                 {text}
                             </span>
@@ -42,9 +42,9 @@ export default function MarqueeCTA() {
                         </div>
                     ))}
                 </div>
-                <div className="animate-marquee-left-to-right flex whitespace-nowrap gap-16 shrink-0 min-w-full justify-around items-center" aria-hidden="true">
+                <div className="animate-marquee-left-to-right flex whitespace-nowrap gap-8 sm:gap-12 md:gap-16 shrink-0 items-center pr-8 sm:pr-12 md:pr-16" aria-hidden="true">
                     {marqueeItems.map((text, idx) => (
-                        <div key={idx} className="flex items-center gap-6">
+                        <div key={idx} className="flex items-center gap-8 sm:gap-12 md:gap-16">
                             <span className="font-sans font-black text-zinc-950 dark:text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors duration-300">
                                 {text}
                             </span>

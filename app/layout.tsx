@@ -202,7 +202,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)} suppressHydrationWarning>
+    <html lang="en" className={cn("dark", "scroll-smooth", "font-sans", geist.variable)} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

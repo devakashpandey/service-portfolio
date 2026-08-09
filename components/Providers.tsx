@@ -15,7 +15,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
     if (!mounted) {
         return (
-            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+            <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
                 <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background transition-opacity duration-500">
                     <div className="relative">
                         {/* Outer Glow */}
@@ -45,7 +45,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     }
 
     return (
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem={false}>
             {children}
         </ThemeProvider>
     );
